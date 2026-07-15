@@ -55,7 +55,7 @@ orchestrator gracefully skips harvesters whose MCPs aren't available.
 ## The Second Scheduled Task: DM Monitor
 
 **Name:** Slack DM Monitor
-**Repeats:** Every 30 minutes during work hours
+**Repeats:** Every hour during work hours
 **Instructions:**
 
 ```

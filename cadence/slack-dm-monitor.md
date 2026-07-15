@@ -310,7 +310,7 @@ Write last processed message timestamp to `resources/dm-monitor-cursor.md`.
 
 In `cadence.md`:
 ```
-every 30m during work_hours → slack-dm-monitor
+every hour during work_hours → slack-dm-monitor
 ```
 
 In `overrides.md`:

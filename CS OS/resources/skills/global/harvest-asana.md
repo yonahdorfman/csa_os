@@ -89,3 +89,4 @@ Skip tasks with no name or automated/template placeholders (e.g., tasks named "N
 - If a project returns an error (permissions, not found), note it and continue.
 - Tasks with no assignee are still surfaced — don't filter them out.
 - Cap "No Due Date" section at 3 tasks per account to avoid noise. If more exist, note the count.
+
