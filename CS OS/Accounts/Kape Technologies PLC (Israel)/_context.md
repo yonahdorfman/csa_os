@@ -1,9 +1,21 @@
 # Kape Technologies PLC (Israel)
 
-**Last Updated:** 2026-07-07
-**Updated By:** CSA OS (Gmail catch-up — 14-day sweep, requested by Yonah)
-**Why Updated:** New contact Itzik Pinchas; parallel "starting fresh" relationship-reset thread found — needs reconciling with the Shay Rubinek/data-lead thread.
-**Previous:** 2026-06-21 — Gmail harvest catch-up (training session, new contacts Carmen/Jonathan/Aviv/Gabriel).
+**Last Updated:** 2026-07-15
+**Updated By:** CSA OS (morning cycle — Gong + Gmail + Calendar harvest)
+**Why Updated:** Four Gong calls this week (relationship reset with Itzik Pinchas, data cleanup working session, new features intro) plus a Data Cleanup 2 session booked for Jul 23.
+**Previous:** 2026-07-07 — Gmail catch-up (new contact Itzik Pinchas, relationship-reset thread found).
+
+---
+
+## Machine Patch — 2026-07-15 (Morning Cycle)
+### Account reset in progress — new AM, multiple calls this week, ownership still unclear
+- **2026-07-08 (19 min):** Itzik/Shavit call — mapping Kape's decision-making structure and gatekeepers ahead of the FY29 renewal push.
+- **2026-07-09 (53 min):** "New Features and intro" — Shavit, Yonah, Ailon walked a large Kape group (10 attendees incl. Jonathan Glick, Victoria Snesarevski) through Copilot, Root Cause Analysis, Session Replay, Feature Flags/Experiments, and role-based access governance recommendations (Owner/Admin/Analyst).
+- **2026-07-12 (10 min):** "Starting over" — Shavit + Yonah with Itzik Pinchas; Itzik confirmed he's the de facto POC for all Kape/Mixpanel conversations and wants to take ownership of data mapping/cleanup, pending prioritization. Aviv Meital (external consultant) also involved.
+- **2026-07-14 (31 min):** Data Cleanup session with Itzik — discussed 23 total Mixpanel projects at Kape, only 6-7 actively used; agreed to start by deleting/merging irrelevant projects (potential cost savings under event-based pricing — currently 460M events/month, 35% of annual quota consumed in 2 months), then clean unused events, then add missing events + context/descriptions (important for AI features too).
+- **Next meeting:** "Kape / Mixpanel - Data Cleanup 2" booked 2026-07-23, 4:00-4:30pm IDT (calendar invite confirmed 2026-07-14) — Itzik + Aviv Meital.
+- Still open: who owns Mixpanel internally at Kape (Shavit asked in #kape-mixpael, not yet answered); ExpressVPN Apps implementation issue alert (fired 2026-07-10, wide internal cc list) not yet confirmed resolved.
+- Source: Gong calls (call_ids 3478267477380246496, 1449924427331575173, 7723320330088359346, 4431507234599617995) + Gmail (Data Cleanup thread, 2026-07-14) + Calendar, harvested via morning-cycle 2026-07-15.
 
 ---
 
@@ -84,6 +96,12 @@ As of 2026-05-31, Kape Technologies is maintaining steady usage primarily driven
 ---
 
 ## Recent History
+
+**2026-07-15 | DM note [via Slack DM]**
+- Itzik (Itzik Pinchas) owns Mixpanel at Kape. (Answers the open question from the 2026-07-15 morning cycle: "who owns Mixpanel internally at Kape" — confirmed as Itzik Pinchas, consistent with him self-identifying as de facto POC on 2026-07-12 call.)
+
+**2026-07-08 | DM note [via Slack DM]**
+- Big meeting tomorrow (2026-07-09) with Kape.
 
 **2026-07-07 | Gmail catch-up (14-day sweep) — parallel relationship reset with Itzik Pinchas**
 - A separate thread from the Shay Rubinek (CRO) motion: Shavit ran a standalone "Kape / Mixpanel - Intro" cadence with Itzik Pinchas from Jun 24 through Jul 2, including a reschedule, an actual intro meeting, and a Jul 2 follow-up ("Follow-up: Kape / Mixpanel Intro") thanking Itzik for the meeting and recapping alignment on "starting fresh" across ExpressVPN, CyberGhost, PIA and the other Kape brands.

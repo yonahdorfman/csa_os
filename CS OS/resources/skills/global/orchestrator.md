@@ -1,7 +1,7 @@
 ---
 name: Orchestrator
-version: 1.1
-last_updated: 2026-06-16
+version: 1.2
+last_updated: 2026-07-16
 category: role
 description: >
   THE single scheduled Cowork task (besides DM monitor). Runs hourly.
@@ -122,9 +122,22 @@ For each rule:
 
 **Partial harvest check (runs every tick, independent of cycle schedule):**
 
-Define `HARVEST_REQUIRED` = [gmail, slack, calendar, bq, gong, clari, mixpanel]
+Define `HARVEST_REQUIRED` = [gmail, slack, calendar, bq, gong, mixpanel]
 These are the sources that must complete for a harvest to be considered full.
-Notion, Drive, Asana, Pylon, and Zendesk are optional — skipping them is not an error.
+Notion, Drive, Asana, and Pylon are optional — skipping them is not an error.
+Clari and Zendesk are standby sources (see harvest-all.md's "Not called by
+default" section) — they are never invoked, so they should never appear in
+`HARVESTERS_DONE`, `HARVESTERS_MISSING`, or a skip log entry at all.
+
+**Valid skip reasons for a `HARVEST_REQUIRED` source are `skipped:mcp_unavailable`
+only.** There is no `skipped:scope` reason, and one must never be logged again — "the
+book is too big to scan this tick" is not a valid justification for a source that
+defines its own batching/rotation mechanism (currently: Slack, see harvest-slack.md's
+Coverage Rotation). That mechanism exists precisely so the harvester never needs to be
+skipped wholesale for cost reasons — run its batch every cycle without exception, even
+if recent cycles skipped it. Do not treat a prior cycle's skip as precedent; re-evaluate
+each harvester's current skill file every tick instead of carrying forward a past
+judgment call.
 
 If `scheduler:completed:morning-cycle` is present today but `HARVESTERS_DONE`
 does not contain all of `HARVEST_REQUIRED`:

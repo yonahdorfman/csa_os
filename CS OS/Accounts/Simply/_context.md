@@ -60,7 +60,7 @@ As of 2026-05-31, Simply is highly engaged with an active pipeline deal 'Simply 
 ## Open Items
 
 - [ ] **[DUE 2026-06-03]** Conduct Quarterly Meeting and advance early renewal (Owner: ShavitBen-Itzhak) — pending
-- [ ] **[DUE 2026-06-15]** Schedule team walkthrough for Session Replay UI controls (Owner: Yonah Dorfman) — pending
+- [x] **[DUE Completed]** Schedule team walkthrough for Session Replay UI controls — done, per Yonah DM note Jul 16 ("already walked through the UI controls"). (Owner: Yonah Dorfman)
 - [ ] **[DUE 2026-06-11]** Close out iOS 26 SR investigation — SDK v1.5.0 confirmed, asked if they're seeing the issue in replays. Determine if this is a confirmed bug and get product/eng timeline (Owner: Yonah Dorfman) — in progress
 
 
@@ -77,6 +77,9 @@ As of 2026-05-31, Simply is highly engaged with an active pipeline deal 'Simply 
 ---
 
 ## Recent History
+
+**2026-07-16 | DM note [via Slack DM]**
+- Already walked through the UI controls.
 
 **2026-06-10 | External channel scan [Jun 9 message — IN PROGRESS]**
 - Customer asked for a timeline on iOS 26 (Liquid Glass) SR privacy issue. Yonah replied Jun 9, asked for SDK version. Customer confirmed v1.5.0 + mixpanel-swift 6.4.0. Yonah is actively investigating as of Jun 10.

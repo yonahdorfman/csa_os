@@ -46,9 +46,6 @@ ACCOUNT:Ferryhopper:url=https://app.asana.com/1/908666848666/project/12142900912
 ACCOUNT:Fibi - Israeli International Bank=1214289658691747
 ACCOUNT:Fibi - Israeli International Bank:url=https://app.asana.com/1/908666848666/project/1214289658691747
 
-ACCOUNT:Fireblocks=1214289936917464
-ACCOUNT:Fireblocks:url=https://app.asana.com/1/908666848666/project/1214289936917464
-
 ACCOUNT:Forex Club International LLC=1214290033534667
 ACCOUNT:Forex Club International LLC:url=https://app.asana.com/1/908666848666/project/1214290033534667
 

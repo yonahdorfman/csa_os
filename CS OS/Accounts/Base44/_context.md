@@ -1,8 +1,19 @@
 # Base44
 
-**Last Updated:** 2026-06-03
-**Updated By:** CSA OS (BQ seed)
-**Why Updated:** Initial seeding from BigQuery account_plans_current
+**Last Updated:** 2026-07-15
+**Updated By:** CSA OS (morning cycle — Slack + Calendar harvest)
+**Why Updated:** QBR today — Slack and Calendar disagree on the meeting time; flagged for verification before the call.
+**Previous:** 2026-06-03 — BQ seed (initial).
+
+---
+
+## Machine Patch — 2026-07-15 (Morning Cycle)
+### ⚠️ QBR today — scheduling conflict between sources, needs verification before the call
+- Slack weekly summary (2026-07-12) says the Base44 QBR was rescheduled twice (Noa Gor declined the original Jul 8 slot) and is "now confirmed for Jul 15, 15:00–15:30 IDT," with confirmation status still flagged as unverified per Tal's internal pulse.
+- **Calendar shows a conflicting time:** "Base44 // Mixpanel - Quarterly Account Meeting" on the primary calendar is set for 2026-07-15, 12:30–13:00 IDT (organizer Tal Huberman, attendee noagor@base44.com, Yonah RSVP still `needsAction`). There is also a separate "Base44" placeholder block 10:00-13:00 same day.
+- **Action before the call:** confirm with Tal which time is correct (12:30 per calendar vs. 15:00 per Slack) and RSVP — do not show up assuming the Slack-reported time without checking, since the two sources disagree.
+- Context for the call: strong week — MCP/agentic usage very high (2,696 API-query calls, 23 external users), Financial AI Hackathon co-hosted with RiseUp at Wix Campus, new product/swag update landed Jul 16.
+- Source: Slack #at-base44 (weekly summary 2026-07-12) + Calendar (2026-07-15), harvested via morning-cycle 2026-07-15.
 
 ---
 

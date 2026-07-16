@@ -1,8 +1,9 @@
 # GETT
 
-**Last Updated:** 2026-06-11
-**Updated By:** CSA OS (morning harvest)
-**Why Updated:** Jun 18 onsite session canceled by Tal; implementation issue email received
+**Last Updated:** 2026-07-16
+**Updated By:** CSA OS (morning harvest — Slack)
+**Why Updated:** #at-gett had gone unsynced since Jun 11 despite active Jul engagement. Jul 9 onsite (30+ attendees) finally happened after repeated postponements; new open support ticket #10057; Tal flagged a potential SR upsell follow-on Jul 12. Renewal remains past-due.
+**Previous:** Last Updated 2026-06-11 — "Jun 18 onsite session canceled by Tal; implementation issue email received"
 
 ---
 
@@ -63,14 +64,38 @@ As of 2026-05-31, GETT has an active pipeline deal for their FY 28 Renewal ($71,
 
 ## Open Items
 
+- [ ] ⚠️ Resolve/monitor support ticket #10057 (session replay / timeline desync), reported by nick.ogai@gett.com Jul 9 — still open as of Jul 12. (Owner: Yonah Dorfman)
+- [x] **[DUE Completed]** Confirm whether the Mixpanel AI-agent deep-dive session Guy Cohen requested (asked by Ofer Polivoda Jul 6) has actually been booked. — confirmed happened, per Yonah DM note Jul 16. (Owner: Yonah/Ofer)
+- [ ] ⚠️ Advance the past-due renewal (Contract End lapsed 2026-05-31, ~$67K–72K per Gong/SFDC) — clarify Lyft-acquisition impact on contract authority. (Owner: Yonah/Tal) — OVERDUE 46d
+- [ ] Follow up on potential Session Replay upsell for next quarter or two, flagged by Tal Huberman Jul 12 off the back of the Jul 9 AI session. (Owner: Yonah/Tal)
 - [ ] **[DUE 2026-06-15]** Advance FY28 renewal ($65,500) from Stage 4: Buying Process. (Owner: Shavit) — in progress
-- [ ] **[DUE ASAP]** Reschedule Jun 18 onsite session (canceled Jun 10 by Tal). (Owner: Yonah/Tal) — pending
+- [x] **[DUE Completed]** Reschedule Jun 18 onsite session (canceled Jun 10 by Tal) — held Jul 9 with 30+ GETT attendees.
 - [x] **[DUE Completed]** Clarify GETT Israel's independence from the Lyft acquisition with Jordana. (Owner: Tal Huberman) — completed
 - [ ] **[OPEN since 2026-06-03]** Tyler Roach asked for a call to set up a new internal Mixpanel project, bringing in two new colleagues (Viktor & Steven) to get the team "into a stronger position using the tools available" — good expansion/adoption signal (new users, deeper internal ownership). No call scheduled yet. (Owner: Yonah Dorfman)
 
 ---
 
 ## Recent History
+
+**2026-07-16 | DM note [via Slack DM]**
+- Guy Cohen's AI session already happened.
+
+**2026-07-12 | Slack (#at-gett) — SR upsell signal + onsite recap**
+- Tal Huberman: "we had a great AI session with them on Thursday [Jul 9], led by Yonah. It also led to a potential SR upsell for next quarter or 2." Confirms the long-postponed onsite finally landed well and is generating expansion pull, not just renewal defense.
+- Source: Slack (#at-gett)
+
+**2026-07-09 | Slack (#at-gett) — Onsite session held; new support ticket opened**
+- The Mixpanel // GETT IL onsite session for Product finally happened (10:30–12:00 IDT) after multiple postponements, with 30+ GETT attendees.
+- Same day, nick.ogai@gett.com opened support ticket #10057 (session replay/timeline desync) — still open as of Jul 12, needs monitoring.
+- Source: Slack (#at-gett)
+
+**2026-07-06 | Slack (#at-gett) — Exec check-ins ahead of onsite**
+- Tal Huberman confirmed the onsite (postponed several times) was locked for Thursday Jul 9.
+- Ofer Polivoda asked directly whether the AI-agent deep-dive session Guy Cohen (POM) requested had been booked — status still unconfirmed as of this write-up.
+- Source: Slack (#at-gett)
+
+**2026-07-08 | DM note [via Slack DM]**
+- Big meeting tomorrow (2026-07-09) with GETT.
 
 **2026-07-02 | 1:1 DM sweep — expansion signal from Tyler Roach**
 - Jun 3: Tyler mentioned launching a full site redesign and said the team is "setting up a new internal project" around Mixpanel, bringing in two colleagues (Viktor & Steven) to strengthen usage of the tools. Asked for a call the following week to get started.

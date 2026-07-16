@@ -1,9 +1,19 @@
 # Nexus Mods
 
-**Last Updated:** 2026-07-07
-**Updated By:** CSA OS (Gmail catch-up — 14-day sweep, requested by Yonah)
-**Why Updated:** New DA intro call scheduled with Natalie Jones (Jul 14) — closes the pending open item; new contact Britt.
-**Previous:** 2026-06-15 — morning cycle refresh (tier upsell closed won).
+**Last Updated:** 2026-07-15
+**Updated By:** CSA OS (morning cycle — Gong + Slack harvest)
+**Why Updated:** Two Gong calls this week covering Natalie Jones' onboarding (monthly review Jul 13, welcome/training session Jul 14). Two Pylon tickets breached SLA.
+**Previous:** 2026-07-07 — Gmail catch-up (DA intro call scheduled).
+
+---
+
+## Machine Patch — 2026-07-15 (Morning Cycle)
+### New Data Analyst onboarding — two Gong calls this week
+- **2026-07-13 (15 min):** Monthly Account Review — Yonah + Shavit with Natalie Jones (new data analyst, 5 days into role at time of call). Dennis Raagaard (her manager, handing off Mixpanel ownership) was OOO but asked the team to keep the slot to meet Natalie. Team structure: Natalie + Dennis now, an Analytics Engineer and Data Scientist expected by end of August. Other tools in stack: GeckoBoard, ClickHouse (data warehouse).
+- **2026-07-14 (50 min):** "Mixpanel + Nat - Welcome!" — Yonah walked Natalie through core Mixpanel functionality (Insights, Funnels, Flows, Retention), built a live custom event + funnel (news post view → mod download) together, and introduced Root Cause Analysis and cohorts. Natalie is expected to take over lexicon cleanup as an initial task.
+- Action items: continue supporting Natalie's onboarding; she's identified internal power users (James Orton, Rory Clark, Lyra Chalk) to connect with.
+- Two Pylon tickets (#9242 onboarding, #10174 billing contact update) breached SLA this week per Jul 12 weekly summary — confirm resolution status.
+- Source: Gong calls (call_id 6086239744380742951, 4746451525903245445) + Slack #at-nexus-mods, harvested via morning-cycle 2026-07-15.
 
 ---
 

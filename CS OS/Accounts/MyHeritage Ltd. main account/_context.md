@@ -1,13 +1,13 @@
 # MyHeritage Ltd. main account
 
-**Last Updated:** 2026-07-06
-**Updated By:** CSA OS (morning-cycle BQ refresh)
-**Why Updated:** Funnel/cohort discrepancy now open 55+ days. EU data-residency deadline still missed. Renewal 25 days out with no formal motion.
-**Previous:** 2026-06-10 — discrepancy open 31 days.
+**Last Updated:** 2026-07-14
+**Updated By:** CSA OS (full harvest — Slack + BQ confirmation)
+**Why Updated:** CONFIRMED — SFDC bot posted to #at-myheritage on 2026-07-13 13:27 IDT: Renewal opp moved `1: Pipeline` → `Closed Won` ("in 4 months"). This corroborates this morning's ambiguous Asana-digest signal with an actual Salesforce stage-change notification. However, the BQ `account_plans_current` table (refreshed as of this harvest) still shows `latest_opp_stage: 1: Pipeline` — BQ has not caught up to the SFDC change yet (expected; BQ sync lag). Treat the renewal as WON pending BQ catching up; the underlying EU data-residency and funnel-discrepancy issues remain open and unaffected by the renewal outcome.
+**Previous:** 2026-07-06 — discrepancy open 55+ days, renewal Stage 1/High Risk (now believed stale).
 
 ---
-## Sales Intelligence (BQ refresh — 2026-07-06)
-**Health:** Low | **Risk:** High | **Sentiment:** Neutral | **Opp:** MyHeritage FY27 Renewal (Stage 1: Pipeline, $110,000)
+## Sales Intelligence (BQ refresh — 2026-07-06, renewal status superseded 2026-07-13 per Slack/SFDC)
+**Health:** Low (pre-renewal-close) | **Risk:** Was High, likely resolved — CONFIRM in SFDC directly | **Sentiment:** Neutral | **Opp:** MyHeritage FY27 Renewal (SFDC shows Closed Won as of 2026-07-13; BQ still shows Stage 1: Pipeline — sync lag)
 
 **Active Risks:**
 - EU data-residency deadline missed — MyStories project still sending ~1.26M events to the US endpoint.

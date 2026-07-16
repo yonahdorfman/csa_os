@@ -1,8 +1,20 @@
 # Stillfront Group AB
 
-**Last Updated:** 2026-06-10
-**Updated By:** CSA OS (external channel scan)
-**Why Updated:** May 11 — warehouse sync 403 Forbidden (Ben Girard deactivated, service account broken, 30 days unreplied)
+**Last Updated:** 2026-07-15
+**Updated By:** CSA OS (morning cycle — Gong harvest)
+**Why Updated:** New risk surfaced — Playa Games (a Stillfront studio) has signaled non-renewal intent on its Mixpanel pilot.
+**Previous:** 2026-06-10 — external channel scan (warehouse sync 403 Forbidden, unresolved).
+
+---
+
+## Machine Patch — 2026-07-15 (Morning Cycle)
+### 🔴 New risk: Playa Games (Stillfront studio) non-renewal intent
+- **2026-07-01 Gong call (23 min):** Alissa (Mixpanel) with Suman Majety (Stillfront). Stillfront runs a decentralized "studio-first" model — 15 studios, ~60 games, 1,200 people, HQ Stockholm. Mixpanel was piloted with one studio, Playa Games, as a trial for possible wider studio adoption.
+- Playa Games has signaled **non-renewal intent** despite high usage — the specific game using Mixpanel is underperforming, investment is being scaled back, and a Mixpanel price increase compounded the decision. Alissa will contact Torsten (Playa's studio head) directly, with Suman cc'd.
+- Positive counter-signal: Suman is personally positive on Mixpanel, interested in the new AI agent/headless features, and open to revisiting integration for growing games in Q4. Suman also invited to a Mixpanel AI event in Stockholm.
+- Stillfront is building a centralized SDK to let studios pick pre-approved vendors — worth tracking as a potential wider-adoption channel if Mixpanel gets on the approved list.
+- Action: follow up with Alissa on the direct Torsten conversation outcome before writing this off as a lost studio — this is a single-studio risk within a much larger group account, not a Stillfront-wide churn signal.
+- Source: Gong call (call_id 4077546260569942982), harvested via morning-cycle 2026-07-15.
 
 ---
 

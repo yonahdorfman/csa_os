@@ -1,8 +1,19 @@
 # Whalo
 
-**Last Updated:** 2026-06-21
-**Updated By:** CSA OS (Gmail harvest — catch-up)
-**Why Updated:** Cohort sync limit increased to 120 on Jun 18 (support ticket resolved by Mixpanel Support/Sergi). Yonah had filed ticket Jun 10 requesting increase for Whalo project 2305100. Now resolved — inform customer. Renewal Aug 2026 ($130K) — 71 days, renewal motion needs to start.
+**Last Updated:** 2026-07-15
+**Updated By:** CSA OS (morning cycle — Slack harvest)
+**Why Updated:** API rate limit issue resolved; Brain integration migrating to MCP Headless.
+**Previous:** 2026-06-21 — Gmail harvest catch-up (cohort sync limit increase).
+
+---
+
+## Machine Patch — 2026-07-15 (Morning Cycle)
+### API rate limit issue resolved — migrating to MCP Headless
+- Per Slack DM (Yonah/Shavit) and Linear ticket QE-441 ("Raise Mixpanel [API limit]...") marked Done 2026-07-08: Whalo's API rate limit has been increased, and their "Brain" internal AI tool (integrates with Mixpanel via API, was hitting a 60 req/sec limit) is migrating to MCP Headless (new cap 1000 req/min).
+- This closes out the loop opened on the 2026-07-09 Gong call (Adir, Yaniv) where the rate-limit/Headless migration was first discussed.
+- Remaining open item: confirm the Brain migration to MCP Headless completes smoothly and monitor new rate limit usage (Owner: Yonah).
+- No renewal motion started yet on the $130,000 FY28 renewal (Stage 1: Pipeline) — worth opening given the account is otherwise healthy (45 active users, strong MCP/Copilot usage).
+- Source: Slack #at-whalo + Linear QE-441, harvested via morning-cycle 2026-07-15.
 
 ---
 

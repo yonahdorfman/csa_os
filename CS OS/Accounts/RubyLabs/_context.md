@@ -1,8 +1,18 @@
 # RubyLabs
 
-**Last Updated:** 2026-06-10
-**Updated By:** CSA OS (external channel scan)
-**Why Updated:** Jun 3 — unreplied question: EU → US project region transfer (7 days)
+**Last Updated:** 2026-07-15
+**Updated By:** CSA OS (morning cycle — Slack + Gong harvest)
+**Why Updated:** Two new implementation-issue alerts this week (AI project, JobAssist project) need owners; Gong call re: AI skill rollout.
+**Previous:** 2026-06-10 — external channel scan (EU/US region transfer question, unreplied).
+
+---
+
+## Machine Patch — 2026-07-15 (Morning Cycle)
+### Two new implementation-issue alerts this week — need owners
+- Automated Mixpanel implementation-issue alerts fired for RubyLabs' "AI" project (2026-07-10, first notification) and "JobAssist" project (2026-07-07, first notification) — both could affect data quality and neither has a confirmed owner yet.
+- 2026-07-08 Gong call (7 min, Shavit) tied to the FY28 Renewal ($189,650): RubyLabs' team is building an AI skill for personalized customer offers, still deciding on rollout timing, and has concerns about Claude content-quality standards — wants Mixpanel's input.
+- Carried open items still unresolved: myIQ implementation issue, EU data-residency confirmation, and Shavit's headless/AI links for Kiryl (originally overdue 5+ weeks as of last week — now likely 6+ weeks).
+- Source: Slack #at-rubylabs + Gong call (call_id 5189022912725106472), harvested via morning-cycle 2026-07-15.
 
 ---
 

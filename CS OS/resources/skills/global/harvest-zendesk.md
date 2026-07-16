@@ -1,27 +1,40 @@
 ---
 name: Harvest Zendesk
-version: 1.1
-last_updated: 2026-07-01
+version: 1.2
+last_updated: 2026-07-16
 category: sub-skill
 requires_mcp: [BigQuery]
-status: fallback — historical tickets only
+status: standby — not called by default as of 2026-07-16
 inputs:
   - CSM_NAME: "Your name as it appears in BQ csa column"
   - ACCOUNTS_PATH: "Base path to accounts"
   - LOOKBACK_DAYS: "default: 30"
 output: Support ticket signals per account
 invoke:
-  - Called by harvest-all during daemon cycle
-  - "/harvest-zendesk"
+  - "/harvest-zendesk" (manual only)
 ---
 
 # Harvest Zendesk
 
+**Standby as of 2026-07-16.** Superseded by `harvest-pylon.md` for support
+tickets and removed from `harvest-all.md`'s execution list — it is no longer
+called automatically. This file is kept intact (not deleted) in case
+pre-migration ticket history is needed again. To reactivate, add it back to
+`harvest-all.md`'s numbered execution list — do not do so without asking
+first.
+
+**Known issue, fix before reactivating:** the query below targets
+`sales_intelligence.zendesk_tickets_enriched`, which no longer exists (a live
+`bq list-tables` check on 2026-07-16 confirmed it's been dropped post-migration,
+matching the `table_not_found` skip logged that day). The current tables are
+`sales_intelligence.zendesk_tickets_raw` and `sales_intelligence.zendesk_tickets_redacted` —
+the query and column list below need to be re-verified against one of those
+before this harvester can run again.
+
 **Mixpanel migrated off Zendesk to Pylon as of July 2026. Pylon is now the
-primary support ticket source — use `harvest-pylon.md` first.** Run this
-harvester only as a fallback to surface **historical tickets filed before
-the migration**, which live in BQ and were not backfilled into Pylon. New
-tickets will not appear here.
+primary support ticket source — use `harvest-pylon.md` first.** Historically
+this harvester surfaced **tickets filed before the migration**, which live in
+BQ and were not backfilled into Pylon.
 
 Pull support tickets from BQ for your accounts. Ticket patterns are
 early churn signals — volume spikes, repeated issues, high-severity

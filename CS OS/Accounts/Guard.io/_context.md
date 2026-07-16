@@ -87,6 +87,9 @@ As of 2026-05-31, Guard.io is in an active pipeline stage for their FY 27 Renewa
 
 ## Recent History
 
+**2026-07-15 | DM note [via Slack DM]**
+- Guard.io has renewed and has a bigger cap now. (Likely resolves the "approaching 100% data allocation limit" active risk below — confirm cap increase amount and update risk status.)
+
 **2026-06-17 | SFDC stage change [via Slack/Clari]**
 - Renewal moved Stage 1: Pipeline → Stage 4: Negotiation ($81,469, close date 5 days out)
 

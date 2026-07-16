@@ -343,10 +343,6 @@ Movement-Group:group:#at-movement-group-mixpanel=C083PNT0XQC
 Runwayer.com:group:#at-runwayer=C0B3CTGN94H
 Runwayer.com:group:#ext-mixpanel-runwayer=C09NBBZP5L3
 
-<!-- FIREBLOCKS -->
-Fireblocks:group:#at-fireblocks=C068VS1D7R7
-Fireblocks:group:#ext-fireblocks-mixpanel=C08E759LRA7
-
 <!-- DUXGROUP -->
 DuxGroup:group:#at-duxgroup=C0ANGQQA9S9
 DuxGroup:group:#ext-mixpanel-duxgroup=C08V7U3122V

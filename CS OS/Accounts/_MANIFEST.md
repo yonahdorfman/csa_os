@@ -50,4 +50,3 @@
 | [Bookaway](Accounts/Bookaway/_context.md) | $46,647 | — | — | #C0B3ELSNV8C | TalHuberman |
 | [Papaya Global {Formerly Azimo}](Accounts/Papaya Global -Formerly Azimo-/_context.md) | $42,800 | — | — | #C04J3Q4JTBN | TalHuberman |
 | [Stillfront Group AB](Accounts/Stillfront Group AB/_context.md) | $12,348 | — | — | #C0ANDQGACGK | AlissaVaughn |
-| [Fireblocks](Accounts/Fireblocks/_context.md) | Unknown | — | Unknown | — | Unknown |
