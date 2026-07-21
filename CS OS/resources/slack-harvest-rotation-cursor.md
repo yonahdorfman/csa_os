@@ -1,14 +1,22 @@
 # Slack Harvest Rotation Cursor
 
 last_batch_end_index: 0
-last_run: 2026-07-08 13:xx GMT+3 (manual /harvest-slack run — priority-set only, rotation batch not yet started)
-last_full_cycle_completed: —
-batch_size: 15
-total_accounts: 47
+last_run: 2026-07-16 (explicit full catch-up — all 46 accounts scanned via /harvest-slack --full, dispatched as 6 parallel batches)
+last_full_cycle_completed: 2026-07-16
+rotation_batch_size: 15
+total_accounts: 46
 
-notes: Fresh cursor — no batches run yet. Priority order is computed fresh each tick
-from Slack source `Last Fetched` dates (stalest first), so this index refers to a
-position in that computed order, not a fixed account list.
+notes: Full-book catch-up completed 2026-07-16 — every account's Slack sources
+(channel, external channel, group/mpim rows, and any user rows due for their monthly
+check) were scanned, not just a rotation batch. Index reset to 0 since the cursor
+was bypassed for this run per the "explicit full catch-up" exception in harvest-slack.md.
+Next regular tick resumes normal rotation from index 0, stalest-first.
+
+As of 2026-07-16, `rotation_batch_size` (formerly `batch_size`) is a fixed allotment
+for the non-priority rotation only — it is additive to, not shared with, the priority
+set, which is scanned in full every tick regardless of size. See harvest-slack.md's
+"Priority Accounts" section for why (the 2026-07-15/07-16 priority-overrun incidents
+that this change fixes).
 
 ## Hot Accounts (auto-detected high Slack activity)
 

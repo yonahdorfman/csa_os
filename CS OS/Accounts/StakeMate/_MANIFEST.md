@@ -4,10 +4,10 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-stakemate (C0ATE97FS9M) | Active | 2026-07-02 |
-| Slack | channel | #ext-mixpanel-stakemate (C0AD2J250U9) | Active | 2026-07-02 |
+| Slack | channel | #at-stakemate (C0ATE97FS9M) | Active | 2026-07-16 |
+| Slack | channel | #ext-mixpanel-stakemate (C0AD2J250U9) | Active | 2026-07-16 |
 | Slack | user | Arya (U0451M45XFC) | Inactive | 2026-07-02 |
-| Slack | dm | Oliver Waddup (D0ARRMYNYJ1) | Active | 2026-07-02 |
+| Slack | dm | Oliver Waddup (D0ARRMYNYJ1) | Active | 2026-07-16 |
 | Slack | user | Pavle Andric (U045EB2M7L1) | Inactive | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002KbX7UAAV](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002KbX7UAAV/view) | Linked | — |

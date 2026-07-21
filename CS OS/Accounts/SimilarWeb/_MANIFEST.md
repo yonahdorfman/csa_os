@@ -4,9 +4,9 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-similarweb (CLABN6TLK) | Active | 2026-07-02 |
-| Slack | channel | #similarweb-mixpanel (C03A3S5GB47) | Active | 2026-07-02 |
-| Slack | dm | Bnaya Reichenberg + Tal Huberman + Yonah Dorfman (C0B2WTB5RFF) | Active | — |
+| Slack | channel | #at-similarweb (CLABN6TLK) | Active | 2026-07-16 |
+| Slack | channel | #similarweb-mixpanel (C03A3S5GB47) | Active | 2026-07-16 |
+| Slack | dm | Bnaya Reichenberg + Tal Huberman + Yonah Dorfman (C0B2WTB5RFF) | Active | 2026-07-16 |
 | Slack | user | Bnaya Reichenberg (U0674089Q2J) | Active | 2026-07-02 |
 | Slack | user | Michael Bilek (U098T5FDGDQ) | Inactive | 2026-07-02 (user not found) |
 | Slack | user | Tomas Safar (U08V00F6AUW) | Inactive | 2026-07-02 (user not found) |

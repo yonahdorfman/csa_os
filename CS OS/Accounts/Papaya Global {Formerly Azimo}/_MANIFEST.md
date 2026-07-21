@@ -4,12 +4,12 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-papayaglobal (C04J3Q4JTBN) | Active | 2026-07-02 |
-| Slack | channel | #ext-papaya-global-mixpanel (C08Q96XF34L) | Active | 2026-07-02 |
+| Slack | channel | #at-papayaglobal (C04J3Q4JTBN) | Active | 2026-07-16 |
+| Slack | channel | #ext-papaya-global-mixpanel (C08Q96XF34L) | Inactive | 2026-07-16 |
 | Slack | user | Mateusz Kuznik (U089HN7CS6Q) | Inactive | 2026-07-02 |
 | Slack | user | Milosz Szewczyk (U08A4182MJL) | Inactive | 2026-07-02 |
 | Slack | user | Artur Kania (U089TTAGXSM) | Inactive | 2026-07-02 |
-| Slack | user | Hagit (unknown) | Active | — |
+| Slack | user | Hagit (unknown) | Active | — (not resolvable via Slack search) |
 | Slack | user | Yuval Brill (U089TTCSCHF) | Active | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013100001aKWK2AAO](https://mixpanel.lightning.force.com/lightning/r/Account/0013100001aKWK2AAO/view) | Linked | — |

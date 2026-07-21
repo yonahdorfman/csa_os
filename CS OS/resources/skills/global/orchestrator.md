@@ -27,7 +27,7 @@ and skills running outside the orchestrator's awareness.
 ## Cowork Scheduled Task Configuration
 
 **Name:** CSA OS Orchestrator
-**Repeats:** Hourly during work hours (7am–6pm weekdays)
+**Repeats:** Hourly during work hours (see `resources/cadence.md` — currently Sun–Thu, 9am–6pm GMT+3)
 **Folder:** {CSOS_PATH}
 **Instructions:**
 
@@ -84,7 +84,7 @@ setup and the live overrides file is stale:
 | `DISPATCH_TARGET` | `{SLACK_USER_ID}` (from same file) |
 | `TELEMETRY_CHANNEL` | `C0B1ZU8QSHE` |
 | `DM_MONITOR_ENABLED` | `true` |
-| `DM_MONITOR_INTERVAL` | `30m` |
+| `DM_MONITOR_INTERVAL` | `60m` |
 
 If you add a field, log it: `orchestrator:config:added:{field}={default}`
 
@@ -102,16 +102,18 @@ If you add a field, log it: `orchestrator:config:added:{field}={default}`
 
 Check each rule against current time and day:
 
-```
-work_hours: 7:00am - 6:00pm
-work_days: monday, tuesday, wednesday, thursday, friday
+This is a format example only — always read the live values from `resources/cadence.md`, currently:
 
-weekdays at 7:30am  → janitor
-weekdays at 8:00am  → morning-cycle
-weekdays at 8:00am on mondays → expand morning-cycle to weekly
-weekdays at 5:00pm  → eod-cycle
-fridays at 4:00pm   → eow-cycle
-1st monday at 8:30am → monthly-cycle
+```
+work_hours: 9:00am - 6:00pm
+work_days: sunday, monday, tuesday, wednesday, thursday
+
+weekdays at 9:30am → janitor
+weekdays at 9:00am → morning-cycle
+weekdays at 9:30am on sundays → expand morning-cycle to weekly
+weekdays at 4:00pm → eod-cycle
+thursdays at 3:00pm → eow-cycle
+1st sunday at 9:30am → monthly-cycle
 ```
 
 For each rule:
@@ -167,7 +169,7 @@ Run the appropriate cycle(s) in order:
 
 ---
 
-#### Janitor (7:30am weekdays)
+#### Janitor (9:30am weekdays)
 
 Run `sub/janitor.md`:
 - Freshness audit, source validation, inbox check, structural hygiene,
@@ -178,7 +180,7 @@ Run `sub/janitor.md`:
 
 ---
 
-#### Morning Cycle (9:30am weekdays)
+#### Morning Cycle (9:00am weekdays)
 
 **Step 1: Pull from Notion**
 - Read all account Context pages from Notion → overwrite local snapshots
@@ -222,7 +224,7 @@ Run `sub/janitor.md`:
 
 ---
 
-#### EoD Cycle (5:00pm weekdays)
+#### EoD Cycle (4:00pm weekdays)
 
 **Step 1: Pull from Notion**
 - Read all account Context pages → overwrite local snapshots
@@ -247,7 +249,7 @@ Run `sub/janitor.md`:
 
 ---
 
-#### EoW Cycle (Friday 4:00pm)
+#### EoW Cycle (Thursday 3:00pm)
 
 **Step 1: Pull from Notion**
 **Step 2: EoW Retrospective**
@@ -267,7 +269,7 @@ Run `sub/janitor.md`:
 
 ---
 
-#### Monthly Cycle (1st Monday 8:30am, after morning cycle)
+#### Monthly Cycle (1st Sunday 9:30am, after morning cycle)
 
 **Step 1: Monthly Consolidation**
 - Run `cadence/monthly-consolidation.md`
@@ -339,7 +341,7 @@ Top-level:
 Thread:
 ```
 Dispatch: Personal DM
-DM Monitor: Active (30m)
+DM Monitor: Active (60m)
 Last cycle: {time} — {what ran}
 Accounts: {N} total, {N} stale (>7d)
 Today: {N} signals, {N} patches
@@ -362,4 +364,4 @@ If you have individual scheduled tasks from v3.6 or earlier, delete them:
 - ❌ Monthly cycle (delete)
 - ❌ Csa rubric weekly (delete if subsumed)
 - ✅ Os orchestrator (KEEP — this is the one)
-- ✅ Slack dm monitor (KEEP — separate 30m task)
+- ✅ Slack dm monitor (KEEP — separate 60m task)

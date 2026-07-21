@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-simply (C0AN32X5BPC) | Active | 2026-07-02 |
-| Slack | channel | #ext-mixpanel-simply (C05S67SQLNN) | Active | 2026-07-02 |
+| Slack | channel | #at-simply (C0AN32X5BPC) | Active | 2026-07-16 |
+| Slack | channel | #ext-mixpanel-simply (C05S67SQLNN) | Active | 2026-07-16 |
 | Slack | user | Shir Goldman (U08PGU5D11V) | Inactive | 2026-07-02 |
 | Slack | user | Roman Brisker (U055KKE4VED) | Active | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |

@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-rubylabs (C0ANG0CB2GH) | Active | 2026-07-02 |
-| Slack | channel | #mixpanel-rubylabs (C088KNB5C5V) | Active | 2026-07-02 |
+| Slack | channel | #at-rubylabs (C0ANG0CB2GH) | Active | 2026-07-16 |
+| Slack | channel | #mixpanel-rubylabs (C088KNB5C5V) | Active | 2026-07-16 |
 | Slack | user | Beka Dalakishvili (U08F9Q1LJ6R) | Inactive | 2026-07-02 |
 | Slack | user | Robinzon Sokhashvili (U08LF0QH7NU) | Inactive | 2026-07-02 (user not found) |
 | Slack | user | Daria Fedorova (D0AUWH7MFJT) | Active | 2026-07-02 |

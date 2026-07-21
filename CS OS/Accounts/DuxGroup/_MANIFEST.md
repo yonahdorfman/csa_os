@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-duxgroup (C0ANGQQA9S9) | Active | 2026-07-02 |
-| Slack | channel | #ext-mixpanel-duxgroup (C08V7U3122V) | Active | 2026-07-02 |
+| Slack | channel | #at-duxgroup (C0ANGQQA9S9) | Active | 2026-07-16 |
+| Slack | channel | #ext-mixpanel-duxgroup (C08V7U3122V) | Active | 2026-07-16 |
 | Slack | user | Vahshan Zeinalov (U06K7SCLMS8) | Active | 2026-07-02 |
 | Slack | user | Ksenia Korolyova (U0APZJD3HTR) | Inactive | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |

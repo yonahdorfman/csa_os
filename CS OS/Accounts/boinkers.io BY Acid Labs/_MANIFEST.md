@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-boinkers-acid (C0ANG09T34H) | Active | 2026-07-02 |
-| Slack | channel | #ext-mixpanel-acid (C0AFSUJEKK7) | Active | 2026-07-02 |
+| Slack | channel | #at-boinkers-acid (C0ANG09T34H) | Active | 2026-07-16 |
+| Slack | channel | #ext-mixpanel-acid (C0AFSUJEKK7) | Active | 2026-07-16 |
 | Slack | user | Maor (U095YNS1DFB) | Inactive | 2026-07-02 |
 | Slack | user | AK Krivitzky (U063DHTU6) | Active | 2026-07-02 |
 | Slack | user | Asaf Huga (U08PQCHTJF3) | Inactive | 2026-07-02 |

@@ -1,7 +1,7 @@
 ---
 name: Janitor
-version: 3.0
-last_updated: 2026-04-22
+version: 3.1
+last_updated: 2026-07-16
 category: sub-skill
 requires_mcp: [Notion]
 optional_mcp: [Slack, BigQuery, Gmail, Google Calendar, Google Drive]
@@ -44,9 +44,44 @@ Output:
 🔴 Critical (>14d): {account names}
 ```
 
+## Validation Rotation (Jobs 2 & 4)
+
+Full per-account source validation (Job 2) and `/reconcile check` drift detection (Job 4)
+are O(N) in accounts and linked sources. Running them exhaustively every day on a 46+
+account book was already being scoped down ad hoc — "spot-checked 2-3 accounts" or
+"scoped to accounts touched by this cycle's harvest" — a different, undocumented judgment
+call made fresh every morning rather than a designed guarantee. Formalize it the same way
+`harvest-slack.md`'s Coverage Rotation works:
+
+1. **Read the cursor:** `resources/janitor-validation-rotation-cursor.md`. Stores
+   `last_batch_end_index`, `last_run`, `last_full_cycle_completed`, `rotation_batch_size`
+   (default 15), `total_accounts`.
+2. **Priority accounts validated every day, uncapped:** any account qualifying as
+   priority per `slack-priority-accounts.md`'s criteria (manual pin, Renewal Risk
+   High/Critical, lapsed contract with opp not Closed Won, or ARR ≥ $100,000) gets full
+   Job 2 + Job 4 validation every cycle, regardless of size — same reasoning as the Slack
+   priority set: a broken source or a Notion/local drift is most costly to miss on exactly
+   these accounts.
+3. **Rotation fills the rest:** from the remaining non-priority accounts, sorted
+   stalest-first by this cursor's own "last validated" date, take the next
+   `rotation_batch_size` accounts and run Jobs 2 and 4 against them. This batch is
+   additive to step 2, not carved out of the same pool — same fix as the Slack rotation
+   change (see `slack-harvest-rotation-cursor.md`'s 2026-07-16 note).
+4. **Update the cursor** at the end: advance `last_batch_end_index`, set `last_run`, and
+   mark `last_full_cycle_completed` if the rotation wrapped past the start.
+
+This guarantees full-book validation coverage at least once every
+`ceil(non_priority_account_count / rotation_batch_size)` days (~3 days at the default
+batch size for a 46-account book), instead of an undefined scope call re-decided every
+morning. Job 2 and Job 4 output must say which accounts were validated *this* cycle
+(priority + rotation batch) vs. carried forward from a prior cycle's result, so "not
+checked today" is never silently indistinguishable from "checked and clean."
+
 ### Job 2: Source Validation
 
-For each account's `_MANIFEST.md` Sources table, verify the source still exists:
+For each account in this cycle's validation batch (priority set + rotation batch, per
+"Validation Rotation" above), verify each of its `_MANIFEST.md` Sources table entries
+still exists:
 
 - **Slack channel:** Call `slack_read_channel` with limit 1. If error → flag.
 - **Notion page:** Fetch the Context child page by ID from registry. If error → flag.
@@ -58,6 +93,7 @@ Output:
 ```
 ### Job 2: Source Validation
 
+Validated this cycle: {N} accounts ({priority_count} priority + {rotation_count} rotation)
 ✅ All sources accessible: {N} accounts
 ⚠️ Access issues:
 • {Account}: Slack channel archived
@@ -82,27 +118,28 @@ Pending: {N} items
 
 ### Job 4: Structural Hygiene + Drift Check
 
-Verify the folder tree matches expectations:
+**Full book, every cycle (cheap — local file checks, no API calls):**
 - Every account folder has `_context.md` and `_MANIFEST.md`
 - Every account in the local tree has a Notion registry entry
-- Every registry entry points to a real Notion page (spot-check 2-3)
 - `cadence.md` exists and is parseable
 - `overrides.md` has no unfilled `{PLACEHOLDER}` values
 
-**Run `reconcile check`** to detect local/Notion drift:
-- Compare timestamps and content for each account
-- Flag accounts where local and Notion are out of sync
-- Include drift findings in the report
+**This cycle's validation batch only (priority set + rotation batch, per "Validation
+Rotation" above — these two are the expensive, API-touching checks that no longer get an
+undefined "spot-check 2-3" scope call):**
+- Every registry entry in the batch points to a real, resolving Notion page
+- **Run `reconcile check`** scoped to the batch: compare timestamps and content for each
+  account in it, flag accounts where local and Notion are out of sync
 
 Output:
 ```
 ### Job 4: Structure + Sync
 
-✅ {N}/{N} accounts have complete file sets
+✅ {N}/{N} accounts have complete file sets (full book)
 ⚠️ Missing registry entry: {account names}
 ⚠️ Orphaned folders: {folder names not in registry}
 
-Drift check:
+Registry + drift check — this cycle's batch ({N} accounts: {priority_count} priority + {rotation_count} rotation):
 ✅ {N} accounts in sync
 ⚠️ {N} drifted — run `/reconcile fix` to resolve
 ```
@@ -184,16 +221,53 @@ Exempt — Verify Manually (untracked primary channel): {N} accounts
 • {Account} ({untracked channel}) — {N}d since last TRACKED contact — confirm the relationship is still active via that channel
 ```
 
+### Job 8: Unprocessed Activity Check (Possible Stale Flags)
+
+Catches the gap where real account activity happened more recently than the
+local `_context.md` was last touched — meaning something may already have
+been discussed or resolved but hasn't been ingested yet. This runs before
+harvest specifically so a flagged account can be prioritized by *this* cycle's
+harvest instead of waiting for another ad hoc catch (see GETT on 2026-07-16:
+`_context.md` was 35 days stale despite active Slack engagement through Jul
+12 — only caught because harvest happened to touch that account that day).
+
+**Step 1:** For each account, compare:
+- `FILE_DATE` — the account's `_context.md` "Last Updated" date (from Job 1)
+- `CONTACT_DATE` — the account's last-tracked-contact date (from Job 7, Step
+  1 — already computed as the MAX across Contacts `Last Engaged`, Recent
+  History, Key Contacts `last touched`, and this cycle's Gmail/Slack/
+  Calendar/Gong signals). Also note which source produced `CONTACT_DATE`.
+
+**Step 2:** If `CONTACT_DATE` is more than 3 days newer than `FILE_DATE`,
+flag the account as possibly-stale. The size of the gap matters more than
+the account's overall Job 1 freshness tier — a file Job 1 calls "fresh" can
+still be sitting on an un-ingested signal from yesterday.
+
+**Step 3:** Any account flagged here should be added to today's Slack
+harvest priority set (see harvest-slack.md's "Priority Accounts" — this is a
+third qualifying source alongside manual pins and auto-priority-by-state), so
+the gap actually gets closed this cycle instead of just being reported again
+tomorrow.
+
+Output:
+```
+### Job 8: Unprocessed Activity Check
+
+🔄 Possibly stale: {N} accounts
+• {Account} — context last updated {FILE_DATE}, but {source} activity as recent
+  as {CONTACT_DATE} ({N}d gap) — may already be discussed/resolved, not yet ingested.
+```
+
 ## Full Report
 
-Combine all 7 jobs into `{LEDGER_PATH}/dashboards/hygiene-report-{YYYY-MM-DD}.md`.
+Combine all 8 jobs into `{LEDGER_PATH}/dashboards/hygiene-report-{YYYY-MM-DD}.md`.
 
 Log to changelog:
 ```
 ## {HH:MM} — janitor:completed
 
 - **Type:** janitor:{ok|warning}
-- **Detail:** {N} warnings. Stale: {N}. Renewals <60d: {N}. Overdue items: {N}. Silence — high priority: {N}, needs outreach: {N}, exempt: {N}.
+- **Detail:** {N} warnings. Stale: {N}. Renewals <60d: {N}. Overdue items: {N}. Possibly stale (Job 8): {N}. Silence — high priority: {N}, needs outreach: {N}, exempt: {N}.
 ```
 
 If warnings found → include them in the morning briefing's First Things First section.
@@ -232,5 +306,8 @@ If no warnings → no Slack post. Silence means clean.
 
 - Janitor is read-only. It never modifies account context or Notion pages.
 - It surfaces problems; the human or other skills fix them.
-- Run time: ~2 minutes for a 10-account book. Scales linearly.
+- Run time: observed ~11 minutes for a 46-account book (2026-07-16), most of it in Jobs
+  2/4's per-account API calls — this is why those two jobs use Validation Rotation instead
+  of scanning every account every cycle. Jobs 1, 3, 5, 6, 7, 8 are full-book every cycle
+  (cheap: local file reads or a handful of bulk queries, not O(N) API calls).
 - If an MCP is unavailable, skip that source's validation — don't block the whole job.

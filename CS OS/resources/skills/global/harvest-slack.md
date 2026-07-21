@@ -1,7 +1,7 @@
 ---
 name: Harvest Slack
-version: 3.1
-last_updated: 2026-07-08
+version: 3.2
+last_updated: 2026-07-16
 category: sub-skill
 requires_mcp: [Slack]
 inputs:
@@ -9,7 +9,7 @@ inputs:
   - SLACK_USER_ID: "Your Slack user ID"
   - CSM_TIMEZONE: "IANA timezone"
   - LOOKBACK_HOURS: "default: 24"
-  - BATCH_SIZE: "Accounts scanned per tick, default: 15"
+  - ROTATION_BATCH_SIZE: "Non-priority accounts scanned per tick via stalest-first rotation, default: 15 — separate from and additive to the priority set, which is always scanned in full regardless of size"
 output: Structured signal list
 invoke:
   - Called by assistant during harvest phase
@@ -53,15 +53,17 @@ If the manifest has no Slack rows at all (new/thin account), fall back to search
 ## Coverage Rotation
 
 Full-book scanning (all ~47 accounts) in one tick is what caused the budget-exhaustion
-failure mode. Instead, each invocation covers one bounded batch and hands off to the next:
+failure mode. Instead, each invocation covers one bounded batch (on top of the always-run
+priority set — see "Priority Accounts" below) and hands off to the next:
 
 1. **Read the cursor:** `resources/slack-harvest-rotation-cursor.md`. It stores a single
    shared `last_batch_end_index` (a position in the priority order computed in step 2,
    not a fixed account list) plus `last_run` and `last_full_cycle_completed`.
-2. **Build the priority order:** all accounts from `Accounts/_MANIFEST.md`, sorted by
+2. **Build the priority order:** all **non-priority-set** accounts from `Accounts/_MANIFEST.md`
+   (i.e. excluding anything already scanned via the priority set this tick), sorted by
    their Slack sources' `Last Fetched` date, **stalest first**. Ties broken by ARR
    descending (bigger accounts get seen sooner when staleness is equal).
-3. **Take the batch:** the next `BATCH_SIZE` accounts (default 15) starting from
+3. **Take the batch:** the next `ROTATION_BATCH_SIZE` accounts (default 15) starting from
    `last_batch_end_index` in that priority order, wrapping around to the top if it runs
    past the end of the list.
 4. **Scan only that batch** using Steps 1-5 below.
@@ -69,11 +71,14 @@ failure mode. Instead, each invocation covers one bounded batch and hands off to
    the last account scanned, and `last_run` to now. If a full lap completed (index wrapped
    past the start), log that as a completed cycle.
 
-This guarantees every account gets scanned at least once roughly every
-`ceil(47 / BATCH_SIZE)` ticks (~4 ticks at the default batch size) instead of depending on
-whether the full book happened to fit under budget that day. If a single account's channels
-are unusually large, `BATCH_SIZE` can shrink for that tick — note the reduction in the
-output rather than silently truncating.
+`ROTATION_BATCH_SIZE` is a fixed, guaranteed allotment — it is never reduced by the size
+of that tick's priority set (see "Priority Accounts" below for why). This guarantees every
+non-priority account gets scanned at least once roughly every
+`ceil(non_priority_account_count / ROTATION_BATCH_SIZE)` ticks (~3 ticks at the default
+batch size for a book where ~12+ accounts are priority) instead of depending on whether
+the priority set happened to leave room that day. If a single account's channels are
+unusually large, `ROTATION_BATCH_SIZE` can shrink for that tick — note the reduction in
+the output rather than silently truncating.
 
 Exception: if the harvest is invoked explicitly as a full catch-up (not the regular hourly
 tick — e.g. "/harvest-slack --full" or a dedicated catch-up session), ignore the cursor and
@@ -90,7 +95,11 @@ de-duplicated priority set, checked fresh every tick:
 2. **Auto-priority by account state** — even without a manual pin, an account qualifies
    if its current `_context.md` shows: Renewal Risk = High/Critical, OR Contract End is
    lapsed with the renewal opp not Closed Won, OR ARR ≥ $100,000.
-3. **Auto-detected "hot" accounts** — tracked in the `Hot Accounts` table of
+3. **Janitor Job 8 flags** — any account janitor.md's "Unprocessed Activity Check" flagged
+   this morning as possibly-stale (real activity newer than the local context file) also
+   bypasses rotation for this cycle, so the gap gets closed the same day it's detected
+   instead of waiting for its rotation turn.
+4. **Auto-detected "hot" accounts** — tracked in the `Hot Accounts` table of
    `slack-harvest-rotation-cursor.md`. After Step 2b's deep read, if an account's message
    count in the lookback window exceeds `hot_message_threshold` (default 10), or the scan
    produced an `unreplied_mention`, mark/refresh it as hot with `hot_ttl_ticks` (default 3)
@@ -98,15 +107,26 @@ de-duplicated priority set, checked fresh every tick:
    drop the row at 0. This is what catches "this account just got noisy" even if nothing
    else about it looks high-priority on paper.
 
-**Every tick, in order:**
-1. Compute the priority set = manual pins ∪ auto-priority-by-state ∪ hot accounts.
-2. Scan the entire priority set first, via Steps 1-5 below — never subject to `BATCH_SIZE`
-   or the rotation index.
-3. Fill the remainder of `BATCH_SIZE` from the stalest-first rotation (Coverage Rotation
-   above), skipping any account already covered by the priority set.
-4. If the priority set alone exceeds `BATCH_SIZE`, scan all of them anyway and say so in
-   the output (`priority overrun: {N} accounts over budget`) — priority accounts are never
-   dropped to hit a budget number; the rotation batch just shrinks or goes to zero instead.
+**Every tick, in order — two separate, uncapped-vs-fixed budgets, never shared:**
+1. Compute the priority set = manual pins ∪ auto-priority-by-state ∪ Job 8 flags ∪ hot
+   accounts.
+2. Scan the entire priority set first, via Steps 1-5 below. **Uncapped, by design** — it
+   is never subject to `ROTATION_BATCH_SIZE` or the rotation index, no matter how large it
+   gets. A 46-account book routinely has 12+ simultaneously-priority accounts (high renewal
+   risk, lapsed, ARR≥$100K); a fixed cap here would mean silently dropping coverage on the
+   accounts that most need it.
+3. Independently, run the stalest-first rotation (Coverage Rotation above) for a **full**
+   `ROTATION_BATCH_SIZE` accounts, skipping any account already covered by the priority set.
+   This batch is additive to step 2, not carved out of the same pool — the priority set's
+   size never shrinks it.
+4. Total accounts scanned this tick = priority set size + `ROTATION_BATCH_SIZE`. If the
+   priority set is unusually large, say so in the output (`large priority set this cycle:
+   {N} accounts`) — this is informational only now, not a budget problem, since it no
+   longer costs the rotation batch anything. (Previously an oversized priority set forced
+   the rotation batch to shrink toward zero — e.g. 2026-07-15 and 2026-07-16, when a
+   17-19-account priority set consumed the entire `BATCH_SIZE=15` allotment and the
+   rotation batch didn't run either day. That failure mode is now fixed by giving each
+   budget its own line.)
 
 ## Steps
 
@@ -239,8 +259,8 @@ Extract all messages in the thread:
 ```markdown
 ## Slack Harvest — {date}
 
-**Priority accounts scanned:** {N} ({pin_count} pinned + {auto_count} auto-priority + {hot_count} hot) {— priority overrun: {N} accounts over budget, if applicable}
-**Rotation batch:** {N} of {total} accounts (index {start}-{end})
+**Priority accounts scanned:** {N} ({pin_count} pinned + {auto_count} auto-priority + {job8_count} Job 8 flags + {hot_count} hot) — uncapped {, large priority set this cycle: {N} accounts, if notably above average}
+**Rotation batch:** {N} of {non_priority_total} non-priority accounts (index {start}-{end}), separate from and additive to the priority set above
 **Skipped via cheap peek:** {N} sources (no new activity) | **Deep-read:** {N} sources | **Threads checked:** {N}
 **Scanned:** {N} messages | **Actionable:** {N} | **Noise:** {N}
 

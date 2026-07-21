@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-base44 (C0AMX07B1EF) | Active | 2026-07-02 |
-| Slack | channel | #ex-base44-mixpanel (C0ACXD77JLE) | Active | 2026-07-02 |
+| Slack | channel | #at-base44 (C0AMX07B1EF) | Active | 2026-07-16 |
+| Slack | channel | #ex-base44-mixpanel (C0ACXD77JLE) | Active | 2026-07-16 |
 | Slack | user | Tair Sarel Someh (U0A8S4905HS) | Inactive | 2026-07-02 (user not found) |
 | Slack | user | Hilik Gutman (U0AHVSBS2P2) | Inactive | 2026-07-02 |
 | Slack | user | Shem Pluber (U0AHZ5DLBEW) | Inactive | 2026-07-02 |

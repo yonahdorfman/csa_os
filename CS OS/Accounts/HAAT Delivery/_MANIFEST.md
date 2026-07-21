@@ -4,11 +4,11 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-haat (C0AU8KTSBJM) | Active | 2026-07-02 |
-| Slack | channel | #ext-haat-mixpanel (C09RATH7F09) | Active | 2026-07-02 |
+| Slack | channel | #at-haat (C0AU8KTSBJM) | Active | 2026-07-16 |
+| Slack | channel | #ext-haat-mixpanel (C09RATH7F09) | Active | 2026-07-16 |
 | Slack | user | Hassan Abu Dalo (U08N0G9UZ9U) | Active | 2026-07-02 |
 | Slack | user | Samer Halloun (U07SP7LTUDR) | Active | 2026-07-02 |
-| Slack | channel | #haat-mixpanel-support (C0B333SLL00) | Active | 2026-07-02 |
+| Slack | channel | #haat-mixpanel-support (C0B333SLL00) | Active | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001Nt00000M8nGbIAJ](https://mixpanel.lightning.force.com/lightning/r/Account/001Nt00000M8nGbIAJ/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1av_aSQFsOAIXjtQ_Wm4jtBgBRDToBARElL9fNz4Eh1E/edit?usp=drivesdk) | Active | — |

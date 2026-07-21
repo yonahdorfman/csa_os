@@ -4,14 +4,14 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-taboola (C01RG0SRYRK) | Active | 2026-07-02 |
-| Slack | channel | #mixpanel-taboola (C0382CUMS0P) | Active | 2026-07-02 |
-| Slack | dm | Shavit Ben-Itzhak + Gabriel Bruck + Yonah Dorfman (C09LH8B856Z) | Active | 2026-07-02 |
-| Slack | dm | Miki Ziso + Shavit Ben-Itzhak + Yonah Dorfman (C0B7ER0M1K7) | Active | 2026-07-02 |
+| Slack | channel | #at-taboola (C01RG0SRYRK) | Active | 2026-07-16 |
+| Slack | channel | #mixpanel-taboola (C0382CUMS0P) | Active | 2026-07-16 |
+| Slack | dm | Shavit Ben-Itzhak + Gabriel Bruck + Yonah Dorfman (C09LH8B856Z) | Inactive | 2026-07-16 |
+| Slack | dm | Miki Ziso + Shavit Ben-Itzhak + Yonah Dorfman (C0B7ER0M1K7) | Inactive | 2026-07-16 |
 | Slack | user | Gali Katz (U5A37QCBC) | Inactive | 2026-07-02 |
 | Slack | user | Jon Vandergriff (U79FXT6BY) | Inactive | 2026-07-02 |
 | Slack | user | Miki Ziso (UD8EY5WQY) | Inactive | 2026-07-02 |
-| Slack | channel | #mixpanel-taboola-news (C0833ANM317) | Active | 2026-07-02 |
+| Slack | channel | #mixpanel-taboola-news (C0833ANM317) | Inactive | 2026-07-16 |
 | Slack | user | Artem Stolov (unknown) | Active | — |
 | Slack | user | Aviv Sinai (D0B680WH65V) | Active | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |

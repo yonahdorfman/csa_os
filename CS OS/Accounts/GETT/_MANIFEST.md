@@ -4,10 +4,10 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-gett (CHRPCBU80) | Active | 2026-07-02 |
-| Slack | channel | #gett-mixpanel (C0255L5Q8DC) | Active | 2026-07-02 |
-| Slack | dm | Guy Cohen POM + Tal Huberman + Yonah Dorfman (C0ANKKEGX60) | Active | 2026-07-02 |
-| Slack | dm | Tal Huberman + Yonah Dorfman + Jordana Eshelby (C0B3MV7FMRA) | Active | 2026-07-02 |
+| Slack | channel | #at-gett (CHRPCBU80) | Active | 2026-07-16 |
+| Slack | channel | #gett-mixpanel (C0255L5Q8DC) | Active | 2026-07-16 |
+| Slack | dm | Guy Cohen POM + Tal Huberman + Yonah Dorfman (C0ANKKEGX60) | Active | 2026-07-16 |
+| Slack | dm | Tal Huberman + Yonah Dorfman + Jordana Eshelby (C0B3MV7FMRA) | Inactive | 2026-07-16 |
 | Slack | user | Idan Weiss (U0B02NZ568L) | Inactive | 2026-07-02 |
 | Slack | user | Nick Ogai (U0AC8GYBPH8) | Inactive | 2026-07-02 |
 | Slack | user | Tyler Roach (U09UA89RXGS) | Active | 2026-07-02 |

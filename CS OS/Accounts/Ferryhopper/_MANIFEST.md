@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-ferryhopper (C0ABKB1M9RP) | Active | 2026-07-02 |
-| Slack | channel | #ex-ferryhopper-mixpanel (C0ACU071JL9) | Active | 2026-07-02 |
+| Slack | channel | #at-ferryhopper (C0ABKB1M9RP) | Active | 2026-07-16 |
+| Slack | channel | #ex-ferryhopper-mixpanel (C0ACU071JL9) | Inactive | 2026-07-16 |
 | Slack | user | Panagiotis Sarafis (D0AJN6W3JBA) | Active | 2026-07-02 |
 | Slack | user | Thodoris Paraskevopoulos (D0AKHBNUES1) | Active | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |

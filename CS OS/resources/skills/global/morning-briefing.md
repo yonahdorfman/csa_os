@@ -1,7 +1,7 @@
 ---
 name: Morning Briefing
-version: 3.0
-last_updated: 2026-04-27
+version: 3.1
+last_updated: 2026-07-16
 category: cadence
 inputs:
   - CSM_NAME, CSM_TIMEZONE
@@ -34,6 +34,10 @@ ${total_arr} · {N} accounts · {N} renewals ≤90d · {N} open todos · {alerts
 • {Account} — {specific situation}. {specific action}.
 • {Account} — {specific situation}. {specific action}.
 • {Account} — {specific situation}. {specific action}.
+{...up to 10 total}
+
+👀 Also Watching
+{Account}, {Account}, {Account} — {one-line shared reason, e.g. "high renewal risk, didn't make today's cut"}
 
 📅 Today
 {meetings or "No meetings scheduled — open {day}. Use for: {suggested tasks}."}
@@ -43,6 +47,7 @@ ${total_arr} · {N} accounts · {N} renewals ≤90d · {N} open todos · {alerts
 2. {Account} — {specific task}
 3. {Person} (Slack) — {what you need from/to tell them}
 4. {Account} — {specific task}
+{...every due/blocking item, no cap — do not stop at a round number}
 
 {if any tools are offline:}
 ⚠️ {Tool} offline — {workaround}.
@@ -90,17 +95,34 @@ Read today's calendar for meetings.
 
 ### 2. Triage
 
-Sort everything into three buckets:
+Sort everything into four buckets:
 
-**First Things First** (3-5 items max): Things that are ON FIRE or will be
+**First Things First** (3-10 items max): Things that are ON FIRE or will be
 if you don't act today. Renewals <30d, overdue deliverables to customers,
 critical data issues, escalations.
+
+**Also Watching** (names only, no full action lines): Any account carrying a
+CRITICAL health flag, high renewal risk, or a genuinely urgent signal (e.g.
+from the hygiene report's "Critical health / High renewal risk" list) that
+didn't make the First Things First cap. The point is that nothing with a real
+risk flag disappears silently just because the top list filled up — list the
+account names with a shared one-line reason, not a full write-up per account.
+If every flagged account fit in First Things First, omit this line entirely.
+
+Also include here any account janitor Job 8 flagged as "possibly stale" this
+morning (real activity newer than the local context file) that is *still*
+unresolved after today's harvest+compress ran — i.e. harvest ran but didn't
+find/patch anything for it. That's worth a manual look, since it means the
+automated catch-up didn't close the gap Job 8 detected.
 
 **Today** (calendar): What's on the schedule. If nothing, suggest how to
 use the time based on what's overdue.
 
 **Needs Action** (numbered list): Specific tasks for today/this week.
 Not a full open-items dump — just the ones that are actually due or blocking.
+**No cap.** List every item that is actually due or blocking, even if that's
+more than 5 — do not truncate for length or aesthetics. If the list runs
+long, that's a signal about the day, not a reason to hide items.
 
 ### 3. Write the Briefing
 
@@ -142,7 +164,7 @@ This is the admin/debug feed AND telemetry feed combined.
 ```
 ## {HH:MM} — briefing:generated
 - **Type:** briefing:generated
-- **Detail:** {daily|weekly} — {N} first-things, {N} action items, {N} meetings
+- **Detail:** {daily|weekly} — {N} first-things, {N} also-watching, {N} action items, {N} meetings
 - **Dispatched:** {DISPATCH_TYPE} to {DISPATCH_TARGET}
 ```
 

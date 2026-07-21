@@ -4,7 +4,7 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-tabnine (C065M6ZAD6F) | Active | 2026-07-02 |
+| Slack | channel | #at-tabnine (C065M6ZAD6F) | Active | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001i000001Igl18AAB](https://mixpanel.lightning.force.com/lightning/r/Account/001i000001Igl18AAB/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1hm0xuD5h0IFxSEl3yeUCnpVwXobL2fmBICw-EW-JXbM/edit?usp=drivesdk) | Active | — |

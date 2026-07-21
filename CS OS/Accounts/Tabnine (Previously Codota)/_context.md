@@ -1,9 +1,9 @@
 # Tabnine (Previously Codota)
 
-**Last Updated:** 2026-07-06
-**Updated By:** CSA OS (morning-cycle BQ refresh)
-**Why Updated:** Refreshed active risks/open items: cancellation notice (filed Jun 25) still active, enterprise offer due to Ory today (2026-07-06).
-**Previous:** 2026-06-03 — BQ seed.
+**Last Updated:** 2026-07-19
+**Updated By:** CSA OS (weekly morning-cycle — Gong + Slack harvest)
+**Why Updated:** New Jul 8 Gong call: Ofer presented written proposal (~30M events/mo at $3,000/mo, 2-year term, flexible payment). Ory open to continuing but hesitant on 2yr term; requested written proposal for legal/internal review — a de-escalation from the active cancellation notice. Query volume rebounding (5,242 this week vs ~4,673 prior).
+**Previous:** 2026-07-06 — Refreshed active risks/open items: cancellation notice (filed Jun 25) still active, enterprise offer due to Ory today (2026-07-06).
 
 ---
 ## Sales Intelligence (BQ refresh — 2026-07-06)
@@ -75,6 +75,7 @@ The FY27 renewal ($93,073 ARR) was Closed Won in early May 2026, and a new FY28 
 
 ## Active Risks
 
+- **[ACTIVE]** [2026-07-19] Partial churn flagged — account reducing contact size. Evidence of account contraction despite renewal negotiations.
 - **[ACTIVE]** [2026-06-03] Customer explicitly stated: 'I'm not renewing the contract in the current conditions.'
 - **[ACTIVE]** [2026-06-03] Severe discrepancy between contracted MTUs (3 million) and actual usage (<300,000).
 - **[ACTIVE]** [2026-06-03] Customer relies heavily on Looker for BI and may consolidate if Mixpanel is deemed too expensive.
@@ -103,6 +104,17 @@ The FY27 renewal ($93,073 ARR) was Closed Won in early May 2026, and a new FY28 
 ---
 
 ## Recent History
+
+**2026-07-20 | EoD summary [via Slack DM]**
+- Included in morning-cycle harvest. [via DM monitor]
+
+**2026-07-19 | DM note [via Slack DM]**
+- Tabnine reducing contact size — partial churn signal despite ongoing renewal negotiations.
+
+**2026-07-08 | Gong — Renewal Negotiation (22 min) [Ofer Polivoda + Ori Yassur (legal/finance)]**
+- Ofer presented new proposal: ~30M events/mo at $3,000/mo, 2-year term, flexible payment.
+- Ori open to continuing but hesitant to commit to 2 years — asked for proposal in writing for legal/internal review. Notable shift from prior active cancellation threat.
+- [Gong](https://us-16307.app.gong.io/call?id=2025947060501819910)
 
 **2026-06-14 | DM note [via Slack DM]**
 - Account is out of Yonah's hands and now in billing. Ownership/responsibility transferred to billing team.

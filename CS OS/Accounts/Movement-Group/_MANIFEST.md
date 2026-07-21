@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-movement-group (C0B37LCA493) | Active | 2026-07-02 |
-| Slack | channel | #at-movement-group-mixpanel (C083PNT0XQC) | Active | 2026-07-02 |
+| Slack | channel | #at-movement-group (C0B37LCA493) | Active | 2026-07-16 |
+| Slack | channel | #at-movement-group-mixpanel (C083PNT0XQC) | Inactive | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001Nt00000JYtdSIAT](https://mixpanel.lightning.force.com/lightning/r/Account/001Nt00000JYtdSIAT/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1Ki36-ot3GO_4YQkucMTek7qC_Rh7IaWhTHRLRmSpBZo/edit?usp=drivesdk) | Active | — |

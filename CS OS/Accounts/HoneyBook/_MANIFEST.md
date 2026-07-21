@@ -4,10 +4,10 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-honeybook (C0ANJ1YUVHC) | Active | 2026-07-02 |
-| Slack | channel | #ext-honeybook-mixpanel (C08GE17ET0Q) | Active | 2026-07-02 |
-| Slack | dm | Amy Vogel + Tal Huberman + Yonah Dorfman (C0AVB5LM9DG) | Active | 2026-07-02 |
-| Slack | dm | Nimrod Milo + Asaf Ziv + Ira Lisitsyna + Tal Huberman + Yonah Dorfman (C0BB756S014) | Active | 2026-07-02 |
+| Slack | channel | #at-honeybook (C0ANJ1YUVHC) | Active | 2026-07-16 |
+| Slack | channel | #ext-honeybook-mixpanel (C08GE17ET0Q) | Active | 2026-07-16 |
+| Slack | dm | Amy Vogel + Tal Huberman + Yonah Dorfman (C0AVB5LM9DG) | Active | 2026-07-16 |
+| Slack | dm | Nimrod Milo + Asaf Ziv + Ira Lisitsyna + Tal Huberman + Yonah Dorfman (C0BB756S014) | Active | 2026-07-16 |
 | Slack | user | Inbar Kipnis (U09DH1M7SG7) | Inactive | 2026-07-02 |
 | Slack | user | Bar Pakula (U08DF94T99B) | Inactive | 2026-07-02 |
 | Slack | user | Dana Erez (U0831PQDCN9) | Inactive | 2026-07-02 |

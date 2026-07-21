@@ -4,9 +4,9 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-paybox (C0162UCMEBX) | Active | 2026-07-02 |
-| Slack | channel | #mixpanel202 (C06MFANDNVC) | Active | 2026-07-02 |
-| Slack | channel | #mixpanel-paybox-qa (C089K4SLHA7) | Active | 2026-07-02 |
+| Slack | channel | #at-paybox (C0162UCMEBX) | Active | 2026-07-16 |
+| Slack | channel | #mixpanel202 (C06MFANDNVC) | Active | 2026-07-16 |
+| Slack | channel | #mixpanel-paybox-qa (C089K4SLHA7) | Inactive | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013100001bPZ1KAAW](https://mixpanel.lightning.force.com/lightning/r/Account/0013100001bPZ1KAAW/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1P6RGiUFvtui7MzvyvKbpu0FhMg6qB49e_9pnTlWmmzE/edit?usp=drivesdk) | Active | — |

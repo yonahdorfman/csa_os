@@ -4,14 +4,14 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-pango (C04N1LENFQW) | Active | 2026-07-02 |
-| Slack | channel | #ext-pango-mixpanel (C09MVQ3FMFT) | Active | 2026-07-02 |
+| Slack | channel | #at-pango (C04N1LENFQW) | Active | 2026-07-16 |
+| Slack | channel | #ext-pango-mixpanel (C09MVQ3FMFT) | Inactive | 2026-07-16 |
 | Slack | user | Tal Mariano (U09NEKKFQ3Z) | Inactive | 2026-07-02 |
 | Slack | user | Shai Aviram (U09LQMG402Y) | Active | 2026-07-02 |
-| Slack | channel | #mixpanel-pango (C07K8AS1FKR) | Active | 2026-07-02 |
-| Slack | user | yardeny@pango.co.il (unknown) | Active | — |
+| Slack | channel | #mixpanel-pango (C07K8AS1FKR) | Inactive | 2026-07-16 |
+| Slack | user | yardeny@pango.co.il (unknown) | Active | — (not resolvable via Slack search) |
 | Slack | user | Keren Inbar (D0AL7SKMTK9) | Active | 2026-07-02 |
-| Slack | dm | Shai Aviram + Dolev Raz + Moshe Israel + Alex Gertsovich + David Braunstein + Rotem Reginiano + Lior Gal + Yonah Dorfman (C0B5ZRPTDGB) | Active | 2026-07-02 |
+| Slack | dm | Shai Aviram + Dolev Raz + Moshe Israel + Alex Gertsovich + David Braunstein + Rotem Reginiano + Lior Gal + Yonah Dorfman (C0B5ZRPTDGB) | Inactive | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002KpDW2AAN](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002KpDW2AAN/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1JhNmzm6rs_3ILsFw2Kr5e9alPa7-88Th-RN9eZYoQn0/edit?usp=drivesdk) | Active | — |

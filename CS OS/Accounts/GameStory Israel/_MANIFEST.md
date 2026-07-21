@@ -4,11 +4,11 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-superplay (C0130UR3BKK) | Active | 2026-07-02 |
-| Slack | channel | #ext-gamestory-mixpanel (C08EHE383DE) | Active | 2026-07-02 |
+| Slack | channel | #at-superplay (C0130UR3BKK) | Active | 2026-07-16 |
+| Slack | channel | #ext-gamestory-mixpanel (C08EHE383DE) | Inactive | 2026-07-16 |
 | Slack | user | Sivan Tytiun (U05G4Q1CMUG) | Inactive | 2026-07-02 |
 | Slack | user | Amir Dahari (U03EQGDG7EH) | Inactive | 2026-07-02 |
-| Slack | channel | #mixpanel-superplay-dpp-query-small-forum (C088YKH7Z19) | Active | 2026-07-02 |
+| Slack | channel | #mixpanel-superplay-dpp-query-small-forum (C088YKH7Z19) | Inactive | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002IJoslAAD](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002IJoslAAD/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1pxrA2EgR_AVxSpkrzZkzoWI19u8zsB1yRlieMUMussM/edit?usp=drivesdk) | Active | — |

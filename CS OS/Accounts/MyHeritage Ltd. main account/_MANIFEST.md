@@ -4,9 +4,9 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-myheritage (C05GSGG8K6H) | Active | 2026-07-02 |
-| Slack | channel | #mixpanel-myheritage (C05EGFB8S3W) | Active | 2026-07-02 |
-| Slack | dm | Shavit Ben-Itzhak + Itay Sobol + Yonah Dorfman (C0B3BQYTR5Z) | Active | 2026-07-02 |
+| Slack | channel | #at-myheritage (C05GSGG8K6H) | Active | 2026-07-16 |
+| Slack | channel | #mixpanel-myheritage (C05EGFB8S3W) | Active | 2026-07-16 |
+| Slack | dm | Shavit Ben-Itzhak + Itay Sobol + Yonah Dorfman (C0B3BQYTR5Z) | Active | 2026-07-16 |
 | Slack | user | Itay Reznik (U0A262B3REY) | Active | 2026-07-02 |
 | Slack | user | Itay Sobol (U07TC01T1C0) | Active | 2026-07-02 |
 | Slack | user | Yael Naor (D0B30S1V3SM) | Active | 2026-07-02 |

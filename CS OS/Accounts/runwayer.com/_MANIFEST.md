@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-runwayer (C0B3CTGN94H) | Active | 2026-07-02 |
-| Slack | channel | #ext-mixpanel-runwayer (C09NBBZP5L3) | Active | 2026-07-02 |
+| Slack | channel | #at-runwayer (C0B3CTGN94H) | Active | 2026-07-16 |
+| Slack | channel | #ext-mixpanel-runwayer (C09NBBZP5L3) | Inactive | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001Nt000003IopZIAS](https://mixpanel.lightning.force.com/lightning/r/Account/001Nt000003IopZIAS/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1OlWNkjB2X_eVrxrwJlBH3ndL86fwtfa6Dqw0gmUdOMg/edit?usp=drivesdk) | Active | — |

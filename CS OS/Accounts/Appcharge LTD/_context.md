@@ -49,6 +49,13 @@ As of 2026-05-31, Appcharge LTD's FY27 Renewal ($155,900) was successfully Close
 
 ---
 
+## Recent History
+
+**2026-07-21 | DM note [via Slack DM]**
+- Great meeting with CISO call. Tal was extremely prepared for the meeting and covered everything the customer wanted — successful engagement.
+
+---
+
 ## Active Risks
 
 - **[ACTIVE]** [2026-06-03] Pylon Issue #927 SLA breach

@@ -4,14 +4,14 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-autods (C06EA2BRJB0) | Active | 2026-07-02 |
-| Slack | channel | #ext-autods-mixpanel (C09QTS1EBDK) | Active | 2026-07-02 |
-| Slack | dm | Nave Lahav + Tal Huberman + Yonah Dorfman + Itamar Zaied (C0ASWJ5H0TB) | Active | 2026-07-02 |
+| Slack | channel | #at-autods (C06EA2BRJB0) | Active | 2026-07-16 |
+| Slack | channel | #ext-autods-mixpanel (C09QTS1EBDK) | Inactive | 2026-07-16 |
+| Slack | dm | Nave Lahav + Tal Huberman + Yonah Dorfman + Itamar Zaied (C0ASWJ5H0TB) | Active | 2026-07-16 |
 | Slack | user | Yuval Wilf (U04114CV01Y) | Active | 2026-07-02 |
 | Slack | user | Tomer Rubinstein (U08LVL5QSV6) | Active | 2026-07-02 |
 | Slack | user | Itamar Zaied (U09L8M3RJV6) | Inactive | 2026-07-02 |
 | Slack | user | Nave Lahav (U024FER9R8F) | Active | 2026-07-02 |
-| Slack | channel | #mixpanel-autods (C06LLU60DL7) | Active | 2026-07-02 |
+| Slack | channel | #mixpanel-autods (C06LLU60DL7) | Inactive | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002JIovTAAT](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002JIovTAAT/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1Y9hWkH2TS5rdhA4Zxix2AC9u6kdtg19DODD0_lUE0JE/edit?usp=drivesdk) | Active | — |

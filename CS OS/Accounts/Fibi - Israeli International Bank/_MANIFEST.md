@@ -4,7 +4,7 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-fibi-bank (C05BS0A63DL) | Active | 2026-07-02 |
+| Slack | channel | #at-fibi-bank (C05BS0A63DL) | Active | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002L2OJKAA3](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002L2OJKAA3/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1Jm1yV1_Ad-Y3ct8cKFdxrvJu4hRKLeg0XOHV3qvhXE4/edit?usp=drivesdk) | Active | — |

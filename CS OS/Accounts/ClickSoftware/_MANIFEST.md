@@ -4,7 +4,7 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-clicksoftware (CHV2LPPQX) | Active | 2026-07-02 |
+| Slack | channel | #at-clicksoftware (CHV2LPPQX) | Active | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001i000001QGQONAA5](https://mixpanel.lightning.force.com/lightning/r/Account/001i000001QGQONAA5/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1dqLCvRgt86SzVvDNNWeH9BNenprLavtPd9_BQv3gn8w/edit?usp=drivesdk) | Active | — |

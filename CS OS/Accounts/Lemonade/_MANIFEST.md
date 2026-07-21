@@ -4,11 +4,11 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-lemonade (CHE9ZMQM8) | Active | 2026-07-02 |
-| Slack | channel | #mixpanel-lemonade-shared (C06CFJ53X8A) | Active | 2026-07-02 |
-| Slack | dm | Dor Gorel + Tal Huberman + Yonah Dorfman (C0AD9QLU5U1) | Active | 2026-07-02 |
-| Slack | dm | Leora Gildenblat + Tal Huberman + Yonah Dorfman + Omer Gerson (C0AU0C26C90) | Active | 2026-07-02 |
-| Slack | dm | Leora Gildenblat + Tal Huberman + Yonah Dorfman + Omer Gerson + Ofir Ventura (C0BFCDSP9QS) | Active | 2026-07-02 |
+| Slack | channel | #at-lemonade (CHE9ZMQM8) | Active | 2026-07-16 |
+| Slack | channel | #mixpanel-lemonade-shared (C06CFJ53X8A) | Active | 2026-07-16 |
+| Slack | dm | Dor Gorel + Tal Huberman + Yonah Dorfman (C0AD9QLU5U1) | Inactive | 2026-07-16 |
+| Slack | dm | Leora Gildenblat + Tal Huberman + Yonah Dorfman + Omer Gerson (C0AU0C26C90) | Active | 2026-07-16 |
+| Slack | dm | Leora Gildenblat + Tal Huberman + Yonah Dorfman + Omer Gerson + Ofir Ventura (C0BFCDSP9QS) | Active | 2026-07-16 |
 | Slack | user | Nir Yogev (USNA1GLQ6) | Inactive | 2026-07-02 |
 | Slack | user | Nadav Bar Uryan (U04BTATV3T5) | Active | 2026-07-02 |
 | Slack | user | Yuli Ballos Shefi (U03974ZGK7T) | Inactive | 2026-07-02 |

@@ -4,9 +4,9 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-nexus-mods (C09GA0XQ32B) | Active | 2026-07-02 |
-| Slack | channel | #ext-mixpanel-nexusmods (C09D3JD5VK2) | Active | 2026-07-02 |
-| Slack | dm | Gabriel Bruck + Gidi Eigenstein + Yonah Dorfman (C09HNK8K431) | Active | 2026-07-02 |
+| Slack | channel | #at-nexus-mods (C09GA0XQ32B) | Active | 2026-07-16 |
+| Slack | channel | #ext-mixpanel-nexusmods (C09D3JD5VK2) | Active | 2026-07-16 |
+| Slack | dm | Gabriel Bruck + Gidi Eigenstein + Yonah Dorfman (C09HNK8K431) | Inactive | 2026-07-16 |
 | Slack | user | Marinus Elgaard (U08USJLJP0T) | Inactive | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0010Z000029U8qHQAS](https://mixpanel.lightning.force.com/lightning/r/Account/0010Z000029U8qHQAS/view) | Linked | — |

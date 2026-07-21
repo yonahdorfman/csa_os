@@ -4,9 +4,9 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-appcharge (C0ANF4HJTLN) | Active | 2026-07-02 |
-| Slack | channel | #ext-appcharge-mixpanel (C0829RV43HV) | Active | 2026-07-02 |
-| Slack | dm | Tal Huberman + Yonah Dorfman + Ayten Bar (C0B0YLS4LGY) | Active | 2026-07-02 |
+| Slack | channel | #at-appcharge (C0ANF4HJTLN) | Active | 2026-07-16 |
+| Slack | channel | #ext-appcharge-mixpanel (C0829RV43HV) | Active | 2026-07-16 |
+| Slack | dm | Tal Huberman + Yonah Dorfman + Ayten Bar (C0B0YLS4LGY) | Inactive | 2026-07-16 |
 | Slack | user | Ravid Pollak (U06A2T14LG7) | Inactive | 2026-07-02 |
 | Slack | user | Amit Porat (U068P49KKDG) | Inactive | 2026-07-02 |
 | Slack | user | Nati Levy (U09E66JEPFE) | Inactive | 2026-07-02 |

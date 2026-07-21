@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-loora (C0APBF1UBME) | Active | 2026-07-02 |
-| Slack | channel | #ext-loora-mixpanel (C08HKTESAJK) | Active | 2026-07-02 |
+| Slack | channel | #at-loora (C0APBF1UBME) | Active | 2026-07-16 |
+| Slack | channel | #ext-loora-mixpanel (C08HKTESAJK) | Active | 2026-07-16 |
 | Slack | user | Yonti (U01HEUVNKSP) | Inactive | 2026-07-02 |
 | Slack | user | Amit Ashckenazi (U064X4AGR61) | Inactive | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |

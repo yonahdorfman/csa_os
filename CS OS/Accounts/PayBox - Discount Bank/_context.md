@@ -1,9 +1,9 @@
 # PayBox - Discount Bank
 
-**Last Updated:** 2026-07-07
-**Updated By:** CSA OS (Gmail catch-up — 14-day sweep, requested by Yonah)
-**Why Updated:** New contact Yamin Elmakis (Head of Mobile); EU data loss follow-up gone quiet 12+ days; new AM (Tal) introduced to Sarit.
-**Previous:** 2026-07-06 — morning-cycle BQ refresh.
+**Last Updated:** 2026-07-19
+**Updated By:** CSA OS (weekly morning-cycle — Gong + Slack harvest)
+**Why Updated:** Jul 7 Gong call (Tal Huberman): AI Agent adoption, Root Cause Analysis, MCP setup to reduce anonymous/API query volume, tied to $128,299 FY28 renewal (still Stage 1: Pipeline). EU data-residency follow-up to Yamin Elmakis still unanswered. $256K downgrade negotiation (Stage 4) and 8 open SR action items from May 13 demo remain stalled — no movement in 5+ weeks.
+**Previous:** 2026-07-07 — Gmail catch-up: new contact Yamin Elmakis (Head of Mobile); EU data loss follow-up gone quiet 12+ days; new AM (Tal) introduced to Sarit.
 
 ---
 ## Sales Intelligence (BQ refresh — 2026-07-06)
@@ -106,6 +106,14 @@ As of 2026-05-31, PayBox has an active pipeline deal for their FY28 Renewal at $
 ---
 
 ## Recent History
+
+**2026-07-20 | EoD summary [via Slack DM]**
+- Focus tomorrow: PayBox renewal conversation ($256K downgrade + EU migration, due Jul 31). [via DM monitor]
+
+**2026-07-07 | Gong — AI Agent / RCA / MCP session (27 min) [Tal Huberman]**
+- Covered AI Agent adoption, Root Cause Analysis, and MCP setup aimed at reducing anonymous/API query volume (82% of total queries are unattributed).
+- Tied to FY28 renewal ($128,299, Stage 1: Pipeline).
+- [Gong](https://us-16307.app.gong.io/call?id=3011105467434256635)
 
 **2026-06-09 | DM note [via Slack DM]**
 - Messaged Sarit at PayBox to see if she is coming to the VIP event.

@@ -4,7 +4,7 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-libertex (CHE6XPFAP) | Active | 2026-07-02 |
+| Slack | channel | #at-libertex (CHE6XPFAP) | Active | 2026-07-16 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001i000001NPrPFAA1](https://mixpanel.lightning.force.com/lightning/r/Account/001i000001NPrPFAA1/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1EdpRBpsWB2rNN96ygCbz1UREPXnTVssjKOFwLQkW2CU/edit?usp=drivesdk) | Active | — |

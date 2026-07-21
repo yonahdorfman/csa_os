@@ -4,11 +4,11 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-elementor (C079QRB9WDT) | Active | 2026-07-02 |
-| Slack | channel | #mixpanel-elementor (C06RZTVCR38) | Active | 2026-07-02 |
-| Slack | dm | Danit Shalom + Yotam Elmalem + Netanel Baba + Yonah Dorfman (C0APK8JAZ0A) | Active | 2026-07-02 |
-| Slack | dm | Netanel Avraham + Ariel Kissos + Yonah Dorfman (C09S7UEL21M) | Active | 2026-07-02 |
-| Slack | dm | Avihay Kain + Sagi Eldar + Shavit Ben-Itzhak + Yonah Dorfman + Omer Elimelech (C0A0VTPM3BN) | Active | 2026-07-02 |
+| Slack | channel | #at-elementor (C079QRB9WDT) | Active | 2026-07-16 |
+| Slack | channel | #mixpanel-elementor (C06RZTVCR38) | Active | 2026-07-16 |
+| Slack | dm | Danit Shalom + Yotam Elmalem + Netanel Baba + Yonah Dorfman (C0APK8JAZ0A) | Inactive | 2026-07-16 |
+| Slack | dm | Netanel Avraham + Ariel Kissos + Yonah Dorfman (C09S7UEL21M) | Inactive | 2026-07-16 |
+| Slack | dm | Avihay Kain + Sagi Eldar + Shavit Ben-Itzhak + Yonah Dorfman + Omer Elimelech (C0A0VTPM3BN) | Inactive | 2026-07-16 |
 | Slack | user | Moran Chaimovitz (U031P87NVB9) | Inactive | 2026-07-02 (user not found) |
 | Slack | user | Tehila Adika (U06BTGDNE5R) | Active | 2026-07-02 |
 | Slack | user | Danit Shalom (U079EKYJ0RG) | Inactive | 2026-07-02 |

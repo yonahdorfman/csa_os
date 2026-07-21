@@ -11,14 +11,14 @@
 
 **Active Risks:**
 - EU data-residency deadline missed — MyStories project still sending ~1.26M events to the US endpoint.
-- Funnel/cohort percentage discrepancy open 55+ days without resolution.
+- ~~Funnel/cohort percentage discrepancy open 55+ days without resolution.~~ RESOLVED 2026-07-16 per DM note.
 - Renewal 25 days away, no formal motion advancing.
 - Legal blockers preventing Session Replay adoption.
 
 **Open Items:**
 - [ ] Escalate and resolve EU endpoint issue for MyStories project — Yonah Dorfman — due 2026-07-10 (In Progress)
 - [ ] Provide customer examples and legal reassurances for Session Replay — Shavit Ben-Itzhak — due 2026-07-10
-- [ ] Resolve 55+ day open funnel/cohort discrepancy with Itay Reznik — Yonah Dorfman — due 2026-07-12
+- [x] Resolve 55+ day open funnel/cohort discrepancy with Itay Reznik — Yonah Dorfman — due 2026-07-12 (RESOLVED 2026-07-16 via DM note)
 - [ ] Formally open and advance $110K renewal motion — Shavit Ben-Itzhak — due 2026-07-15 (In Progress)
 
 Source: BQ (sales_intelligence.account_plans_current), morning-cycle harvest 2026-07-06.
@@ -84,7 +84,7 @@ As of 2026-05-31, MyHeritage has an active FY 27 Renewal in Pipeline for $110,00
 - [ ] **[DUE 2026-06-30]** Advance Metric Trees upsell ($10K) from Stage 2: Solution (Owner: Ofer Polivoda) — in progress
 - [ ] **[DUE 2026-06-15]** Schedule next touchpoint (Owner: Gabriel Bruck) — pending
 - [ ] **[DUE 2026-06-30]** Review and clean up the event lexicon in Mixpanel (Owner: Room-C-OY) — pending
-- [ ] **[DUE 2026-06-11]** Confirm with Itay Reznik that the May 10 funnel discrepancy (with/without exclude showing inverted %) was resolved — Yonah replied May 10 suggesting a UI display lag/refresh, but no customer confirmation received (Owner: Yonah Dorfman)
+- [x] **[DUE 2026-06-11]** Confirm with Itay Reznik that the May 10 funnel discrepancy (with/without exclude showing inverted %) was resolved — Yonah replied May 10 suggesting a UI display lag/refresh, but no customer confirmation received (Owner: Yonah Dorfman) — **RESOLVED 2026-07-16** per DM note
 - [ ] **[OVERDUE — deadline passed 2026-07-01]** EU data residency: *MyStories* project still sending ~1.26M events/month to Mixpanel's US endpoint. Flagged Jun 21 in `#mixpanel-myheritage`, asked who owns the integration — no reply. (Owner: Yonah Dorfman) — needs urgent follow-up
 
 
@@ -101,6 +101,12 @@ As of 2026-05-31, MyHeritage has an active FY 27 Renewal in Pipeline for $110,00
 ---
 
 ## Recent History
+
+**2026-07-19 | DM note [via Slack DM]**
+- MyHeritage has closed a new contract and will start August 1.
+
+**2026-07-16 | DM note [via Slack DM]**
+- Funnel discrepancy is closed. Resolves the 55+ day open item confirming with Itay Reznik that the May 10 funnel/cohort % discrepancy was fixed.
 
 **2026-07-06 | DM note [via Slack DM]**
 - MyHeritage moved to the EU endpoint; will take some time for all app users to upgrade. (Progress signal on the overdue EU data-residency open item — not yet confirmed fully resolved.)

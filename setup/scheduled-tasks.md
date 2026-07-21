@@ -13,7 +13,7 @@ If you need to change behavior, patch the skill file — not the task.
 ## Task 1: CSA OS Orchestrator
 
 **Name:** CSA OS Orchestrator
-**Repeats:** Hourly during work hours (7am–6pm weekdays)
+**Repeats:** Hourly during work hours (Sun–Thu, 9am–6pm GMT+3 — see `resources/cadence.md`)
 **Folder:** {your CSOS folder path}
 
 ### Instructions (paste this):
@@ -53,7 +53,7 @@ source of truth. If a Notion write fails, do not write locally.
 ## Task 2: Slack DM Monitor
 
 **Name:** Slack DM Monitor
-**Repeats:** Every 30 minutes during work hours
+**Repeats:** Every hour during work hours (Sun–Thu, 9am–6pm GMT+3 — see `resources/cadence.md`)
 **Folder:** {your CSOS folder path}
 
 ### Instructions (paste this):

@@ -4,10 +4,10 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-whalo (C0ANAA66NLB) | Active | 2026-07-02 |
-| Slack | channel | #ext-whalo-mixpanel (C0B7AA0PGQY) | Active | 2026-07-02 |
-| Slack | user | Alon Lev (D0BAE63RHAL) | Active | 2026-06-03 |
-| Slack | user | Yaniv Lior (D0B9MNGJA9F) | Active | 2026-06-03 |
+| Slack | channel | #at-whalo (C0ANAA66NLB) | Active | 2026-07-16 |
+| Slack | channel | #ext-whalo-mixpanel (C0B7AA0PGQY) | Active | 2026-07-16 |
+| Slack | user | Alon Lev (D0BAE63RHAL) | Inactive | 2026-07-16 |
+| Slack | user | Yaniv Lior (D0B9MNGJA9F) | Inactive | 2026-07-16 |
 | Slack | user | Yaniv (unknown) | Active | — |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002EAizuAAD](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002EAizuAAD/view) | Linked | — |
