@@ -4,9 +4,9 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-kape (C03L4M7KCK0) | Active | 2026-07-16 |
-| Slack | channel | #kape-mixpael (C03L1UKL6EB) | Active | 2026-07-16 |
-| Slack | user | Roman Fominih (U06RKHPM7FY) | Active | 2026-07-02 |
+| Slack | channel | #at-kape (C03L4M7KCK0) | Active | 2026-07-21 |
+| Slack | channel | #kape-mixpael (C03L1UKL6EB) | Active | 2026-07-21 |
+| Slack | user | Roman Fominih (U06RKHPM7FY) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0010Z00001vKIolQAG](https://mixpanel.lightning.force.com/lightning/r/Account/0010Z00001vKIolQAG/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1Py7aZGyWWe-1A19OPSxq0WzWAkhjNAKHDx49TYvn2DQ/edit?usp=drivesdk) | Active | — |

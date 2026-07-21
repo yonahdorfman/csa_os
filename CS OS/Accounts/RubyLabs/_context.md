@@ -95,6 +95,13 @@ As of 2026-05-31, RubyLabs is a highly engaged, top-tier account with exceptiona
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up — new support ticket + two implementation-issue alerts still need owners**
+- New Pylon issue #10505 ("Timezone handling for user event timestamps") received new customer messages Jul 18–19 — needs triage.
+- Two Mixpanel implementation-issue alerts fired this month remain unassigned: "AI" project (Jul 10) and "JobAssist" project (Jul 7).
+- Also flagged in #mixpanel-rubylabs this week: event-ingestion drop reported Jul 11 (~7:30am BST, resolved same day per thread), and a UI bug (Jul 10) with cut-off dropdowns blocking chart-type selection (4 replies, still open as of Jul 11).
+- Flagship-level usage continues (271K+ queries, 130+ users, 11,233 MCP calls this week) — no churn signal, purely an operational-follow-up gap.
+- myIQ implementation issue and EU data-residency confirmation remain open carryovers from prior weeks.
+
 **2026-07-02 | External channel scan — EU data residency deadline missed (largest exposure in book) + MCP engagement signal**
 - Jun 21: Yonah flagged *Hint* (~263M events) and *getQR* (~14M) plus smaller projects still routing to US endpoint before Jul 1 — no reply visible, deadline now passed.
 - Jun 28: Yonah asked the channel how the team uses Mixpanel's MCP/API day-to-day — no reply yet, but ties into the Jul 1 Weekly Pulse showing 38,144 MCP tool calls in 90 days from 15-27 people/week — genuinely agentic usage, worth a dedicated follow-up call given the AI/MCP engagement is unusually deep for this account.

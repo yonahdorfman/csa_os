@@ -4,9 +4,9 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-nanit (C0AN1NR5AMV) | Active | 2026-07-16 |
-| Slack | channel | #ext-nanit-mixpanel (C08DLA6J25U) | Active | 2026-07-16 |
-| Slack | user | Sharona Lvovsky (U09V41Q8UB0) | Inactive | 2026-07-02 (user not found) |
+| Slack | channel | #at-nanit (C0AN1NR5AMV) | Active | 2026-07-21 |
+| Slack | channel | #ext-nanit-mixpanel (C08DLA6J25U) | Inactive | 2026-07-21 |
+| Slack | user | Sharona Lvovsky (U09V41Q8UB0) | Inactive | 2026-07-21 (user not found) |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013100001jkfEwAAI](https://mixpanel.lightning.force.com/lightning/r/Account/0013100001jkfEwAAI/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1Eyan_2D38lh4PZ-LxxQYl8wnaC2FIjgBQps2vy0f0NI/edit?usp=drivesdk) | Active | — |

@@ -4,28 +4,28 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-similarweb (CLABN6TLK) | Active | 2026-07-16 |
-| Slack | channel | #similarweb-mixpanel (C03A3S5GB47) | Active | 2026-07-16 |
-| Slack | dm | Bnaya Reichenberg + Tal Huberman + Yonah Dorfman (C0B2WTB5RFF) | Active | 2026-07-16 |
-| Slack | user | Bnaya Reichenberg (U0674089Q2J) | Active | 2026-07-02 |
-| Slack | user | Michael Bilek (U098T5FDGDQ) | Inactive | 2026-07-02 (user not found) |
-| Slack | user | Tomas Safar (U08V00F6AUW) | Inactive | 2026-07-02 (user not found) |
-| Slack | user | Rom Bolokan (U06TER42ZQW) | Inactive | 2026-07-02 |
-| Slack | user | Yuval Regev (U3Y6N0N68) | Inactive | 2026-07-02 (user not found) |
-| Slack | user | Noam Roznitz (U06UA86MVUY) | Inactive | 2026-07-02 |
-| Slack | user | Ofir Hasid (U06UML1KNJH) | Inactive | 2026-07-02 (user not found) |
-| Slack | user | Natalie Mondjack (U0830TVMPL6) | Inactive | 2026-07-02 |
-| Slack | user | Orit Miller (U07KR0AHUMN) | Inactive | 2026-07-02 |
-| Slack | user | Shahar Reiner (U060KFAFXQ9) | Inactive | 2026-07-02 |
-| Slack | user | Marianna Kroz (U07H05Q3092) | Inactive | 2026-07-02 |
-| Slack | user | Daria Goldman (U052UM3EYKB) | Inactive | 2026-07-02 |
-| Slack | user | Hadas Yosef (U07CK2KRAM7) | Inactive | 2026-07-02 |
-| Slack | user | Shira Akiva (U08775MML8Z) | Inactive | 2026-07-02 |
-| Slack | user | Omer Aviram (U07CK2VPYEM) | Inactive | 2026-07-02 |
-| Slack | user | Mor Amiran (U02NYMHLZ09) | Inactive | 2026-07-02 |
-| Slack | user | Irakli Tatikishvili (U01FA7EFHM1) | Inactive | 2026-07-02 |
-| Slack | user | Ronen Yacobi (U038J45F0KD) | Inactive | 2026-07-02 |
-| Slack | user | Tal Milner (U071ZKC0QH3) | Inactive | 2026-07-02 |
+| Slack | channel | #at-similarweb (CLABN6TLK) | Active | 2026-07-21 |
+| Slack | channel | #similarweb-mixpanel (C03A3S5GB47) | Active | 2026-07-21 |
+| Slack | dm | Bnaya Reichenberg + Tal Huberman + Yonah Dorfman (C0B2WTB5RFF) | Active | 2026-07-21 |
+| Slack | user | Bnaya Reichenberg (U0674089Q2J) | Active | 2026-07-21 |
+| Slack | user | Michael Bilek (U098T5FDGDQ) | Inactive | 2026-07-21 (user not found) |
+| Slack | user | Tomas Safar (U08V00F6AUW) | Inactive | 2026-07-21 (user not found) |
+| Slack | user | Rom Bolokan (U06TER42ZQW) | Inactive | 2026-07-21 |
+| Slack | user | Yuval Regev (U3Y6N0N68) | Inactive | 2026-07-21 (user not found) |
+| Slack | user | Noam Roznitz (U06UA86MVUY) | Inactive | 2026-07-21 |
+| Slack | user | Ofir Hasid (U06UML1KNJH) | Inactive | 2026-07-21 (user not found) |
+| Slack | user | Natalie Mondjack (U0830TVMPL6) | Inactive | 2026-07-21 |
+| Slack | user | Orit Miller (U07KR0AHUMN) | Inactive | 2026-07-21 |
+| Slack | user | Shahar Reiner (U060KFAFXQ9) | Inactive | 2026-07-21 |
+| Slack | user | Marianna Kroz (U07H05Q3092) | Inactive | 2026-07-21 |
+| Slack | user | Daria Goldman (U052UM3EYKB) | Inactive | 2026-07-21 |
+| Slack | user | Hadas Yosef (U07CK2KRAM7) | Inactive | 2026-07-21 |
+| Slack | user | Shira Akiva (U08775MML8Z) | Inactive | 2026-07-21 |
+| Slack | user | Omer Aviram (U07CK2VPYEM) | Inactive | 2026-07-21 |
+| Slack | user | Mor Amiran (U02NYMHLZ09) | Inactive | 2026-07-21 |
+| Slack | user | Irakli Tatikishvili (U01FA7EFHM1) | Inactive | 2026-07-21 |
+| Slack | user | Ronen Yacobi (U038J45F0KD) | Inactive | 2026-07-21 |
+| Slack | user | Tal Milner (U071ZKC0QH3) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013100001bgDJvAAM](https://mixpanel.lightning.force.com/lightning/r/Account/0013100001bgDJvAAM/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1GbaGLAOiLQ31gnrzd6Pe8E8zqh3j6O_5kvGd9nKwnKY/edit?usp=drivesdk) | Active | — |

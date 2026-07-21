@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-duda (C0ANB5VHDC3) | Active | 2026-07-16 |
-| Slack | channel | #ext-duda-mixpanel (C08EXGD003G) | Active | 2026-07-16 |
+| Slack | channel | #at-duda (C0ANB5VHDC3) | Active | 2026-07-21 |
+| Slack | channel | #ext-duda-mixpanel (C08EXGD003G) | Active | 2026-07-21 |
 | Slack | user | Avigayil Lewin (UTCN6EFA5) | Inactive | 2026-07-02 |
 | Slack | user | Avigayil Lewin (unknown) | Active | — |
 | Slack | user | Tal Levi (D0ANDRZMLQ5) | Active | 2026-07-02 |

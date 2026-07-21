@@ -126,3 +126,9 @@ The FY27 renewal ($93,073 ARR) was Closed Won in early May 2026, and a new FY28 
 - Legal escalation threatened if no agreement. Both sides want to resolve.
 - Status: Awaiting internal decision post written proposal.
 - [Gong](https://us-16307.app.gong.io/call?id=2025947060501819910)
+
+**2026-07-21 | Slack full catch-up (#at-tabnine)**
+- New signal confirmed via Jul 20 auto-summary: Tabnine is reducing contract/seat size — a partial churn signal even as the written 2yr/$3K-per-month proposal (from the Jul 8 Gong call) is still pending Ory's legal/internal review.
+- Internal data-quality flag persists: BQ shows ARR of $39,810 vs. $93,073 in local context — flagged as BQ drift, needs reconciliation (Owner: Yonah).
+- Query volume/MCP usage stable-to-modest (10 active users, ~919 queries, 8 MCP queries this week). No new raw customer messages in-channel beyond the automated weekly digests.
+- Next Quarterly Account Review: Aug 20, 2026.

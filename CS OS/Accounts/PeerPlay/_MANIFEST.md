@@ -4,9 +4,9 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-peerplay (C0ANPNNT2HJ) | Active | 2026-07-16 |
-| Slack | channel | #ext-peerplay-mixpanel (C0729PQ9LBU) | Active | 2026-07-16 |
-| Slack | dm | Shavit Ben-Itzhak + Gabriel Bruck + Yonah Dorfman (C09LH8B856Z) | Inactive | 2026-07-16 |
+| Slack | channel | #at-peerplay (C0ANPNNT2HJ) | Active | 2026-07-21 |
+| Slack | channel | #ext-peerplay-mixpanel (C0729PQ9LBU) | Active | 2026-07-21 |
+| Slack | dm | Shavit Ben-Itzhak + Gabriel Bruck + Yonah Dorfman (C09LH8B856Z) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001Nt000004dx2nIAA](https://mixpanel.lightning.force.com/lightning/r/Account/001Nt000004dx2nIAA/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/12bE5xJO-Cq_I6AQgSEG9UZRhXMRqFnKp4eifWzcXa-4/edit?usp=drivesdk) | Active | — |

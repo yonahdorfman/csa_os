@@ -1,7 +1,7 @@
 ---
 name: Morning Briefing
-version: 3.0
-last_updated: 2026-04-27
+version: 3.1
+last_updated: 2026-07-16
 category: cadence
 inputs:
   - CSM_NAME, CSM_TIMEZONE
@@ -29,16 +29,15 @@ no generic action labels.
 ☀️ Morning Briefing — {Day}, {Month} {Date}
 ${total_arr} · {N} accounts · {N} renewals ≤90d · {N} open todos · {alerts if any}
 
-{if any tasks were completed:}
-✅ Completed Since Yesterday
-• {Account} — {what was completed} ✓
-• {Account} — {what was completed} ✓
-
 🔥 First Things First
 • {Account} — {specific situation}. {specific action needed today}.
 • {Account} — {specific situation}. {specific action}.
 • {Account} — {specific situation}. {specific action}.
 • {Account} — {specific situation}. {specific action}.
+{...up to 10 total}
+
+👀 Also Watching
+{Account}, {Account}, {Account} — {one-line shared reason, e.g. "high renewal risk, didn't make today's cut"}
 
 📅 Today
 {meetings or "No meetings scheduled — open {day}. Use for: {suggested tasks}."}
@@ -48,6 +47,7 @@ ${total_arr} · {N} accounts · {N} renewals ≤90d · {N} open todos · {alerts
 2. {Account} — {specific task}
 3. {Person} (Slack) — {what you need from/to tell them}
 4. {Account} — {specific task}
+{...every due/blocking item, no cap — do not stop at a round number}
 
 {if any tools are offline:}
 ⚠️ {Tool} offline — {workaround}.
@@ -95,58 +95,34 @@ Read today's calendar for meetings.
 
 ### 2. Triage
 
-Sort everything into three buckets:
+Sort everything into four buckets:
 
-**First Things First** (3-5 items max): Things that are ON FIRE or will be
+**First Things First** (3-10 items max): Things that are ON FIRE or will be
 if you don't act today. Renewals <30d, overdue deliverables to customers,
 critical data issues, escalations.
+
+**Also Watching** (names only, no full action lines): Any account carrying a
+CRITICAL health flag, high renewal risk, or a genuinely urgent signal (e.g.
+from the hygiene report's "Critical health / High renewal risk" list) that
+didn't make the First Things First cap. The point is that nothing with a real
+risk flag disappears silently just because the top list filled up — list the
+account names with a shared one-line reason, not a full write-up per account.
+If every flagged account fit in First Things First, omit this line entirely.
+
+Also include here any account janitor Job 8 flagged as "possibly stale" this
+morning (real activity newer than the local context file) that is *still*
+unresolved after today's harvest+compress ran — i.e. harvest ran but didn't
+find/patch anything for it. That's worth a manual look, since it means the
+automated catch-up didn't close the gap Job 8 detected.
 
 **Today** (calendar): What's on the schedule. If nothing, suggest how to
 use the time based on what's overdue.
 
 **Needs Action** (numbered list): Specific tasks for today/this week.
 Not a full open-items dump — just the ones that are actually due or blocking.
-
-### 2.5. Verify Before You Flag
-
-Before including any follow-up action item in First Things First or Needs Action,
-verify it hasn't already been completed. For each candidate item:
-
-**Asana verification (FIRST):**
-- Read the registry from `CS OS/resources/asana-project-registry.md`
-- For each account with potential action items, call `get_tasks` with:
-  - `project_gid` = the account's GID from registry
-  - Filter: tasks modified in the last 7 days (`modified_since`)
-  - `opt_fields`: `name,completed,completed_at,notes,due_on,permalink_url`
-- Check if any tasks were completed since yesterday:
-  - If a task was marked complete AND matches a candidate item → flag it as DONE
-  - Include completed tasks in a separate "✅ Completed" section of the briefing
-- Check if open tasks in Asana match candidate items:
-  - If an open task exists for the item → verify it's still actionable
-  - If the task is overdue in Asana → escalate priority in the briefing
-
-**Slack verification:**
-- Read ALL channels linked to that account (both internal `#at-{name}` and external
-  Slack Connect channels from the account's channel IDs)
-- Do NOT cap message reads — use `oldest` set to 7 days ago and retrieve all messages.
-  The default 30-message limit is not sufficient; threads may have more activity.
-- Look for evidence the action was already taken: a message from the CSM addressing
-  the item, a customer confirmation, a resolution note, etc.
-- If evidence exists, mark the item DONE and exclude it from the briefing
-  (or note it as completed if context is useful)
-
-**Gmail verification:**
-- Search for recent threads involving the account/contact
-- When a matching thread is found, call `get_thread` on it (not just `search_threads`)
-  to retrieve ALL messages in the thread — `search_threads` returns a capped list
-  and will miss recent replies
-- Look for a sent message from the CSM after the original trigger date that
-  addresses the item
-- If found, mark the item DONE
-
-**Rule:** Only flag an item as needing action if you have confirmed — via Asana, Slack,
-AND Gmail — that no action has been taken. When in doubt, check all three sources before
-flagging. A false "still open" wastes the CSM's time more than a false "done".
+**No cap.** List every item that is actually due or blocking, even if that's
+more than 5 — do not truncate for length or aesthetics. If the list runs
+long, that's a signal about the day, not a reason to hide items.
 
 ### 3. Write the Briefing
 
@@ -157,21 +133,6 @@ colleague — direct, specific, no filler.
 
 1. Save the full briefing to `{LEDGER_PATH}/briefings/{YYYY-MM-DD}-morning.md`
 2. Push the briefing to Notion Workspace Ledger as a child page titled "Morning Briefing — {date}"
-
-### 4.5. Create Asana Tasks
-
-After the briefing is written but before posting to Slack, create Asana tasks
-for items in "First Things First" and "Needs Action" sections.
-
-1. Call the `/create-asana-tasks` sub-skill (from `sub/create-asana-tasks.md`)
-2. Pass all action items from First Things First and Needs Action
-3. The sub-skill will:
-   - Check for duplicate tasks (skip if already exists)
-   - Create tasks in the appropriate account projects
-   - Set due dates based on urgency
-   - Log what was created to the changelog
-
-If Asana MCP is unavailable, skip this step and log a warning.
 
 ### 5. Post to Slack
 
@@ -203,7 +164,7 @@ This is the admin/debug feed AND telemetry feed combined.
 ```
 ## {HH:MM} — briefing:generated
 - **Type:** briefing:generated
-- **Detail:** {daily|weekly} — {N} first-things, {N} action items, {N} meetings
+- **Detail:** {daily|weekly} — {N} first-things, {N} also-watching, {N} action items, {N} meetings
 - **Dispatched:** {DISPATCH_TYPE} to {DISPATCH_TARGET}
 ```
 

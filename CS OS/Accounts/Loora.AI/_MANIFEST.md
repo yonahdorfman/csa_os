@@ -4,10 +4,10 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-loora (C0APBF1UBME) | Active | 2026-07-16 |
-| Slack | channel | #ext-loora-mixpanel (C08HKTESAJK) | Active | 2026-07-16 |
-| Slack | user | Yonti (U01HEUVNKSP) | Inactive | 2026-07-02 |
-| Slack | user | Amit Ashckenazi (U064X4AGR61) | Inactive | 2026-07-02 |
+| Slack | channel | #at-loora (C0APBF1UBME) | Active | 2026-07-21 |
+| Slack | channel | #ext-loora-mixpanel (C08HKTESAJK) | Active | 2026-07-21 |
+| Slack | user | Yonti (U01HEUVNKSP) | Inactive | 2026-07-21 |
+| Slack | user | Amit Ashckenazi (U064X4AGR61) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002GYYoUAAX](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002GYYoUAAX/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/11MxmGFbiKPvfql5imwHQChqq2w54zSBKl-zYhdbRPKw/edit?usp=drivesdk) | Active | — |

@@ -86,6 +86,14 @@ As of May 31, 2026, Elementor has an active pipeline deal 'Elementor - FY 27 Ren
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up (#at-elementor, #mixpanel-elementor, 3 group DMs)**
+- Renewal ($107,200, Stage 5: Signing, Jul 31 target) still has no close call booked as of the Jul 20 bot summary — 11 days out, status Red.
+- NPS detractor score of 0 from Shahar B. (high-value contact, first flagged Jul 12) remains unaddressed — repeated across Jul 12/19/20 summaries.
+- MTU consumption mismatch (800K actual vs 1.5M contracted) still unresolved; EU data-residency migration deadline (Jul 1) still missed with no confirmed owner.
+- Elementor's ~30% staff layoff (news broke Jul 6) continues as an unresolved business-risk signal to monitor.
+- #mixpanel-elementor: no new customer questions since Jul 6 (Shavit's Hebrew AI/MCP outreach — well-received with reactions, no substantive reply).
+- Group DMs: no new activity since Jun 1 (session-replay sampling technical thread) and Nov 17 (distinct ID migration thread).
+
 **2026-06-30 | DM note [via Slack DM]**
 - Yonah confirmed conditional sampling checklist sent to Hagay. Open item resolved (17d overdue, now done).
 - Stage updated to 5: Signing per morning briefing (moved Jun 28).

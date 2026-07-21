@@ -84,3 +84,14 @@ As of 2026-05-31, HAAT Delivery has an active pipeline deal for their FY 29 Rene
 | Latest Opp | HAAT Delivery - FY 29 Renewal |
 | Stage | 1: Pipeline |
 | Opp ARR | 90450.0 |
+
+---
+
+## Recent History
+### 2026-07-21 — Slack Full Catch-up
+- All 5 open action items from the Jun 24 call (Braze external ID docs, Meta integration docs, Headless SDK docs, RCA docs, custom property investigation) confirmed completed and sent (Tal asked Jul 5, Yonah confirmed "Yes all done and sent" Jul 6) — Braze auth error and BigQuery follow-up open items can be closed out.
+- Administrative deal $13,454 closed won Jun 28; $35K SR upsell remains at Stage 4 and $90,450 FY29 renewal at Stage 1, both undisturbed.
+- Next Mixpanel // HAAT Monthly Meeting rescheduled to **Wed, Jul 29, 2026, 12:00–12:30 IDT** (supersedes the Jun 24 meeting already held).
+- Customer (ext-haat-mixpanel) asked Jul 6 about overriding cohort sync webhook cadence for near real-time personalization (new-user offer triggers synced to Braze/Meta); Yonah confirmed native integrations max out at 15-min cadence (webhooks can't go faster) and suggested Feature Flags as an alternative — thread closed out Jul 16 with customer thanking Yonah for the reply, no further follow-up needed.
+- Usage trending up: weekly account summaries (Jul 12, 19, 20) show all green/healthy status, MCP query volume rising sharply, with ben.leibman overtaking samer.halloun as top named user — no new risks surfaced across #at-haat, #ext-haat-mixpanel, or #haat-mixpanel-support since last fetch.
+- No new activity found in Hassan Abu Dalo DM (channel returned empty — possible access/history gap) or Samer Halloun DM (last message Jun 29, predates this window) since their 2026-07-02 last fetch.

@@ -92,3 +92,9 @@ As of 2026-05-31, Taboola is in post-renewal mode with an active pipeline deal '
 **2026-06-10 | External channel scan [Jun 2 message — RESOLVED]**
 - Customer reported identify-only events on Jun 2. Was a Mixpanel platform-wide ingestion delay incident, not a customer-side SDK issue.
 - Yonah + support replied same day. Support provided full incident updates (Ross, Ilhan, Miles). Ticket #3539 closed. All data intact, no tracking regression.
+
+**2026-07-21 | Slack full catch-up (#at-taboola, #mixpanel-taboola, group DMs x2, #mixpanel-taboola-news, DM Aviv Sinai)**
+- Renewal figure/stage discrepancy worth reconciling in SFDC: today's internal briefing shows $189,650 at Stage 4: Negotiation (Oct 31 close) vs. the previously tracked $95,699 at Stage 1.
+- Official Mixpanel MCP adoption continues at modest scale (52 queries this week, mostly ohad.l@taboola.com) despite the account historically relying on its own in-house MCP client — a positive shift worth watching.
+- Feature usage (Copilot, Replays, Alerts, Value Moments) dropped to zero this week from ~45 Value Moments the prior week.
+- No new raw customer messages in any of the scanned channels/DMs this week; all recent activity is automated weekly digests. Long-standing MCP API hourly cap issue and Lior S. VIP invite remain open/overdue.

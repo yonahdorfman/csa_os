@@ -91,3 +91,13 @@ As of 2026-05-31, SimilarWeb is highly engaged with an active FY27 Renewal pipel
 - Context managed externally (Kraster) — wants automated Mixpanel sync.
 - Actions: Help push session replay; Slack channel for direct comms.
 - [Gong](https://us-16307.app.gong.io/call?id=1987748909027137657)
+
+---
+
+## Recent History
+
+**2026-07-21 | Slack full catch-up — Lexicon-audit skill not yet adopted, EU residency confusion resolved**
+- Jul 19 internal thread (#at-similarweb): Tal asked whether SimilarWeb has used the Lexicon-audit skill yet — Yonah confirmed "They have not." Follow-up needed with Bnaya.
+- FY27 renewal ($94,777) remains at Stage 1: Pipeline — no movement since the Jul 8 AI Agent + RCA Agent demo.
+- EU data-residency confusion around the *Mobrofit* project was resolved via DM group (Jun 22–23): customer clarified only 2 of their projects have EU residency, one inactive and one very small — data-forwarding change is low risk, dev team already implementing.
+- No new escalations found in #similarweb-mixpanel or the Bnaya/Tal/Yonah group DM this cycle.

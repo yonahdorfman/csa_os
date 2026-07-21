@@ -129,6 +129,16 @@ As of 2026-05-31, MyHeritage has an active FY 27 Renewal in Pipeline for $110,00
 - ⚠️ Open items overdue: funnel discrepancy confirm (Jun 11), schedule next touchpoint (Jun 15 — may be closed by today's call), lexicon cleanup (Jun 30, 7 days remaining).
 
 ---
+
+## Recent History
+### 2026-07-21 — Slack Full Catch-up
+- **Renewal/contract confirmed by bot digest:** #at-myheritage weekly summaries (2026-07-19, 2026-07-20) corroborate the $110K FY27 renewal Closed Won (2026-07-13) and the new contract starting Aug 1, 2026 — consistent with the 2026-07-19 DM note already logged.
+- **CORRECTION — EU data-residency issue was actually resolved 2026-06-22, not still open:** Read full 23-reply thread in #mixpanel-myheritage (started 2026-06-21 by Yonah). MyHeritage engineers (Tal Davidov, Mikhail Karabutov, Ofir Sharony et al.) worked through confusion over which project (MyStories) needed the endpoint change, then confirmed "done!" at 2026-06-22 16:31 IDT. However, subsequent weekly bot summaries (07-12, 07-19, 07-20) kept flagging this as unresolved/overdue — that appears to be a false-negative in the automated digest. Recommend re-verifying current MyStories event volume to the US endpoint before fully closing, but the customer-side code change was confirmed complete.
+- **Itay Reznik DM — new positive interaction (2026-07-14):** Yonah walked Itay through building a board/insight view (histogram vs. metric breakdown); exchange ended with "thank you!! amazing." Notable given this contact's historically Negative CRM sentiment — worth watching for a sentiment shift.
+- **Unreplied check-in in core group DM (2026-07-13):** Yonah messaged "Hi Itay! Just wanted to see how you are doing with the recent news. Hope everything is ok" (re: Francisco Partners ownership-change news) — no reply visible yet in the thread. Worth a follow-up.
+- Itay Sobol DM and Yael Naor DM: no new messages since prior fetch (2026-07-02); Yael Naor DM now inactive (last activity 2026-05-11).
+
+---
 ## V/R/G Log (EoD 2026-07-06)
 **2026-07-06 | VALUE | EU endpoint migration progressing**
 DM note from Yonah (13:55 IDT): MyStories has moved to the EU endpoint, with app users upgrading over time. This is genuine progress on the EU data-residency risk that had been open since the missed Jul 1 cutover. Not yet fully closed — "upgrading over time" implies a rollout tail, so keep this open until 100% of MyStories traffic is confirmed off the US endpoint. The separate 55+ day funnel/cohort discrepancy with Itay Reznik remains unresolved and is now the longest-open item in the book — did not move today.

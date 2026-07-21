@@ -62,6 +62,16 @@ As of 2026-05-31, ClickSoftware (now Salesforce Field Service) recently closed a
 - [ ] **[DUE 2026-06-07]** Identify internal product champion and initiate activation outreach. (Owner: Shavit Ben-Itzhak) — pending
 - [ ] **[DUE 2026-06-10]** Investigate user attribution gap in current query volume. (Owner: Shavit Ben-Itzhak) — pending
 
+---
+
+## Recent History
+
+**2026-07-21 | Slack full catch-up [#at-clicksoftware]**
+- Now 15+ consecutive weeks of near-zero named-user Mixpanel activity post-renewal (closed Apr 15); flagged Renewal Risk = High again in this week's book-wide sweep.
+- Only known contact, Vince Valentino, remains unresponsive; no second contact identified despite repeated internal escalation.
+- amizrahi@salesforce.com continues logging sporadic activity (70 queries/week) — still unverified whether this is a genuine ClickSoftware-side user or a Salesforce-domain service/integration account.
+- No Slack, email, or calendar engagement from ClickSoftware itself — account remains fully dark. Near-certain churn risk without intervention.
+
 
 ---
 

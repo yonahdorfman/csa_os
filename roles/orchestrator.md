@@ -1,14 +1,14 @@
 ---
 name: Orchestrator
-version: 1.0
-last_updated: 2026-04-30
+version: 1.4
+last_updated: 2026-07-21
 category: role
 description: >
   THE single scheduled Cowork task (besides DM monitor). Runs hourly.
   Evaluates cadence rules, detects missed cycles, executes what's due.
   There should be NO other scheduled tasks for individual skills.
 requires_mcp: [Notion, Slack]
-optional_mcp: [Gmail, Google Calendar, Google Drive, BigQuery, Mixpanel MCP]
+optional_mcp: [Gmail, Google Calendar, Google Drive, BigQuery, Mixpanel MCP, Statisfy]
 invoke:
   - Cowork scheduled task: hourly during work hours
   - "/orchestrate"
@@ -27,7 +27,7 @@ and skills running outside the orchestrator's awareness.
 ## Cowork Scheduled Task Configuration
 
 **Name:** CSA OS Orchestrator
-**Repeats:** Hourly during work hours (7am–6pm weekdays)
+**Repeats:** Hourly during work hours (see `resources/cadence.md` — currently Sun–Thu, 9am–6pm GMT+3)
 **Folder:** {CSOS_PATH}
 **Instructions:**
 
@@ -48,6 +48,7 @@ is due. Write all context changes to Notion first, cache locally after.
 | Google Calendar | List events, Get event | Harvest calendar signals |
 | Google Drive | Search files, List recent files | Harvest doc changes |
 | BigQuery | Execute query, List tables | Sales intelligence + Mixpanel telemetry |
+| Statisfy | Read objects, Read relationships | Live CRM enrichment (health scorecard, pipeline, contacts) — optional |
 
 **Notion and Slack are required.** Everything else is optional — the
 orchestrator gracefully skips harvesters whose MCPs aren't available.
@@ -55,7 +56,7 @@ orchestrator gracefully skips harvesters whose MCPs aren't available.
 ## The Second Scheduled Task: DM Monitor
 
 **Name:** Slack DM Monitor
-**Repeats:** Every 30 minutes during work hours
+**Repeats:** Every hour during work hours
 **Instructions:**
 
 ```
@@ -84,7 +85,7 @@ setup and the live overrides file is stale:
 | `DISPATCH_TARGET` | `{SLACK_USER_ID}` (from same file) |
 | `TELEMETRY_CHANNEL` | `C0B1ZU8QSHE` |
 | `DM_MONITOR_ENABLED` | `true` |
-| `DM_MONITOR_INTERVAL` | `30m` |
+| `DM_MONITOR_INTERVAL` | `60m` |
 
 If you add a field, log it: `orchestrator:config:added:{field}={default}`
 
@@ -93,20 +94,27 @@ If you add a field, log it: `orchestrator:config:added:{field}={default}`
 - Extract what has already run: look for `scheduler:completed:{rule}` entries
 - This prevents double-runs
 
+**Also extract per-harvester completion markers** (see Harvest section):
+- Look for `harvest:{source}:completed` entries (e.g. `harvest:bq:completed`)
+- Build a list: `HARVESTERS_DONE` = all sources with a completion marker today
+- This is used to detect partial harvests in Step 3
+
 ### 3. Evaluate Cadence Rules
 
 Check each rule against current time and day:
 
-```
-work_hours: 7:00am - 6:00pm
-work_days: monday, tuesday, wednesday, thursday, friday
+This is a format example only — always read the live values from `resources/cadence.md`, currently:
 
-weekdays at 7:30am  → janitor
-weekdays at 8:00am  → morning-cycle
-weekdays at 8:00am on mondays → expand morning-cycle to weekly
-weekdays at 5:00pm  → eod-cycle
-fridays at 4:00pm   → eow-cycle
-1st monday at 8:30am → monthly-cycle
+```
+work_hours: 9:00am - 6:00pm
+work_days: sunday, monday, tuesday, wednesday, thursday
+
+weekdays at 9:30am → janitor
+weekdays at 9:00am → morning-cycle
+weekdays at 9:30am on sundays → expand morning-cycle to weekly
+weekdays at 4:00pm → eod-cycle
+thursdays at 3:00pm → eow-cycle
+1st sunday at 9:30am → monthly-cycle
 ```
 
 For each rule:
@@ -114,6 +122,54 @@ For each rule:
 - **Day match?** Weekday, specific day, 1st Monday, etc.
 - **Already run?** Check changelog for `scheduler:completed:{name}` today
 - If all pass → execute
+
+**Partial harvest check (runs every tick, independent of cycle schedule):**
+
+Define `HARVEST_REQUIRED` = [gmail, slack, calendar, bq, gong, mixpanel]
+These are the sources that must complete for a harvest to be considered full.
+Notion, Drive, Asana, Pylon, and Statisfy are optional — skipping them is not an error.
+Clari and Zendesk are standby sources (see harvest-all.md's "Not called by
+default" section) — they are never invoked, so they should never appear in
+`HARVESTERS_DONE`, `HARVESTERS_MISSING`, or a skip log entry at all.
+
+**Valid skip reasons for a `HARVEST_REQUIRED` source are `skipped:mcp_unavailable`
+only.** There is no `skipped:scope` reason, and one must never be logged again — "the
+book is too big to scan this tick" is not a valid justification for a source that
+defines its own batching/rotation mechanism (currently: Slack, see harvest-slack.md's
+Coverage Rotation). That mechanism exists precisely so the harvester never needs to be
+skipped wholesale for cost reasons — run its batch every cycle without exception, even
+if recent cycles skipped it. Do not treat a prior cycle's skip as precedent; re-evaluate
+each harvester's current skill file every tick instead of carrying forward a past
+judgment call.
+
+If `scheduler:completed:morning-cycle` is present today but `HARVESTERS_DONE`
+does not contain all of `HARVEST_REQUIRED`:
+- Identify `HARVESTERS_MISSING` = HARVEST_REQUIRED minus HARVESTERS_DONE
+- If all missing harvesters' MCPs are now available → run **harvest-catchup**:
+  1. Run only the missing harvesters from `sub/harvest-all.md`
+  2. Run `sub/compress.md` on new signals only
+  3. Run `sub/notion-sync.md` write mode for affected accounts
+  4. Log each recovered harvester: `harvest:{source}:completed`
+  5. Post to Slack DM: `⚡ Harvest catch-up: recovered {sources} ({N} new signals)`
+  6. Log: `scheduler:completed:harvest-catchup`
+- If MCPs are still unavailable → skip silently, log `harvest:{source}:skipped:mcp_unavailable`
+
+This means a session interruption mid-harvest is automatically recovered on the
+next tick, without re-running the full morning cycle.
+
+**Pending Notion writes check (runs every tick, independent of cycle schedule):**
+
+Compare today's changelog:
+- Accounts with a `compress:wrote:{account}` / `compress:context-update` entry, or any
+  entry saying a write was "deferred", "batched", or "scheduled for a later cycle"
+- vs accounts with a matching `notion-sync:write` success entry today
+
+If any account has patches (or a deferral note) without a completed Notion write →
+run `sub/notion-sync.md` write mode NOW for exactly those accounts, and log
+`notion-sync:write` per account. **There is no "later batch write" — a deferral
+note is a bug, not a plan.** (2026-07-21: a "batched write scheduled for later
+cycle (45 accounts pending)" note was logged in the morning and the write never
+ran; this check exists so that can't recur.)
 
 ### 4. Detect Missed Cycles
 
@@ -128,7 +184,7 @@ Run the appropriate cycle(s) in order:
 
 ---
 
-#### Janitor (10:00am weekdays)
+#### Janitor (9:30am weekdays)
 
 Run `sub/janitor.md`:
 - Freshness audit, source validation, inbox check, structural hygiene,
@@ -139,14 +195,23 @@ Run `sub/janitor.md`:
 
 ---
 
-#### Morning Cycle (9:30am weekdays)
+#### Morning Cycle (9:00am weekdays)
 
-**Step 1: Pull from Notion**
-- Read all account Context pages from Notion → overwrite local snapshots
+**Step 1: Pull from Notion (DELTA pull — not all 47 pages)**
+- Query the Accounts DB for pages whose `Last edited time` is newer than the last
+  successful pull (yesterday's cycle; fall back to 24h if unknown) — pull ONLY those
+  page bodies and overwrite their local snapshots. All other accounts keep their
+  local cache. Most days this is 0–5 pages, not 47; a full-book pull is only for
+  first run or when `reconcile check` flags drift. This is the single biggest
+  token saver in the system.
 - Detect empty/stub pages → set `first-write=true` flag
 
 **Step 2: Harvest**
 - Run `sub/harvest-all.md` (calls all available harvesters)
+- For each harvester that completes, immediately log: `harvest:{source}:completed`
+  (e.g. `harvest:gmail:completed`, `harvest:bq:completed`)
+- For each harvester that is skipped (MCP unavailable), log: `harvest:{source}:skipped:mcp_unavailable`
+- Do NOT log `harvest-all:completed` — the per-source markers replace it
 - Record: which harvesters ran, which skipped, total signals found
 
 **Step 3: Compress**
@@ -154,10 +219,14 @@ Run `sub/janitor.md`:
 - Record: number of patches, accounts touched
 
 **Step 4: Write to Notion**
-- Run `sub/notion-sync.md` write mode
+- Run `sub/notion-sync.md` write mode for the accounts compress patched THIS cycle
+  (typically 1–10 accounts) — NOT the whole book. Unpatched accounts have nothing
+  to write.
 - REPLACE mode for first-write, UPDATE mode for existing pages
 - Cache locally after Notion write succeeds
 - Record: pages written, pages failed, first-writes, duration
+- **This step is not deferrable.** Do not log "batched for a later cycle" — run it
+  now, in the same cycle that produced the patches.
 
 **Step 5: Morning Briefing**
 - Run `cadence/morning-briefing.md`
@@ -167,7 +236,12 @@ Run `sub/janitor.md`:
 
 **Step 6: Post to Slack**
 - Post full briefing as top-level message (the only skill that posts full)
-- Log: `scheduler:completed:morning-cycle`
+- Log `scheduler:completed:morning-cycle` — **ONLY if Steps 2–4 actually executed**
+  (harvest batch run per each harvester's own spec, compress run, notion-sync write
+  done for every patched account). Posting the briefing does NOT complete the cycle.
+  If any of Steps 2–4 were skipped or partial, do NOT log the completion marker —
+  the per-tick partial-harvest and pending-writes checks will finish the job on the
+  next tick, and they key off the marker's absence.
 
 **Step 7: Fire Telemetry**
 - Read `sub/telemetry.md` for the event format
@@ -181,8 +255,9 @@ Run `sub/janitor.md`:
 
 #### EoD Cycle (4:00pm weekdays)
 
-**Step 1: Pull from Notion**
-- Read all account Context pages → overwrite local snapshots
+**Step 1: Pull from Notion (DELTA pull)**
+- Same as the morning cycle: pull only pages edited in Notion since the last
+  successful pull. Never re-pull the full book on a routine cycle.
 
 **Step 2: EoD Retrospective**
 - Run `cadence/eod-retrospective.md`
@@ -271,7 +346,17 @@ After processing any command, fire telemetry:
 
 - **Type:** orchestrator:tick
 - **Detail:** Evaluated {N} rules. Executed: {list}. Skipped: {list} (already run | not due).
+- **Harvest:** {HARVESTERS_DONE} complete, {HARVESTERS_MISSING} missing.
 ```
+
+Include the harvest line on every tick so any partial harvest is visible at a glance.
+
+**Changelog brevity (token control):** one tick = one entry, ≤6 lines. Do not write
+additional `orchestrator:status` / `status-final` entries restating the same cadence
+evaluation (2026-07-21 had four near-identical evaluations logged in 20 minutes).
+Detailed narration belongs in the skill-specific entries (harvest, compress, sync),
+and those should be summaries, not transcripts. Every line written here is re-read
+by every subsequent tick that day — verbosity compounds.
 
 ### 8. Error Telemetry
 
@@ -293,7 +378,7 @@ Top-level:
 Thread:
 ```
 Dispatch: Personal DM
-DM Monitor: Active (30m)
+DM Monitor: Active (60m)
 Last cycle: {time} — {what ran}
 Accounts: {N} total, {N} stale (>7d)
 Today: {N} signals, {N} patches
@@ -316,4 +401,4 @@ If you have individual scheduled tasks from v3.6 or earlier, delete them:
 - ❌ Monthly cycle (delete)
 - ❌ Csa rubric weekly (delete if subsumed)
 - ✅ Os orchestrator (KEEP — this is the one)
-- ✅ Slack dm monitor (KEEP — separate 30m task)
+- ✅ Slack dm monitor (KEEP — separate 60m task)

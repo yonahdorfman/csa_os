@@ -4,12 +4,12 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-stillfront (C0ANDQGACGK) | Active | 2026-07-16 |
-| Slack | channel | #ext-mixpanel-stillfront-playa (C0999HHF0J1) | Active | 2026-07-16 |
+| Slack | channel | #at-stillfront (C0ANDQGACGK) | Active | 2026-07-21 |
+| Slack | channel | #ext-mixpanel-stillfront-playa (C0999HHF0J1) | Active | 2026-07-21 |
 | Slack | user | Konstantin Jakobi (UDYURV874) | Inactive | 2026-07-02 (user not found) |
 | Slack | user | Ben Girard (U0722EJLYHH) | Inactive | 2026-07-02 |
-| Slack | user | Nils Lobe (D0AARTKTUK0) | Active | 2026-07-02 |
-| Slack | dm | Alexander Mau + Alexander Padberg + Gidi Eigenstein + Suman Majety + Yonah Dorfman (C0A1HGQ3HGW) | Inactive | 2026-07-16 |
+| Slack | user | Nils Lobe (D0AARTKTUK0) | Inactive | 2026-07-21 |
+| Slack | dm | Alexander Mau + Alexander Padberg + Gidi Eigenstein + Suman Majety + Yonah Dorfman (C0A1HGQ3HGW) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0010Z000024meJAQAY](https://mixpanel.lightning.force.com/lightning/r/Account/0010Z000024meJAQAY/view) | Linked | — |
 | GDoc | account_plan | [Link](—) | Active | — |

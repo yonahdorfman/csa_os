@@ -69,6 +69,12 @@ As of May 31, 2026, Forex Club International LLC has an active pipeline deal 'Fo
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up (#at-libertex)**
+- Account has gone quiet for a third straight week — no new inbound Slack/email since the Jul 1 call with Shavit + Oleksandr/Oleksiy/Andrey.
+- FY27 renewal ($148,723, Stage 1) still stuck with no movement; Jun 3 action items (EU MCP connector docs, AI permissions check, Google Chat webhook) are now 7+ weeks overdue.
+- Feature engagement flat — no Copilot usage for a second straight week, though Value Moments held at 87.
+- No new signal beyond what's already logged from the Jul 7 Gmail catch-up.
+
 **2026-07-07 | Gmail catch-up (14-day sweep) — data-quality issue detail + new contact**
 - The "duplicate registration events per profile ID" issue from the Jul 1 re-engagement call has an email trail: Anastasia Tsygankova (a.tsygankova@libertex.com, new contact) independently flagged "Multiple registration events" to Shavit; Shavit asked for the login flow detail; the thread escalated to include Yonah and Vitaly Kolesov (vitaly.kolesov@libertexgroup.com) by Jul 1.
 - Same day (Jul 1), Yonah sent a "User property mapping" doc directly to Oleksandr Horychev (oleksandr.horychev@libertexgroup.com) covering Mixpanel's default geolocation properties ($city, etc.) — this reads as direct follow-through on the historical user-table mapping topic discussed on the Jul 1 call.

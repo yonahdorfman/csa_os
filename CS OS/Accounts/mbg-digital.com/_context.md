@@ -79,3 +79,13 @@ As of 2026-05-31, there is an active pipeline deal 'mbg-digital.com - FY 28 Rene
 | Latest Opp | mbg-digital.com - FY 28 Renewal |
 | Stage | 1: Pipeline |
 | Opp ARR | 56217.0 |
+
+---
+
+## Recent History
+
+**2026-07-21 | Slack full catch-up (#at-mbg-digital, #ext-mixpanel-mbgdigital)**
+- Held a 61-min hands-on training session Jul 15 (Gong call) with Silviu, Roman, Radovan and Martin — covered AI-assisted analysis, signup tracking, VIP user skewing, and recommended dashboards/alerts for iGaming use cases. Funnel optimization and future deep-dive sessions discussed as next steps.
+- FY28 renewal ($56,217) remains at Stage 1: Pipeline, tied to this training engagement — no follow-up meeting booked yet to build on the momentum.
+- Prior billing/payment-verification ticket #699242 and Session Replay overage (105.5% of plan, flagged Jul 1) were not re-mentioned this week — status should be confirmed as resolved or still open.
+- Usage steady (5 active users, ~482 queries top user, 6 Copilot prompts, 24 Value Moments this week).

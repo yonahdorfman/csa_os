@@ -4,10 +4,10 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-ferryhopper (C0ABKB1M9RP) | Active | 2026-07-16 |
-| Slack | channel | #ex-ferryhopper-mixpanel (C0ACU071JL9) | Inactive | 2026-07-16 |
-| Slack | user | Panagiotis Sarafis (D0AJN6W3JBA) | Active | 2026-07-02 |
-| Slack | user | Thodoris Paraskevopoulos (D0AKHBNUES1) | Active | 2026-07-02 |
+| Slack | channel | #at-ferryhopper (C0ABKB1M9RP) | Active | 2026-07-21 |
+| Slack | channel | #ex-ferryhopper-mixpanel (C0ACU071JL9) | Inactive | 2026-07-21 |
+| Slack | user | Panagiotis Sarafis (D0AJN6W3JBA) | Inactive | 2026-07-21 |
+| Slack | user | Thodoris Paraskevopoulos (D0AKHBNUES1) | Active | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002FcydpAAB](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002FcydpAAB/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1ZAI_dSA-i1i5SGNcMJBNU68TDnYdDHBT4XReCnHcdfo/edit?usp=drivesdk) | Active | — |

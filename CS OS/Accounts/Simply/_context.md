@@ -78,6 +78,12 @@ As of 2026-05-31, Simply is highly engaged with an active pipeline deal 'Simply 
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up — SR walkthrough closed out, new open technical thread on local_time property**
+- The long-overdue Session Replay UI-controls team walkthrough with Roman's team finally happened (closed an action item open since May 27).
+- New unresolved technical thread in #ext-mixpanel-simply (opened Jul 12, still active as of Jul 20, 20 replies): customer wants `local_time` property to reflect user's local time rather than project timezone — needs a resolution/workaround.
+- FY28 Early Renewal + Upsell ($190K) remains at Stage 1: Pipeline with no commercial movement this cycle.
+- Usage and Session Replay adoption both healthy and growing (70 replays watched last week).
+
 **2026-07-16 | DM note [via Slack DM]**
 - Already walked through the UI controls.
 

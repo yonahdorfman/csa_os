@@ -4,24 +4,24 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-lemonade (CHE9ZMQM8) | Active | 2026-07-16 |
-| Slack | channel | #mixpanel-lemonade-shared (C06CFJ53X8A) | Active | 2026-07-16 |
-| Slack | dm | Dor Gorel + Tal Huberman + Yonah Dorfman (C0AD9QLU5U1) | Inactive | 2026-07-16 |
-| Slack | dm | Leora Gildenblat + Tal Huberman + Yonah Dorfman + Omer Gerson (C0AU0C26C90) | Active | 2026-07-16 |
-| Slack | dm | Leora Gildenblat + Tal Huberman + Yonah Dorfman + Omer Gerson + Ofir Ventura (C0BFCDSP9QS) | Active | 2026-07-16 |
-| Slack | user | Nir Yogev (USNA1GLQ6) | Inactive | 2026-07-02 |
-| Slack | user | Nadav Bar Uryan (U04BTATV3T5) | Active | 2026-07-02 |
-| Slack | user | Yuli Ballos Shefi (U03974ZGK7T) | Inactive | 2026-07-02 |
-| Slack | user | Itay Dar (U04RRM0ECSD) | Inactive | 2026-07-02 |
-| Slack | user | Dor Gorel (U08MTB7HG0K) | Active | 2026-07-02 |
-| Slack | user | Omer Gerson (U0A5XHM2XH8) | Inactive | 2026-07-02 |
-| Slack | user | Adam Fainaru (U081W3W7QAK) | Inactive | 2026-07-02 |
-| Slack | user | Samanta Hourmann Lefel (U08QPJL6EMU) | Inactive | 2026-07-02 |
-| Slack | user | Avishai Cohen (U06MAMH00F2) | Inactive | 2026-07-02 |
-| Slack | user | Raz Ezra (U03MQSG68TW) | Inactive | 2026-07-02 |
-| Slack | user | Rotem Doron (U03GTCPS0GG) | Inactive | 2026-07-02 |
-| Slack | user | Ofir Ventura (U014SQNJZB7) | Active | 2026-07-02 |
-| Slack | user | Leora Gildenblat (UTVL3RZ52) | Inactive | 2026-07-02 |
+| Slack | channel | #at-lemonade (CHE9ZMQM8) | Active | 2026-07-21 |
+| Slack | channel | #mixpanel-lemonade-shared (C06CFJ53X8A) | Active | 2026-07-21 |
+| Slack | dm | Dor Gorel + Tal Huberman + Yonah Dorfman (C0AD9QLU5U1) | Inactive | 2026-07-21 |
+| Slack | dm | Leora Gildenblat + Tal Huberman + Yonah Dorfman + Omer Gerson (C0AU0C26C90) | Active | 2026-07-21 |
+| Slack | dm | Leora Gildenblat + Tal Huberman + Yonah Dorfman + Omer Gerson + Ofir Ventura (C0BFCDSP9QS) | Active | 2026-07-21 |
+| Slack | user | Nir Yogev (USNA1GLQ6) | Inactive | 2026-07-21 |
+| Slack | user | Nadav Bar Uryan (U04BTATV3T5) | Inactive | 2026-07-21 |
+| Slack | user | Yuli Ballos Shefi (U03974ZGK7T) | Inactive | 2026-07-21 |
+| Slack | user | Itay Dar (U04RRM0ECSD) | Inactive | 2026-07-21 |
+| Slack | user | Dor Gorel (U08MTB7HG0K) | Active | 2026-07-21 |
+| Slack | user | Omer Gerson (U0A5XHM2XH8) | Inactive | 2026-07-21 |
+| Slack | user | Adam Fainaru (U081W3W7QAK) | Inactive | 2026-07-21 |
+| Slack | user | Samanta Hourmann Lefel (U08QPJL6EMU) | Inactive | 2026-07-21 |
+| Slack | user | Avishai Cohen (U06MAMH00F2) | Inactive | 2026-07-21 |
+| Slack | user | Raz Ezra (U03MQSG68TW) | Inactive | 2026-07-21 |
+| Slack | user | Rotem Doron (U03GTCPS0GG) | Inactive | 2026-07-21 |
+| Slack | user | Ofir Ventura (U014SQNJZB7) | Inactive | 2026-07-21 |
+| Slack | user | Leora Gildenblat (UTVL3RZ52) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013100001gTudTAAS](https://mixpanel.lightning.force.com/lightning/r/Account/0013100001gTudTAAS/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1xpXOWYMYLoza5ZosopH357TG08bA16lHSVa7FPckrGo/edit?usp=drivesdk) | Active | — |

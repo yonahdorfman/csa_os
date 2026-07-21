@@ -86,3 +86,9 @@ There is an active pipeline deal for the FY27 Renewal ($59,114 ARR). Last intera
 - Down from 184 (Mar) and 174 (Apr 13-19) — continuing decline
 - Zero feature adoption: no Copilot, Replay, Custom Alerts, or Value Moments
 - Post-acquisition consolidation confirmed — no Talon domain users remain active
+
+**2026-07-21 | Slack full catch-up (#at-palo-alto, #ext-proj-pb-mixpanel, group DMs x2) — no new signals beyond today's earlier EoD patch**
+- Query volume remains critically low (69 total this week, 2 named users) with zero feature engagement (Copilot/Replay/Alerts/Value Moments all at 0) — continued post-Palo Alto-acquisition decline.
+- Renewal risk flagged High again this week (Oct 31, 2026 renewal); exec-to-exec meeting to assess renewal intent still not booked despite being the stated priority for many weeks.
+- #ext-proj-pb-mixpanel and both group DMs (Hagit/Yuval/Tal/Yonah; Adi/Eliazar/Tal/Yonah/Yael) show no new customer messages since Jun/Jul — last substantive DM exchange was Jul 12/13 check-in with no reply logged since.
+- Conflicting signal (Statisfy "Positive" health score vs. declining usage) remains unresolved.

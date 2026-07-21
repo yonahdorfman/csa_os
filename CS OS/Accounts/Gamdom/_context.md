@@ -98,6 +98,12 @@ As of 2026-05-31, Gamdom is a relatively new customer (0.4 years) with an ARR of
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up (#at-gamdom, #ext-mixpanel-gamdom)**
+- Account still flagged Renewal Risk = High (Jul 19–20 sweeps); query volume stable but modest (~1,310/week).
+- Shavit re-reached out in the external channel Jul 15 ("it's been a while, how's it going?") — no response yet as of Jul 20.
+- 7 action items from the Jun 15/17 Use Case Review calls (event descriptions, AI/MCP org setup) remain unconfirmed; no firm date set yet for the previously committed "early August" meeting.
+- Customer describes analytics work as "on hold until developers add needed events and user data" (per Jun 30 external-channel thread) — likely root cause of the low usage and stalled action items.
+
 **2026-06-09 | DM note [via Slack DM]**
 - gamdom training scheduled for june 15
 

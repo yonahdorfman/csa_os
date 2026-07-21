@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-altshuler (C06600A5TLZ) | Active | 2026-07-16 |
-| Slack | channel | #mixpanel-altshuler-shaham (C086N5A1Z4P) | Inactive | 2026-07-16 |
+| Slack | channel | #at-altshuler (C06600A5TLZ) | Active | 2026-07-21 |
+| Slack | channel | #mixpanel-altshuler-shaham (C086N5A1Z4P) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002JL9KWAA1](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002JL9KWAA1/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/124c2BM9LQE22TtTbPKrzxwHwW8m-WZPXto3Vy9sLMHc/edit?usp=drivesdk) | Active | — |

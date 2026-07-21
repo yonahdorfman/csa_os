@@ -99,3 +99,10 @@ As of 2026-05-31, HoneyBook has an active FY 27 Renewal pipeline deal valued at 
 - New contact on call: Nimrod (nimrod@honeybook.com).
 - Signal: Strong engagement. Follow up to confirm agreed next steps.
 - [Gong](https://us-16307.app.gong.io/call?id=2585523483410233213)
+
+### 2026-07-21 — Slack Full Catch-up
+- Re-pulled the Nimrod/Asaf/Ira/Tal/Yonah group DM (renamed today to "Honeybook Session Replay Review") and confirmed the Jul 13–19 thread on the replay player's address-bar/SPA route-tracking bug (Ira Lisitsyna: fix deployed Jul 19 but issue still not resolved) — this is the same issue already captured in today's earlier EoD patch as Ticket #10605, so not logged again here.
+- Both #at-honeybook and #ext-honeybook-mixpanel channels have gone quiet since Jun 30 (no new messages) — no new signals.
+- Amy Vogel + Tal + Yonah group DM has had no activity since Jun 9 (scheduling logistics only, no new content) — status downgraded to Inactive.
+- Lower-priority 1:1 DMs (Inbar Kipnis, Bar Pakula, Dana Erez, Moli Meshulam, Yoni Levi, Amy Vogel) checked — no new messages since last fetch; Amy Vogel 1:1 DM's most recent content (May 25, replay/stitching bug, Ticket 2299) predates last fetch and is already reflected in Active Risks.
+- No additional new signals beyond today's earlier EoD patch — the only Slack activity found since last fetch was the already-logged support-ticket risk (Ticket #10605).

@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-bluethrone (C0AN6L3TZQU) | Active | 2026-07-16 |
-| Slack | channel | #ext-mixpanel-bluethrone (C08MAM6M5J6) | Active | 2026-07-16 |
+| Slack | channel | #at-bluethrone (C0AN6L3TZQU) | Active | 2026-07-21 |
+| Slack | channel | #ext-mixpanel-bluethrone (C08MAM6M5J6) | Active | 2026-07-21 |
 | Slack | user | Sander (U03CP185M9B) | Active | 2026-07-02 |
 | Slack | user | Tatiana Audzeichyk (U09KMK87CAK) | Inactive | 2026-07-02 |
 | Slack | user | Cristina Huergo (U07K2RX69BL) | Inactive | 2026-07-02 |

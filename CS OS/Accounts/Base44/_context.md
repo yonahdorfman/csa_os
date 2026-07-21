@@ -82,6 +82,12 @@ As of 2026-05-31, there is an active pipeline deal 'Base44 - FY 27 Renewal' for 
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up [#at-base44, #ex-base44-mixpanel]**
+- Base44 Quarterly Account Meeting held Jul 15 (after being rescheduled twice) — Noa Gor expressed satisfaction with current usage and strong interest in new capabilities: an AI Agent and Cross Analysis. Clear expansion signal.
+- Customer asked for technical specs on integrating more deeply via Mixpanel's API (custom properties, "Mixpanel Headless"-style integration) — open task to send docs.
+- MCP/agentic usage remains very strong, led by yoavfa@base44.com.
+- No further update visible in #ex-base44-mixpanel on the May 12 duplicate-events/dedup BigQuery bug beyond what was already logged Jul 2 — still worth confirming root-cause closure.
+
 **2026-07-02 | External channel scan — data integrity bug still open**
 - May 12: customer reported duplicate events appearing in the native Mixpanel→BigQuery integration, asked for root cause/timeline. May 14: dedup workaround discussed. No confirmed close-out visible.
 - *Source: Slack (#ex-base44-mixpanel), harvest-catchup 2026-07-02.*

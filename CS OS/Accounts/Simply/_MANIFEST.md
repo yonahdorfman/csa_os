@@ -4,10 +4,10 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-simply (C0AN32X5BPC) | Active | 2026-07-16 |
-| Slack | channel | #ext-mixpanel-simply (C05S67SQLNN) | Active | 2026-07-16 |
-| Slack | user | Shir Goldman (U08PGU5D11V) | Inactive | 2026-07-02 |
-| Slack | user | Roman Brisker (U055KKE4VED) | Active | 2026-07-02 |
+| Slack | channel | #at-simply (C0AN32X5BPC) | Active | 2026-07-21 |
+| Slack | channel | #ext-mixpanel-simply (C05S67SQLNN) | Active | 2026-07-21 |
+| Slack | user | Shir Goldman (U08PGU5D11V) | Inactive | 2026-07-21 |
+| Slack | user | Roman Brisker (U055KKE4VED) | Active | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002L1gUCAAZ](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002L1gUCAAZ/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1dy8HiiBoqRYGPAtZE2DVX49AMJ1xZOWI1-VaAizxVik/edit?usp=drivesdk) | Active | — |

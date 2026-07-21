@@ -72,6 +72,17 @@ As of 2026-05-31, AutoDS IL has an active renewal pipeline deal for $60,080 clos
 - [ ] **[DUE 2026-06-14]** Evaluate enterprise trial conversion and advance $20K upsell (Owner: Tal Huberman) — pending
 - [x] **[DUE Completed]** Conduct Fundamentals and Analyst training (Owner: Tal Huberman) — completed
 
+---
+
+## Recent History
+
+**2026-07-21 | Slack full catch-up [#at-autods, #ext-autods-mixpanel, #mixpanel-autods]**
+- Account quiet in Slack/email for two consecutive weeks (Jul 12–20) — no new inbound customer activity.
+- Outcomes/action items from the Jul 6 quarterly business review still have not been logged or confirmed — now going on two weeks without documentation.
+- Usage remains broad and stable (~50 active users); no new risks surfaced.
+- #ext-autods-mixpanel and #mixpanel-autods (secondary/legacy channels) show no new activity — confirmed inactive.
+- Next recurring AutoDS Quarterly Meeting: Sep 28, 2026, 13:30 IDT.
+
 
 ---
 

@@ -84,5 +84,10 @@ As of 2026-05-31, GameStory Israel has an active $50,400 renewal opportunity clo
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up (#at-superplay, #ext-gamestory-mixpanel, #mixpanel-superplay-dpp-query-small-forum)**
+- Confirms FY27 Renewal ($50,400) Closed Won Jul 1 (already logged) — no new GameStory-specific Slack activity since. Note: #at-superplay is a shared/mislabeled channel that carries mostly SuperPlay (a much larger, separate account — $867K renewal in Negotiation) traffic; GameStory-specific signal is limited to the Jul 1 close and a May 26 pre-close call.
+- #ext-gamestory-mixpanel: quiet since Apr 14 (product-update broadcast only); no customer messages.
+- #mixpanel-superplay-dpp-query-small-forum: dormant since Feb 2025 (channel-join messages only) — not an active GameStory channel.
+
 **2026-07-01 | Deal closed [via Slack #at-superplay]**
 - FY27 Renewal ($50,400) moved from Stage 1: Pipeline to Closed Won — closed in 4 months. Confirmed via Slack bot notification tagging Tal Huberman, Ofer Polivoda, Ghaith Ghazi, Shavit Ben-Itzhak, and Yonah. Source: Slack (#at-superplay).

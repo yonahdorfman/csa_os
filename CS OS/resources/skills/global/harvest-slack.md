@@ -1,7 +1,7 @@
 ---
 name: Harvest Slack
-version: 3.2
-last_updated: 2026-07-16
+version: 3.3
+last_updated: 2026-07-21
 category: sub-skill
 requires_mcp: [Slack]
 inputs:
@@ -28,10 +28,11 @@ partial coverage. A bounded batch guarantees forward progress on every tick.
 
 ## Channel Discovery
 
-**MANDATORY: Always read the account's `_MANIFEST.md` Sources table in full before scanning.** Do not rely solely on the BQ-mapped internal channel ID — that only ever covers the internal `#at-{account}` channel. The manifest is the authoritative list of every Slack source tied to the account and routinely includes sources the BQ field does not:
+**MANDATORY: For each account in the batch, take the UNION of these three sources.** Do not rely solely on the BQ-mapped internal channel ID — that only ever covers the internal `#at-{account}` channel:
 
-1. **BQ `account_metadata.slack_channel_id_c`** — pre-mapped internal channel ID (most reliable for the internal channel only, not a substitute for the manifest).
-2. **Account `_MANIFEST.md` Sources table** — the full source list. Read every row where `Source` = `Slack`, regardless of `Type`. This includes, at minimum:
+1. **`resources/slack-channel-registry.md`** — the pre-resolved book-wide registry of channel/DM/group IDs per account (`{Account}:group:...=ID`, `{Account}:DM:...=ID`). Read it ONCE per run (it's one small file), not per-account. This is the cheapest and most complete ID source — use its IDs directly instead of re-searching Slack. If a scan discovers a source missing from the registry, append it.
+2. **BQ `account_metadata.slack_channel_id_c`** — pre-mapped internal channel ID (most reliable for the internal channel only, not a substitute for the registry/manifest).
+3. **Account `_MANIFEST.md` Sources table** — the full source list. Read every row where `Source` = `Slack`, regardless of `Type`. This includes, at minimum:
    - `channel` rows — both internal (`#at-{account}`) and external/shared (`#ext-mixpanel-{account}`, `#{account}-mixpanel`, `#mixpanel-{account}`) channels
    - `user` rows — 1:1 DMs with named contacts (read via `slack_read_channel` using the user_id as the channel_id)
    - `group` / `mpim` rows — multi-person DMs / group chats involving the account's contacts
@@ -165,7 +166,13 @@ For each Slack source collected in Step 1 (internal channel, external channel, D
     when the account last happened to be scanned.
 
 **Step 2b: Deep read (only for channels with new activity)**
-- Read the last 30 messages in the lookback window (or last 10 for a monthly `user`-row liveness check)
+- Read everything since that source's `Last Fetched` date — NOT a fixed `LOOKBACK_HOURS` window.
+  Rotation means a non-priority account may not have been scanned for 3+ days; a fixed 24h
+  lookback silently drops every message older than yesterday, which is exactly how messages
+  get missed. `LOOKBACK_HOURS` only applies when `Last Fetched` is empty (first scan).
+- Cap the deep read at ~100 messages per source; if the cap truncates, say so in the output
+  (`{channel}: truncated at 100 msgs, oldest unread {date}`) instead of silently dropping.
+- For a monthly `user`-row liveness check, the last 10 messages are enough.
 - For `user`/DM rows, call `slack_read_channel` with the user's Slack ID as `channel_id`
 
 **Step 2c: Check for threads (CRITICAL — don't miss side conversations)**
@@ -203,6 +210,12 @@ liveness check for `user` rows. `Status` reflects activity recency, not scan cad
 an `Inactive` channel is still scanned on the same schedule as an `Active` one.
 
 ### 2b. Cursor Maintenance (Rotation + Hot Accounts)
+
+**A run that does not read AND update the rotation cursor is not a completed harvest —
+do not log `harvest:slack:completed` without it.** Do not improvise an ad-hoc "priority
+accounts" list in place of the procedure above: the 2026-07-17→07-21 runs did exactly
+that, the cursor sat at index 0 the whole time, and the ~30 non-priority accounts were
+never scanned — the direct cause of missed Slack messages.
 
 At the end of the run, update `resources/slack-harvest-rotation-cursor.md`:
 - Set `last_batch_end_index` to the position right after the last rotation-batch account

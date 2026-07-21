@@ -97,4 +97,11 @@ As of 2026-05-31, Altshuler Shaham has an active renewal pipeline deal for $53,8
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up [#at-altshuler, #mixpanel-altshuler-shaham]**
+- Flagged Renewal Risk = High for two consecutive weeks (Jul 12 and Jul 19 book-wide risk pulls); FY28 renewal ($53,899) still stuck at Stage 1: Pipeline with no progress.
+- Mark Galin's 7 action items from the Jun 16 hands-on session (event descriptions, withdrawal funnel dashboard, alerts, annotations, follow-up session) remain unconfirmed as of Jul 20 — no check-in logged.
+- DWC (Data Warehouse Connector) upsell opportunity flagged Jun 23 has still not progressed.
+- Usage remains concentrated in just 2 named users (sarik, markg), fluctuating week to week; no new meetings scheduled.
+- #mixpanel-altshuler-shaham (secondary channel) shows no activity beyond bot joins — inactive, confirmed.
+
 - 2026-06-17: Hands-on session (60 min) with Mark Galin, Sari (sarik@altshul.co.il), Chen (chenl@altshul.co.il) + Yonah + Tal Huberman. Focus: implementing Mixpanel for the new money withdrawal flow (transition from EasySend to in-house). Key context: testing nearly complete, launch planned July. Topics covered: event tracking for withdrawal steps, custom events/properties for financial products, Mixpanel alerts for behavioral anomalies, notations for deployment events. Positive signal — Mark Galin is the hands-on implementer and took ownership of 5 action items. This is the "breakthrough moment" from the account plan coming to life. Source: Clari call (https://copilot.clari.com/call/121ea429-21f2-474b-9aae-1c54fce33ab3)

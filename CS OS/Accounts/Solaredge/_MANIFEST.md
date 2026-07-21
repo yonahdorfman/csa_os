@@ -4,7 +4,7 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-solaredge (C04303X47SR) | Active | 2026-07-16 |
+| Slack | channel | #at-solaredge (C04303X47SR) | Active | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0010Z00002538jhQAA](https://mixpanel.lightning.force.com/lightning/r/Account/0010Z00002538jhQAA/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1JNYS7KBBr9hvhnrQ4j46s6GyWbsxol-6D52q6TpUhpY/edit?usp=drivesdk) | Active | — |

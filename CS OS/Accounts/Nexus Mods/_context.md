@@ -136,3 +136,13 @@ As of 2026-05-31, Nexus Mods shows strong growth with an active pipeline deal 'N
 - Customer asked why budget view showed 400M more events for May (200M more for April) vs All Events.
 - Shavit replied same day: explained $all_mtu_events vs all events — MTU billing counts identify, merge, and other non-UI events. Customer: "Thx 🙌"
 - Context: the discrepancy is expected behavior, not a bug. Ties into the pricing email — event volume discrepancy is the overage itself.
+
+---
+
+## Recent History
+### 2026-07-21 — Slack Full Catch-up
+- #at-nexus-mods: automated weekly summaries (Jul 19, Jul 20) confirm no new commercial movement on FY28 Renewal (Stage 1: Pipeline, $154,623) — still needs progression.
+- Two Pylon tickets (#9242 DA onboarding, #10174 billing contact update) still flagged as SLA-breached as of the Jul 20 weekly summary — resolution status unconfirmed, recommend explicit follow-up.
+- #ext-mixpanel-nexusmods: billing contact change request (Jul 9) to move invoicing to Anna Gabrielczyk was acknowledged (✅ reaction) — appears resolved; no further channel activity since.
+- Natalie Jones (new Data Analyst) continues a strong ramp — top query user and top MCP contributor for two consecutive weeks per Jul 19/20 summaries.
+- Group DM (Gabriel Bruck + Gidi Eigenstein + Yonah Dorfman) and Marinus Elgaard 1:1 DM: no new activity since 2025-10-01 and 2026-07-02 respectively — no churn-risk or escalation signals surfaced this cycle.

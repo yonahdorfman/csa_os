@@ -7,7 +7,8 @@
 ---
 
 ## Identity
-- ARR: ${amount} | Renewal: {date} ({days} days)
+- ARR: ${amount} | Contract End: {date} ({days} days, or "⚠️ LAPSED {N}d" if past and opp not Closed Won)
+- Next Opp Target: {date or "TBD — no active opportunity"} — {opp name}, Stage: {stage}
 - Plan: {plan type} | Contract: {terms, notice window}
 - FY{XX} Status: {Active|Pending-Upsell|Renewal|At-Risk} | Churn Risk: {Low|Medium|High} ({why}) | Shared with {AE}: {Y|N}
 
@@ -105,7 +106,7 @@ Entries are tagged VALUE, RISK, or GOAL for filtering at read time:
 
 ## Sales Intelligence
 > 🤖 Machine-generated — BQ data as of {date}. Do not edit manually; this section is overwritten on each refresh.
-> SFDC Account ID: `{id}` | BQ ARR: ${amount} | Renewal: {date} | Auto-renew: {Yes|No}
+> SFDC Account ID: `{id}` | BQ ARR: ${amount} | Contract End: {date} | Auto-renew: {Yes|No}
 
 ### Health & Sentiment
 - **Overall:** {rating} | **Sentiment:** {label} ({score})
@@ -139,3 +140,35 @@ Entries are tagged VALUE, RISK, or GOAL for filtering at read time:
 
 ### Executive Summary (BQ)
 {2-3 sentence summary of pipeline, last interaction, key activities}
+
+---
+
+## Statisfy Snapshot
+> 🤖 Machine-generated — live CRM data as of {date}. Do not edit manually; overwritten each refresh.
+
+**Health Scorecard** (as of {health.date})
+
+| Pillar | Status |
+|--------|--------|
+| Overall | {overallHealth} |
+| Product Usage | {productUsage} |
+| Relationship | {relationship} |
+| Outcomes | {outcomes} |
+| Experience | {experience} |
+| Feature Requests | {featureRequests} |
+| Risks | {risks} |
+
+**Open Opportunities**
+
+| Name | Type | Stage | Amount | Close Date | Probability | Renewal at Risk? |
+|------|------|-------|--------|------------|--------------|-------------------|
+| {name} | {type} | {stage} | ${amount} | {close_date} | {probability}% | {Yes/No} |
+
+**Relationship of Record**
+- CSM: {name} | AM: {name} | Champion: {name or "none logged"} | Exec Sponsor: {name or "none logged"}
+
+**Open CRM Tasks**
+- [ ] {title} — due {due_date}
+
+**Conflicts with BigQuery** (only if any)
+- {e.g. BQ Contract End vs. Statisfy active Renewal opp close date mismatch — see harvest-statisfy.md}

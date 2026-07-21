@@ -352,6 +352,7 @@ Accounts DB
 └── {Account Name}           ← parent page (DB entry, properties only)
     ├── Context              ← child page (full account context — read every cycle)
     └── Manifest             ← child page (sources — read at setup/sync)
+    └── Contacts             ← child page (contacts that should be updated — read at setup/sync)
 ```
 
 **CRITICAL — Process ONE account at a time to prevent parent/child mapping bugs.**

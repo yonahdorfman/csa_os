@@ -111,6 +111,12 @@ There is an active pipeline deal for the FY27 Renewal ($63,205 ARR) currently in
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up [#at-and-t-global]**
+- MSA finally signed (Jul 19, per Tal) — major forward movement after weeks of lapsed renewal (expired Jun 30). SOW still needs signature; Tal has a follow-up meeting with AT&T legal to move it forward.
+- Renewal ($63,205) remained flagged red/lapsed through Jul 20 weekly summaries (20+ days past due) even as the MSA signature landed — real decision-maker still not confirmed as of the last automated summary.
+- Mixpanel's SecurityScorecard score improved from 60 to 77 (internal remediation), a positive lever for unblocking AT&T's vendor review.
+- Usage remains steady (~23-25K queries/week, ~48-50 named users); no new inbound customer engagement in Slack this period.
+
 **2026-07-06 | DM note [via Slack DM]**
 - Contact clarification: Harriet Kaufman is an internal Mixpanel team member (not customer-side). Ayelet Eyal is a product user, not a decision maker on the renewal.
 

@@ -95,3 +95,9 @@ As of 2026-05-31, runwayer.com has an active FY 27 Renewal opportunity in the pi
 - Interested in A/B testing, AI agent, MCP connection; will consider team training
 - Action items (Shavit): send docs for A/B testing + feature flags + AI agent + MCP, schedule quarterly meeting
 - External channel contacts: Ruslan (CEO), Aleksandr Lebedev (analytics), Maya (operations/finance)
+
+**2026-07-21 | Slack full catch-up (#at-runwayer, #ext-mixpanel-runwayer)**
+- Shavit's Jun 11 action items (docs for A/B testing, feature flags, AI agent & MCP for Valeria) remain outstanding — now 6+ weeks overdue; this is the top open item.
+- Unassigned Statisfy alert "Project Stopped Sending Data" (flagged May 29) still has no owner.
+- FY27 Renewal ($54,176) unchanged at Stage 1: Pipeline; no progression this week.
+- No new raw customer Slack activity in either channel this week — account remains quiet since the Jun 11 call. Next confirmed touchpoint: Runwayer/Mixpanel Quarterly Meeting, Aug 11, 2026.

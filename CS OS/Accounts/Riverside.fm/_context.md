@@ -77,3 +77,13 @@ As of May 31, 2026, Riverside is engaged in an active pipeline deal for their FY
 | Latest Opp | Riverside.fm - FY 28 Renewal |
 | Stage | 1: Pipeline |
 | Opp ARR | 73999.0 |
+
+---
+
+## Recent History
+
+**2026-07-21 | Slack full catch-up — eighth consecutive quiet week from CSA side, SR alert still unassigned**
+- #at-riverside is the only Slack source on file; scanned in full — no direct customer engagement, calls, or emails logged since the channel was created in May 2026, despite ~39,000 queries/week across 65+ named users.
+- "Session Replay Not Activated" Statisfy alert remains unassigned, now 8+ weeks since it first surfaced (May 29).
+- Top users continue to be lalaine.chavez, ido.harash, and abel@riverside.fm — strong champion candidates for first outreach.
+- This remains the single highest-usage, lowest-engagement account in the book — claiming the SR alert and initiating first contact is the clear next step.

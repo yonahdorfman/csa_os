@@ -1,7 +1,7 @@
 ---
 name: Compress
-version: 1.1
-last_updated: 2026-07-06
+version: 1.2
+last_updated: 2026-07-21
 category: sub-skill
 description: >
   The intelligence step. Takes raw harvest output from all sources, classifies
@@ -59,7 +59,7 @@ Do not treat them as independent sources. Neither overrides a locally-authored e
 The assistant passes combined output from all harvest-* skills that ran.
 Parse this into a flat list of signals, each with:
 - account (matched or "unmatched")
-- source (gmail, slack, calendar, drive, bq, notion)
+- source (gmail, slack, calendar, drive, bq, notion, statisfy)
 - urgency (critical, high, normal, noise)
 - signal_type (risk, decision, approval, escalation, blocker, milestone, sentiment, renewal, general)
 - summary (one line)
@@ -280,4 +280,4 @@ For each account that was updated, append to the changelog:
 
 - **Empty harvest:** If all harvesters returned nothing or were unavailable, say "No signals to compress" and log it.
 - **New account detected:** If a signal references an account that doesn't have a folder yet, file to Inbox with a note: "Possible new account: {name}. Create folder with /add-account."
-- **Conflicting signals:** If two sources say different things about the same topic (e.g., Slack says "deal closed" but Gmail says "still negotiating"), include both with source attribution. Don't resolve conflicts — flag them for human review.
+- **Conflicting signals:** If two sources say different things about the same topic (e.g., Slack says "deal closed" but Gmail says "still negotiating"), include both with source attribution. Don't resolve conflicts — flag them for human review. BQ vs. Statisfy is the recurring case (contract dates, ARR, CSM/AM assignment, renewal stage) — harvest-statisfy.md surfaces these explicitly; carry them into Active Risk or Recent History with both values and sources rather than picking one.

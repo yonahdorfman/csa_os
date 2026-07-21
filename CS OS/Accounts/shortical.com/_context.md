@@ -131,3 +131,9 @@ As of 2026-05-31, shortical.com has an active pipeline deal for their FY 28 Rene
 **2026-07-06 | GOAL | Deal signed — event setup walkthrough next**
 DM note from Yonah (13:56 IDT) reports the deal is signed and a walkthrough of event setup will follow soon. This lands the same day the overage climbed further (130.65%, up from 125.7% Sunday) and while the MTU pricing proposal to Hai/Yuval was due today (owned by Tal Huberman). Recommend confirming with Tal whether "deal signed" refers to the MTU pricing/tier resolution — if so, the event setup walkthrough is the natural moment to also close out the overage calculation open item (owned by Yonah, due tomorrow Jul 7).
 *Source: DM note 2026-07-06 (13:56 IDT) + Mixpanel telemetry 2026-07-06.*
+
+**2026-07-21 | Slack full catch-up (#at-shortical, #ext-mixpanel-shortical, DM Yossi Zaltsman) — fresh pull, not duplicating today's earlier EoD patch**
+- NEW today: a "Network Exception Errors" custom alert fired (Jul 20, 4PM UTC) — Uniques of Network Request Exception hit 1,087 (threshold 900), tied to a 500 error on `prod.shortical.com/api/v1/users/claims`. Worth a quick technical check but likely operational noise rather than a customer-reported issue.
+- Event overage remains critical at ~140% of plan; customer still actively weighing disabling Mixpanel for web tracking.
+- MTU pricing proposal to Hai/Yuval is now 5+ weeks overdue — top blocker per Tal's Jul 20 digest.
+- On-site session & lunch with Yuval, Hai, Igal, and Yossi confirmed for Aug 4 — key venue to close the pricing conversation in person.

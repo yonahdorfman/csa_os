@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-gamdom (C0ANF540K2A) | Active | 2026-07-16 |
-| Slack | channel | #ext-mixpanel-gamdom (C0A6W12AJTU) | Active | 2026-07-16 |
+| Slack | channel | #at-gamdom (C0ANF540K2A) | Active | 2026-07-21 |
+| Slack | channel | #ext-mixpanel-gamdom (C0A6W12AJTU) | Active | 2026-07-21 |
 | Slack | user | Connor (U0A6BC5FNDV) | Inactive | 2026-07-02 |
 | Slack | user | Viktor (U08DL8B161E) | Inactive | 2026-07-02 |
 | Slack | user | Steven (U0ALBPZAGSK) | Inactive | 2026-07-02 |

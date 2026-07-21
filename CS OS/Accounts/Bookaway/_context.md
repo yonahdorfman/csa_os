@@ -74,6 +74,13 @@ _No executive summary available._
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up [#at-bookaway, #bookaway-mixpanel]**
+- Renewal ($51,830) remains stuck at Stage 1: Pipeline — internal Yonah/Tal weekly (Jul 20) again flags "Bookaway - no answer," meaning customer outreach still hasn't landed.
+- AI displacement risk stays open — customer (under Travelier consolidation with One2Go Asia + a smaller European brand) still weighing an in-house analytics/warehouse build vs. continued Mixpanel investment; benchmarking against GrowthBook.
+- The Singapore-based GM (new budget decision-maker) still hasn't been looped into a stakeholder conversation.
+- Usage remains very low and declining — only 6 active users, 1,323 queries this week, consistent with ongoing org restructuring.
+- Account flagged red/high churn risk; no external Bookaway meeting scheduled in the next 7 days.
+
 **2026-06-10 | External channel scan [May 26 message — RESOLVED]**
 - Customer asked to recover deleted board. Tal Huberman replied immediately: acknowledged urgency, told customer it's generally not recoverable, escalated to support on their behalf.
 - Customer replied positively: "Done!" Tal: "Yay! Be careful next time :slightly_smiling_face:"

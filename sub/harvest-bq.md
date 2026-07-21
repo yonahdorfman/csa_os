@@ -82,6 +82,25 @@ See templates/_context-template.md for the full format. Key sections to fill:
 - **Recent History** from dates/interactions in `executive_summary`
 - **Sales Intelligence** from health scores + opp data
 
+**Contract date fields — do not conflate these:**
+
+`commercials_contract_end` and `latest_opp` close date answer different questions and must
+be written to separate, explicitly-labeled fields. Collapsing them into one ambiguous
+"Renewal" field hides lapsed contracts behind a healthy-looking future date.
+
+- **`Contract End`** = `p.commercials_contract_end` — when the CURRENT signed contract
+  actually expires. This is the only field that determines whether an account is lapsed.
+- **`Next Opp Target`** = the close date implied by `latest_opp_name` / `latest_opp_stage`
+  (e.g. "FY28 Renewal" closing 2027-06-01) — when the NEXT contract is projected to be
+  signed. This is a pipeline forecast, not a commitment, and stays unfilled/TBD until an
+  opportunity exists.
+- Write both to the Identity table. Never let `Next Opp Target` overwrite or stand in for
+  `Contract End`.
+- **Lapsed check:** if `Contract End` is in the past AND the related opportunity's stage is
+  not Closed Won, flag it explicitly — e.g. `Contract End: 2026-05-31 ⚠️ LAPSED 37d, renewal
+  still Stage 1: Pipeline` — so the risk is visible in Identity itself, not just in a
+  separate risk log.
+
 ### 3. Manifest content (_MANIFEST.md)
 
 ```
@@ -106,7 +125,9 @@ See templates/_context-template.md for the full format. Key sections to fill:
 
 When called during normal daemon operation:
 - Only update **Sales Intelligence** section of _context.md (safe to overwrite)
-- Update Identity fields if ARR/AE/renewal changed
+- Update Identity fields if ARR/AE/`Contract End`/`Next Opp Target` changed — re-run the
+  lapsed check (above) on every refresh, since a contract that was current yesterday can
+  lapse today purely from time passing, with no new BQ data at all
 - Add NEW contacts from `contacts_json` not already in Key Contacts
 - Add NEW action items from `action_plan_json` not already in Open Items
 - **Never overwrite** Recent History, Active Risks, Open Items (human-maintained)

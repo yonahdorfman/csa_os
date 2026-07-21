@@ -88,6 +88,11 @@ As of 2026-05-31, Fibi has an active pipeline deal for their FY 27 Renewal ($63,
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up (#at-fibi-bank)**
+- Account still flagged Renewal Risk = High in both the Jul 19 and Jul 20 book-wide risk sweeps; renewal ($63,246, Stage 1: Pipeline) and SR upsell ($40K, Stage 3: Proof) both remain stalled with no forward movement.
+- Champion Diana Chausskiy remains the engaged point of contact (consistent with the usage-report thread already logged Jul 7); no new Fibi-specific Slack activity this week beyond the recurring internal bot summaries.
+- Jul 2 onsite outcome and champion-transition close-out remain undocumented for multiple weeks — still needs closure.
+
 **2026-07-07 | Gmail catch-up (14-day sweep) — usage report exchange + business plan meeting rescheduled**
 - Jul 6-7: Continued the monthly usage report thread with Diana Chausskiy — Yonah sent June usage data (Jul 6, 12:42pm), Diana asked if she could pull the report herself in Mixpanel, Yonah replied yes (Settings → Mixpanel Usage) but offered to keep sending it monthly anyway. Good engagement signal — Diana is actively using the relationship and wants self-service.
 - Jul 1-2: The "תוכנית עסקית" (business plan) meeting with Tal Huberman was rescheduled multiple times — final landing: Thursday Aug 13, 10:30am, because Diana is on a 2-week vacation in July and wanted to come prepared with consolidated questions rather than rush it.

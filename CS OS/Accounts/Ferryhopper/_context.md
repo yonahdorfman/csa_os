@@ -90,6 +90,12 @@ As of 2026-05-31, Ferryhopper has a $52,000 ARR FY 29 Renewal in the pipeline. L
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up (#at-ferryhopper, #ex-ferryhopper-mixpanel, DM Panagiotis Sarafis, DM Thodoris Paraskevopoulos)**
+- Account still flagged Renewal Risk = High (Jul 19–20 book-wide sweeps); FY29 $52K renewal (Stage 1) remains stalled with no motion started.
+- Yonah reached out directly Jul 19 — team confirmed they're slammed with peak summer travel season and actively adding more events; plan to check back once the busy season eases.
+- DM with Thodoris (Jul 15–20): resolved a question about the default "Opt In" event and whether it can serve as a session-start proxy — confirmed it can't reliably (many users trigger it only once).
+- Nested-properties follow-up (open since the May 25 call) and the "Talk with Max" item remain overdue.
+
 **2026-06-10 | External channel scan [May 18–20 messages — ALL REPLIED]**
 - May 18: Conversion Rate (Uniques/1-session) vs (sessions) — Tal answered with docs link, Yonah added funnel example. Customer: "Great! Thanks!"
 - May 19: Nested property rename — Yonah replied: not possible in UI, code-level only, old/new are separate. Customer followed up; confirmed no aliasing available.

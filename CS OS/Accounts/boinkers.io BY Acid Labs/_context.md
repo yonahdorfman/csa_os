@@ -99,3 +99,9 @@ As of 2026-05-31, boinkers.io has an active pipeline deal for their FY 27 Renewa
 - Jun 8: Export API deduplication gap — Yonah replied same day. Acknowledged the issue, provided workaround (deduplicate on distinct_id+insert_id client-side), submitted product feedback. Scott Cohen + AK Krivitzky tagged for product awareness. Underlying API parity gap remains open at product level.
 - Jun 4: Lookup table broken — custom property not appearing in reports. Still unreplied.
 - Both issues require immediate outreach; financial impact of Export API bug is the top priority.
+
+**2026-07-21 | Slack full catch-up (#at-boinkers-acid, #ext-mixpanel-acid, DMs for Maor/AK Krivitzky/Asaf Huga/Guy Bauer)**
+- RESOLVED TODAY: support (Ilhan Abdalle) confirmed the drag-and-drop Filter/Breakdown bug (ticket #9065, reported Jul 5 by maorf) is fixed as of today (Jul 21) — asked customer to confirm on their side. This closes out a functionality gap the power user said they used "DAILY."
+- Two other Pylon issues remain open and need status checks: #10338 (critical bug) and #10835 (Appsflyer_ID column inconsistency in _MASTER_EVENT view).
+- Customer story momentum: Boinkers' Mixpanel Headless usage (programmatic custom properties/cohorts) is being developed into a customer story with Nick Lin/Ella Sandovski — EMEA team flagged it for spotlighting.
+- Single-user concentration risk persists (alexander.mazyarik ~75% of real-user queries); recurring monthly "Implementation Issue" notification for Boinkers-prod fired again, still unresolved.

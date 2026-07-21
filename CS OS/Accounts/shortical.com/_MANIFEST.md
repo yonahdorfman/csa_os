@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-shortical (C0ANPR4FQ3W) | Active | 2026-07-16 |
-| Slack | channel | #ext-mixpanel-shortical (C09TCQTHPRS) | Inactive | 2026-07-16 |
+| Slack | channel | #at-shortical (C0ANPR4FQ3W) | Active | 2026-07-21 |
+| Slack | channel | #ext-mixpanel-shortical (C09TCQTHPRS) | Active | 2026-07-21 |
 | Slack | user | Yossi Zaltsman (U0B553CQ1DF) | Inactive | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001Nt00000R8v6UIAR](https://mixpanel.lightning.force.com/lightning/r/Account/001Nt00000R8v6UIAR/view) | Linked | — |

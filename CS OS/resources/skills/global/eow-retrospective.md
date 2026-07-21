@@ -7,7 +7,7 @@ inputs:
   - ACCOUNTS_PATH, LEDGER_PATH, CSM_NAME, CSM_EMAIL, CSM_TIMEZONE
   - NOTION_PAGE_REGISTRY
 invoke:
-  - Scheduled: Friday at configured time (via orchestrator)
+  - Scheduled: Thursday at configured time (via orchestrator)
   - "/weekly"
 ---
 
@@ -19,7 +19,7 @@ Writes V/R/G Log entries. Detects cross-account patterns.
 ## Steps
 
 ### 1. Pull Latest from Notion
-### 2. Read the Week's Changelog (Mon–Fri)
+### 2. Read the Week's Changelog (Sun–Thurs)
 ### 3. Read All Account Context
 ### 4. Write V/R/G Log Entries to Notion
 

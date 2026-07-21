@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-mbg-digital (C0ATSAJ9U8M) | Active | 2026-07-16 |
-| Slack | channel | #ext-mixpanel-mbgdigital (C0AC89860HZ) | Active | 2026-07-16 |
+| Slack | channel | #at-mbg-digital (C0ATSAJ9U8M) | Active | 2026-07-21 |
+| Slack | channel | #ext-mixpanel-mbgdigital (C0AC89860HZ) | Active | 2026-07-21 |
 | Slack | user | martin.lond@noclip.ee (unknown) | Active | — |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001Nt00000Fm96qIAB](https://mixpanel.lightning.force.com/lightning/r/Account/001Nt00000Fm96qIAB/view) | Linked | — |

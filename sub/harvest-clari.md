@@ -1,8 +1,9 @@
 ---
 name: Harvest Clari
 version: 1.0
-last_updated: 2026-04-29
+last_updated: 2026-07-16
 category: sub-skill
+status: standby — not called by default as of 2026-07-16
 requires_mcp: [BigQuery]
 optional_mcp: [Clari Copilot]
 inputs:
@@ -11,11 +12,18 @@ inputs:
   - LOOKBACK_DAYS: "default: 7"
 output: Call summaries, action items, and key takeaways per account
 invoke:
-  - Called by harvest-all during daemon cycle
-  - "/harvest-clari"
+  - "/harvest-clari" (manual only)
 ---
 
 # Harvest Clari
+
+**Standby as of 2026-07-16.** Superseded by `harvest-gong.md` for call
+intelligence and removed from `harvest-all.md`'s execution list and from
+`HARVEST_REQUIRED` in orchestrator.md — it is no longer called automatically.
+This file is kept intact (not deleted) in case Gong data ever needs
+cross-checking against the old Clari dataset. To reactivate, add it back to
+`harvest-all.md`'s numbered execution list — do not do so without asking
+first. If reactivated, keep it BQ-first (see below), same as Gong.
 
 Pull call transcripts, summaries, key takeaways, and action items from BQ.
 This is one of the richest signal sources — a single call produces structured

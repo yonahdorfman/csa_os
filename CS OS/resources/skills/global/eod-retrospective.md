@@ -92,6 +92,23 @@ edits made during the day.
 Read `{LEDGER_PATH}/changelog/{YYYY-MM-DD}.md`.
 Extract: accounts touched, signals processed, context updates, errors.
 
+### 2.5. Check Asana for Completed Tasks
+
+Before generating the retro, check Asana for tasks completed today.
+
+1. Read the registry from `CS OS/resources/asana-project-registry.md`
+2. For all account projects, call `get_tasks` with:
+   - `project_gid` = each account's GID from registry
+   - Filter: tasks completed today (`completed_since` = start of today)
+   - `opt_fields`: `name,completed_at,notes,permalink_url,assignee.name`
+3. For each completed task:
+   - Extract the account name from the project
+   - Include in the "Done" section of the retro
+   - Mark with ✅ to indicate it came from Asana
+4. Batch project fetches where possible to stay within rate limits
+
+If Asana MCP is unavailable, skip this step and note in the retro.
+
 ### 3. Read Account Context
 For each account touched today, read current `_context.md`.
 
@@ -128,12 +145,14 @@ Write to Notion first. Cache locally after.
 ### Done
 - {Account}: {what was accomplished or happened}
 - {Account}: {what was accomplished}
+- ✅ {Account}: {task completed in Asana}
+- ✅ {Account}: {task completed in Asana}
 
 ### Carrying
 - {Account}: {what didn't get done and why}
 
 ### Signals
-- Sources: Gmail {N} | Slack {N} | Calendar {N} | BQ {N} | Mixpanel {N}
+- Sources: Gmail {N} | Slack {N} | Calendar {N} | BQ {N} | Mixpanel {N} | Asana {N} completed
 - Actionable: {N} | Noise filtered: {N}
 - Context updates: {N} accounts patched
 
@@ -147,6 +166,22 @@ Write to Notion first. Cache locally after.
 
 1. Save to `{LEDGER_PATH}/retros/{YYYY-MM-DD}-eod.md`
 2. Push retro to Notion Workspace Ledger as child page
+
+### 7.5. Create Asana Tasks for Tomorrow
+
+After the retro is written but before posting to Slack, create Asana tasks
+for items in "Tomorrow" and "Carrying" sections.
+
+1. Call the `/create-asana-tasks` sub-skill (from `sub/create-asana-tasks.md`)
+2. Pass all action items from Tomorrow and Carrying
+3. The sub-skill will:
+   - Check for duplicate tasks (skip if already exists)
+   - Create tasks in the appropriate account projects
+   - Mark "Carrying" items as high priority (overdue)
+   - Set "Tomorrow" items with appropriate due dates
+   - Log what was created to the changelog
+
+If Asana MCP is unavailable, skip this step and log a warning.
 
 ### 8. Post to Slack (headline + thread)
 

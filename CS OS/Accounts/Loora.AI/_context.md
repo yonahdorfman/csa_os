@@ -89,3 +89,9 @@ As of 2026-05-31, Loora.AI has an active pipeline deal ('Loora.AI - FY 27 Renewa
 - Yonah replied same day: guided toward the merge function. Customer asked if it can be called from browser; Yonah said yes.
 - Customer resolved it independently: "i was able to solve with a combination of identify and alias called from the websdk." Yonah: "Perfect"
 - Coaching note: originally flagged as "13 days unreplied" — was actually replied to the same day. Thread check corrects this.
+
+### 2026-07-21 — Slack Full Catch-up
+- #at-loora: Jul 16 Gong call — Shavit presented tiered MTU-based pricing options for the stalled $20K Data Upsell; Loora to decide by end of July (commercial signal, decision pending, no update yet).
+- Internal weekly digests (Jul 19, Jul 20) confirm QBR action items from May 19 are now ~9 weeks overdue and still owned by Yonah: GDPR US/EU data residency guidance to Yonti, funnel cutoff/identity management investigation, and the mobile app implementation issue flagged Jun 10 — none resolved.
+- #ext-loora-mixpanel: no new customer-facing messages since last fetch; most recent activity was Jul 6 (internal Shavit share of new AI feature walkthrough, no customer reply/thread).
+- DMs with Yonti and Amit Ashckenazi returned no messages in this window — no new signals from either lower-priority channel.

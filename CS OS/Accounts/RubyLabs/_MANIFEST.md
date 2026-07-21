@@ -4,15 +4,15 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-rubylabs (C0ANG0CB2GH) | Active | 2026-07-16 |
-| Slack | channel | #mixpanel-rubylabs (C088KNB5C5V) | Active | 2026-07-16 |
-| Slack | user | Beka Dalakishvili (U08F9Q1LJ6R) | Inactive | 2026-07-02 |
-| Slack | user | Robinzon Sokhashvili (U08LF0QH7NU) | Inactive | 2026-07-02 (user not found) |
-| Slack | user | Daria Fedorova (D0AUWH7MFJT) | Active | 2026-07-02 |
-| Slack | user | Vladislav Maksimovic (U0A992A0X1N) | Inactive | 2026-07-02 |
-| Slack | user | Pijus Kasteckas (U08EF6P67MH) | Inactive | 2026-07-02 |
-| Slack | user | Sergii Pliiev (U09A7F0R3PU) | Inactive | 2026-07-02 |
-| Slack | user | Sergii Medvid (U09U94XEJ03) | Inactive | 2026-07-02 |
+| Slack | channel | #at-rubylabs (C0ANG0CB2GH) | Active | 2026-07-21 |
+| Slack | channel | #mixpanel-rubylabs (C088KNB5C5V) | Active | 2026-07-21 |
+| Slack | user | Beka Dalakishvili (U08F9Q1LJ6R) | Inactive | 2026-07-21 |
+| Slack | user | Robinzon Sokhashvili (U08LF0QH7NU) | Inactive | 2026-07-21 (user not found) |
+| Slack | user | Daria Fedorova (D0AUWH7MFJT) | Inactive | 2026-07-21 |
+| Slack | user | Vladislav Maksimovic (U0A992A0X1N) | Inactive | 2026-07-21 |
+| Slack | user | Pijus Kasteckas (U08EF6P67MH) | Inactive | 2026-07-21 |
+| Slack | user | Sergii Pliiev (U09A7F0R3PU) | Inactive | 2026-07-21 |
+| Slack | user | Sergii Medvid (U09U94XEJ03) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001Nt00000N9GMsIAN](https://mixpanel.lightning.force.com/lightning/r/Account/001Nt00000N9GMsIAN/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1Bsn_9E2oV3LV8IfDa9Qinetb8HWj1xs3k-S49GiJUtw/edit?usp=drivesdk) | Active | — |

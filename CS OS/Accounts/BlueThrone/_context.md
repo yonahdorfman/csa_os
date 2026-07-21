@@ -84,5 +84,13 @@ The FY27 Renewal deal recently Closed Won on May 11 for $215,001, and the FY28 R
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up [#at-bluethrone, #ext-mixpanel-bluethrone]**
+- Account quiet in Slack/email for two consecutive weeks (Jul 12–20) — no new inbound activity.
+- Amplitude→Mixpanel migration docs and Mixpanel Headless docs promised to Sergei Abramian from the Jul 1 call remain unconfirmed/unsent as of Jul 20 — overdue action item for Yonah.
+- WHC (Warehouse Ingestion) enterprise trial window closed Jul 12 with no confirmed outcome logged.
+- FY28 renewal ($215,001, Stage 1: Pipeline) shows no progression.
+- Usage remains strong and growing (27 active users, ~10.8K queries from top user, MCP usage up to 568/week).
+- Next recurring monthly meeting: Aug 5, 2026, 12:00 IDT.
+
 **2026-07-01 | Gong — Monthly Meeting (12:00 IDT) [Yonah + Shavit + Lily Amsellem + Sergei Abramian]**
 - New signal: BlueThrone's first-ever SaaS acquisition (previously mobile-only) migrating Amplitude → Mixpanel, ~400M historical events; a further acquisition in 2-3 months could raise quota needs. Sergei personally handling setup. Warehouse Connectors success story cited. Mixpanel Headless pitched for an internal AI agent (experiment suggestions). SR still declined (event/funnel tracking sufficient). Watch: quantify acquisition-driven quota/upsell potential before FY28 renewal ($215,001). [Gong](https://us-16307.app.gong.io/call?id=7548322592106970813)

@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-bookaway (C0B3ELSNV8C) | Active | 2026-07-16 |
-| Slack | channel | #bookaway-mixpanel (C079912RNDC) | Active | 2026-07-16 |
+| Slack | channel | #at-bookaway (C0B3ELSNV8C) | Active | 2026-07-21 |
+| Slack | channel | #bookaway-mixpanel (C079912RNDC) | Active | 2026-07-21 |
 | Slack | user | Ofer Rozenstine (U091JB0HU5A) | Inactive | 2026-07-02 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002JJ0ccAAD](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002JJ0ccAAD/view) | Linked | — |

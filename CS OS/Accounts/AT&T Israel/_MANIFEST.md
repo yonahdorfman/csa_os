@@ -4,7 +4,7 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-and-t-global (C04CYT8CSN7) | Active | 2026-07-16 |
+| Slack | channel | #at-and-t-global (C04CYT8CSN7) | Active | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002EvzATAAZ](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002EvzATAAZ/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1IJuqHIUYJ_tO4Sf0H-zp76JgrkIqwpk-pAeqwcVrwdM/edit?usp=drivesdk) | Active | — |

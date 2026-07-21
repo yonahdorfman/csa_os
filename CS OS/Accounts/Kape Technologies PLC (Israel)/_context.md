@@ -96,6 +96,12 @@ As of 2026-05-31, Kape Technologies is maintaining steady usage primarily driven
 ---
 
 ## Recent History
+### 2026-07-21 — Slack Full Catch-up
+- #kape-mixpael: Kape data team (Segev Cohen) continued a technical thread through Jul 19 on anonymous-to-identified user linking for Facebook in-app browser traffic (UTM attribution timing/ordering issue); Yonah answered on Jul 19, thread ends awaiting customer confirmation — no blocker, informational/support in nature.
+- #kape-mixpael: related Meta/Facebook ad attribution reconciliation issue on the `web_live_xv` project (checkout_completed vs. Meta UI discrepancies) — customer's Jul 19 follow-up suggests FB in-app browser event-ordering/queuing as likely cause; open, no explicit new ask.
+- #kape-mixpael (Jul 16): Aviv Meital requested org-wide Admin access across all Kape Mixpanel projects; Yonah advised routing via Itzik Pinchas (org admin) — consistent with the Jul 20 weekly summary noting access is still only partially granted (CG/XV projects still missing).
+- #at-kape: no new customer-facing signals beyond automated weekly account summaries (Jul 19, Jul 20), which restate previously-logged items (FY29 renewal Stage 1, Data Cleanup 2 on Jul 23, Kape Intego Quarterly Meeting Jul 27).
+- Roman Fominih DM: no messages retrievable in this pull (channel returned empty) — no new signals since 2026-07-02; worth re-checking access next cycle.
 
 **2026-07-15 | DM note [via Slack DM]**
 - Itzik (Itzik Pinchas) owns Mixpanel at Kape. (Answers the open question from the 2026-07-15 morning cycle: "who owns Mixpanel internally at Kape" — confirmed as Itzik Pinchas, consistent with him self-identifying as de facto POC on 2026-07-12 call.)

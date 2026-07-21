@@ -4,10 +4,10 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-palo-alto (C0AP5TS531S) | Active | 2026-07-16 |
-| Slack | channel | #ext-proj-pb-mixpanel (C0AHCRYTPPZ) | Inactive | 2026-07-16 |
-| Slack | dm | Hagit Ben-Tzur + Yuval Brill + Tal Huberman + Yonah Dorfman (C0B6T9HJZLJ) | Inactive | 2026-07-16 |
-| Slack | dm | Adi Azriel + Eliazar Sikuriansky + Tal Huberman + Yonah Dorfman + Yael Bratman Levit (C0B89PQGCTC) | Active | 2026-07-16 |
+| Slack | channel | #at-palo-alto (C0AP5TS531S) | Active | 2026-07-21 |
+| Slack | channel | #ext-proj-pb-mixpanel (C0AHCRYTPPZ) | Inactive | 2026-07-21 |
+| Slack | dm | Hagit Ben-Tzur + Yuval Brill + Tal Huberman + Yonah Dorfman (C0B6T9HJZLJ) | Inactive | 2026-07-21 |
+| Slack | dm | Adi Azriel + Eliazar Sikuriansky + Tal Huberman + Yonah Dorfman + Yael Bratman Levit (C0B89PQGCTC) | Inactive | 2026-07-21 |
 | Slack | user | Yael Bratman Levit (U09CV84BZDF) | Inactive | 2026-07-02 |
 | Slack | user | Fuming Shih (U081PQ3TH37) | Inactive | 2026-07-02 |
 | Slack | user | Hagit Ben-Tzur (U0898J8LL8N) | Active | 2026-07-02 |

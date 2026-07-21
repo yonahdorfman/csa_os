@@ -95,3 +95,12 @@ As of 2026-05-31, Nanit has an active pipeline deal ('Nanit - FY 28 Renewal') fo
 **2026-07-06 | RISK | Approaching plan overage — compounds existing commercial friction**
 Plan usage now 95.0%, up from 90.7% on 2026-06-22 — closing in on overage on an MTU-based plan. This account already carries commercial friction (past-due invoice, pricing pushback), so an overage landing on top of that is a compounding risk rather than a standalone usage milestone. No outreach yet. Recommend getting ahead of it proactively (before the overage notice lands) rather than waiting for it to surface as a billing surprise. Account is also in the Stale bucket (14 days since last context touch) — due for a genuine review, not just a telemetry refresh.
 *Source: Mixpanel/BQ harvest-catchup 2026-07-06 (12:16).*
+
+---
+
+## Recent History
+### 2026-07-21 — Slack Full Catch-up
+- #at-nanit: no new messages since last fetch (2026-07-16); most recent channel activity was the 2026-07-05 Weekly Account Summary — no new customer signals to extract.
+- #ext-nanit-mixpanel: channel has gone quiet since a Nov 2025 JQL/data-export thread; no activity in 2026, confirming this external channel is dormant (recommend re-engaging or archiving the source).
+- Sharona Lvovsky (U09V41Q8UB0) DM lookup failed again with channel_not_found — same issue as the 2026-07-02 attempt. Not blocking; flagging for manual verification of user ID/workspace membership.
+- No unreplied CSM (Yonah) mentions, no new blockers, escalations, or renewal/commercial signals found beyond what's already logged above (MTU approaching-limit risk, past-due invoice, pricing pushback remain the open items).

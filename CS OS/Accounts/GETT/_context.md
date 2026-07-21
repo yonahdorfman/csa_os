@@ -77,6 +77,12 @@ As of 2026-05-31, GETT has an active pipeline deal for their FY 28 Renewal ($71,
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up (#at-gett, #gett-mixpanel, DM Guy Cohen POM group, DM Tal Huberman/Jordana group)**
+- Support ticket #10057 (session replay/timeline desync) now has a specific customer repro (Jul 9): video shows replay lagging 2–3s behind the event timeline (order_confirmation_screen appearing late) in both rider and driver apps — thread has 14 replies, still open, needs resolution follow-up.
+- Renewal ($67K–72K) remains past-due since May 31 with the Lyft-acquisition contract-authority question still unresolved — no movement this week.
+- "Gett – mobile SR" is now an active internal agenda item (Yonah/Tal weekly, Jul 20); Shavit requested a mobile-native Experimentation case study for a GETT conversation, confirmed GETT has one (Jul 19) — active internal enablement continuing off the Jul 16 AI-agent session that surfaced a new SR-upsell opportunity.
+- Jordana Eshelby (EMEA Select Renewals) thread confirms GETT Israel is NOT under the Lyft/Free-Now acquisition umbrella — good for renewal positioning, no new developments since May 14.
+
 **2026-07-16 | DM note [via Slack DM]**
 - Guy Cohen's AI session already happened.
 

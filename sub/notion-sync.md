@@ -1,7 +1,7 @@
 ---
 name: Notion Sync
-version: 5.0
-last_updated: 2026-04-29
+version: 5.1
+last_updated: 2026-07-21
 category: sub-skill
 requires_mcp: [Notion]
 inputs:
@@ -52,6 +52,13 @@ Local _context.md (working snapshot / cache)
 Read the Notion Context child page. Overwrite local `_context.md`.
 This is how every cycle starts.
 
+**Default scope is DELTA, not full-book.** Before pulling page bodies, query the
+Accounts DB for pages whose `Last edited time` is newer than the last successful
+pull, and pull only those. Everything else keeps its local snapshot. A full pull
+of all ~47 page bodies is reserved for: first run, `reconcile` finding drift, or
+an explicit `/notion-sync pull --full`. Pulling the whole book twice a day when
+0–5 pages changed is the system's largest avoidable token cost.
+
 ### Steps
 
 **1. Fetch Notion Context child page**
@@ -99,6 +106,13 @@ Write the full local `_context.md` markdown to the Notion Context child page bod
 Also extract metadata and update parent page properties.
 This is how compress and retros persist changes.
 
+**Scope: only the accounts that were patched this cycle** (by compress, a retro, or
+a DM note) — typically 1–10 accounts, never a "batch of all 47." An account whose
+local file didn't change has nothing to write. And the write happens in the SAME
+cycle as the patch — never log it as "scheduled for a later cycle" (see the
+orchestrator's pending-writes check, added 2026-07-21 after exactly that deferral
+dropped a day's writes).
+
 ### Page-State Detection
 
 Before writing, check the Notion Context page body size:
@@ -130,13 +144,39 @@ Parse the local markdown to extract property values for the parent page:
 If any extraction fails → log warning, set to "TBD", continue with the write.
 Metadata extraction is best-effort — it should never block the content write.
 
-**3. Detect page state**
+**3. Resolve the page ID (CRITICAL — registry only)**
 
-Fetch the current Notion Context child page body.
+Read `{NOTION_PAGE_REGISTRY}` directly and find the exact line
+`ACCOUNT:{account_name}:context={page_id}` (exact string match on account name,
+including punctuation/casing as it appears in the registry).
+
+- **Never** use `notion-search` to find a Context page ID. Search is semantic and can
+  return Google Drive docs, SFDC links, or unrelated Notion pages instead of the
+  Context child page — this already caused a silent write-skip that was misdiagnosed
+  as a "registry gap" (2026-07-14, MyHeritage + Lemonade) when the registry entry
+  existed the whole time.
+- **Never** reuse a page ID copied from a previous write or from memory. A copy-paste
+  error once assigned one account's ID to a different account's write and nearly
+  corrupted its Context page (2026-07-02, GameStory Israel draft used BlueThrone's ID).
+  Always re-read the registry fresh for each account being written.
+- If no matching `ACCOUNT:{name}:context=` line exists after actually reading the
+  file (not after a failed search) → this is a genuine registry gap. Log
+  `notion-sync:write:error — {account} no registry entry`, skip the write, and do
+  NOT guess or fall back to search.
+
+**4. Verify the resolved ID before writing**
+
+Fetch the page by the resolved ID and check its ancestor-path title matches
+`{account_name}` exactly. If it doesn't match, treat this the same as a missing
+registry entry — log the mismatch and stop; do not write to the wrong page.
+
+**5. Detect page state**
+
+Using the verified page from step 4:
 - If body is empty or <50 chars → set mode = `REPLACE` (first write)
 - If body has content ≥50 chars → set mode = `UPDATE` (patch write)
 
-**4. WRITE to Notion Context child page (CRITICAL)**
+**6. WRITE to Notion Context child page (CRITICAL)**
 
 **REPLACE mode (first write / empty page):**
 - Write the FULL local `_context.md` markdown as the page body
@@ -152,14 +192,14 @@ Fetch the current Notion Context child page body.
 
 In both modes:
 - **Content format:** markdown
-- Use `notion-update-page` with the context child page ID from registry
+- Use `notion-update-page` with the page ID resolved and verified in steps 3-4
 
 If Notion write fails:
 - Log error: `notion-sync:write:error — {account} Notion write failed: {reason}`
 - Return error
-- **Do NOT proceed to step 5** — never cache locally if Notion write failed
+- **Do NOT proceed to step 7** — never cache locally if Notion write failed
 
-**5. Update parent page properties**
+**7. Update parent page properties**
 
 After the Context child page body is written, update the parent page:
 - Health = extracted value
@@ -168,13 +208,13 @@ After the Context child page body is written, update the parent page:
 
 Use `notion-update-page` with the parent page ID from registry.
 
-**6. Cache locally (ONLY if Notion write succeeded)**
+**8. Cache locally (ONLY if Notion write succeeded)**
 
 Pull the updated Notion page back to local to confirm they match.
 Or simply: the local file is already current (we just wrote FROM it).
 Either way, after this step, local and Notion should be identical.
 
-**7. Log**
+**9. Log**
 
 ```
 [HH:MM] — notion-sync:write:{init|patch}

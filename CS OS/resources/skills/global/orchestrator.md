@@ -1,14 +1,14 @@
 ---
 name: Orchestrator
-version: 1.2
-last_updated: 2026-07-16
+version: 1.4
+last_updated: 2026-07-21
 category: role
 description: >
   THE single scheduled Cowork task (besides DM monitor). Runs hourly.
   Evaluates cadence rules, detects missed cycles, executes what's due.
   There should be NO other scheduled tasks for individual skills.
 requires_mcp: [Notion, Slack]
-optional_mcp: [Gmail, Google Calendar, Google Drive, BigQuery, Mixpanel MCP]
+optional_mcp: [Gmail, Google Calendar, Google Drive, BigQuery, Mixpanel MCP, Statisfy]
 invoke:
   - Cowork scheduled task: hourly during work hours
   - "/orchestrate"
@@ -48,6 +48,7 @@ is due. Write all context changes to Notion first, cache locally after.
 | Google Calendar | List events, Get event | Harvest calendar signals |
 | Google Drive | Search files, List recent files | Harvest doc changes |
 | BigQuery | Execute query, List tables | Sales intelligence + Mixpanel telemetry |
+| Statisfy | Read objects, Read relationships | Live CRM enrichment (health scorecard, pipeline, contacts) — optional |
 
 **Notion and Slack are required.** Everything else is optional — the
 orchestrator gracefully skips harvesters whose MCPs aren't available.
@@ -126,7 +127,7 @@ For each rule:
 
 Define `HARVEST_REQUIRED` = [gmail, slack, calendar, bq, gong, mixpanel]
 These are the sources that must complete for a harvest to be considered full.
-Notion, Drive, Asana, and Pylon are optional — skipping them is not an error.
+Notion, Drive, Asana, Pylon, and Statisfy are optional — skipping them is not an error.
 Clari and Zendesk are standby sources (see harvest-all.md's "Not called by
 default" section) — they are never invoked, so they should never appear in
 `HARVESTERS_DONE`, `HARVESTERS_MISSING`, or a skip log entry at all.
@@ -156,6 +157,20 @@ does not contain all of `HARVEST_REQUIRED`:
 This means a session interruption mid-harvest is automatically recovered on the
 next tick, without re-running the full morning cycle.
 
+**Pending Notion writes check (runs every tick, independent of cycle schedule):**
+
+Compare today's changelog:
+- Accounts with a `compress:wrote:{account}` / `compress:context-update` entry, or any
+  entry saying a write was "deferred", "batched", or "scheduled for a later cycle"
+- vs accounts with a matching `notion-sync:write` success entry today
+
+If any account has patches (or a deferral note) without a completed Notion write →
+run `sub/notion-sync.md` write mode NOW for exactly those accounts, and log
+`notion-sync:write` per account. **There is no "later batch write" — a deferral
+note is a bug, not a plan.** (2026-07-21: a "batched write scheduled for later
+cycle (45 accounts pending)" note was logged in the morning and the write never
+ran; this check exists so that can't recur.)
+
 ### 4. Detect Missed Cycles
 
 If the daemon was down yesterday (or longer), detect and backfill:
@@ -182,8 +197,13 @@ Run `sub/janitor.md`:
 
 #### Morning Cycle (9:00am weekdays)
 
-**Step 1: Pull from Notion**
-- Read all account Context pages from Notion → overwrite local snapshots
+**Step 1: Pull from Notion (DELTA pull — not all 47 pages)**
+- Query the Accounts DB for pages whose `Last edited time` is newer than the last
+  successful pull (yesterday's cycle; fall back to 24h if unknown) — pull ONLY those
+  page bodies and overwrite their local snapshots. All other accounts keep their
+  local cache. Most days this is 0–5 pages, not 47; a full-book pull is only for
+  first run or when `reconcile check` flags drift. This is the single biggest
+  token saver in the system.
 - Detect empty/stub pages → set `first-write=true` flag
 
 **Step 2: Harvest**
@@ -199,10 +219,14 @@ Run `sub/janitor.md`:
 - Record: number of patches, accounts touched
 
 **Step 4: Write to Notion**
-- Run `sub/notion-sync.md` write mode
+- Run `sub/notion-sync.md` write mode for the accounts compress patched THIS cycle
+  (typically 1–10 accounts) — NOT the whole book. Unpatched accounts have nothing
+  to write.
 - REPLACE mode for first-write, UPDATE mode for existing pages
 - Cache locally after Notion write succeeds
 - Record: pages written, pages failed, first-writes, duration
+- **This step is not deferrable.** Do not log "batched for a later cycle" — run it
+  now, in the same cycle that produced the patches.
 
 **Step 5: Morning Briefing**
 - Run `cadence/morning-briefing.md`
@@ -212,7 +236,12 @@ Run `sub/janitor.md`:
 
 **Step 6: Post to Slack**
 - Post full briefing as top-level message (the only skill that posts full)
-- Log: `scheduler:completed:morning-cycle`
+- Log `scheduler:completed:morning-cycle` — **ONLY if Steps 2–4 actually executed**
+  (harvest batch run per each harvester's own spec, compress run, notion-sync write
+  done for every patched account). Posting the briefing does NOT complete the cycle.
+  If any of Steps 2–4 were skipped or partial, do NOT log the completion marker —
+  the per-tick partial-harvest and pending-writes checks will finish the job on the
+  next tick, and they key off the marker's absence.
 
 **Step 7: Fire Telemetry**
 - Read `sub/telemetry.md` for the event format
@@ -226,8 +255,9 @@ Run `sub/janitor.md`:
 
 #### EoD Cycle (4:00pm weekdays)
 
-**Step 1: Pull from Notion**
-- Read all account Context pages → overwrite local snapshots
+**Step 1: Pull from Notion (DELTA pull)**
+- Same as the morning cycle: pull only pages edited in Notion since the last
+  successful pull. Never re-pull the full book on a routine cycle.
 
 **Step 2: EoD Retrospective**
 - Run `cadence/eod-retrospective.md`
@@ -320,6 +350,13 @@ After processing any command, fire telemetry:
 ```
 
 Include the harvest line on every tick so any partial harvest is visible at a glance.
+
+**Changelog brevity (token control):** one tick = one entry, ≤6 lines. Do not write
+additional `orchestrator:status` / `status-final` entries restating the same cadence
+evaluation (2026-07-21 had four near-identical evaluations logged in 20 minutes).
+Detailed narration belongs in the skill-specific entries (harvest, compress, sync),
+and those should be summaries, not transcripts. Every line written here is re-read
+by every subsequent tick that day — verbosity compounds.
 
 ### 8. Error Telemetry
 

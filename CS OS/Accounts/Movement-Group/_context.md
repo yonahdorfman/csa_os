@@ -81,3 +81,13 @@ As of 2026-05-31, Movement-Group is an active account with a FY28 Renewal in the
 | Latest Opp | Movement-Group - FY 28 Renewal |
 | Stage | 1: Pipeline |
 | Opp ARR | 54045.0 |
+
+---
+
+## Recent History
+### 2026-07-21 — Slack Full Catch-up
+- #at-movement-group: only automated weekly account-summary bot posts (Yonah/Claude) since last fetch — no customer replies; account repeatedly flagged Renewal Risk = High and "needs outreach" after 44+ days of customer silence (as of Jul 20).
+- Usage remains concentrated in a single named user (danielb@movement-group.com); no CSM outreach or customer response logged.
+- No follow-up on file with Liat Levi after the June 24 VIP Event — still open.
+- #at-movement-group-mixpanel: dormant since 2025-07-03 (org members left channel); no new activity, no customer messages found on this re-check.
+- No mentions of daniac, no escalations, no commercial/renewal signals, and no unreplied CSM mentions found in either channel this cycle.

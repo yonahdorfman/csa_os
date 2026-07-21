@@ -113,3 +113,8 @@ As of 2026-05-31, StakeMate is a highly engaged customer with an active FY28 Ren
 **2026-05-07 | Training call [Clari]**
 - 69-min session with Arya Tayebi (atayebi) and Oliver Waddup — covered lexicon, experiments, SR, metric trees
 - Yonah AI: send Oliver the power analysis tool (still open)
+
+**2026-07-21 | Slack full catch-up (#at-stakemate, #ext-mixpanel-stakemate, DM Oliver Waddup)**
+- No new customer-facing messages since Jul 14 heatmap/session-replay Q&A (already logged). Automated weekly bot summaries (Jul19/20) confirm the same two open items are still unresolved and now overdue: React Native heatmaps ETA question (open since Jul 14, 6+ days) and SR enterprise trial approval from Ofer Polivoda (pending 6+ weeks).
+- Usage remains healthy (18 active users, ~9.8K queries, 15 replays watched, 21 Value Moments this week).
+- No churn/escalation signals; sentiment steady.

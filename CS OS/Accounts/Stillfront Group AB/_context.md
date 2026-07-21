@@ -104,3 +104,10 @@ _No executive summary available._
 - Usage dropped 72% WoW to 414 queries from only 5 active users — all Playa Games team (nlobe, skolodzey, apadberg)
 - Nils Lobe requested usage summary via DM Apr 6 — still unanswered as of Apr 26
 - No Slack or email signals since Apr 19
+
+**2026-07-21 | Slack full catch-up (#at-stillfront, #ext-mixpanel-stillfront-playa, DM Nils Lobe, group DM)**
+- CHURN RISK escalating: FY27 renewal ($12,348) explicitly tagged "Churn risk" in SFDC; Playa Games non-renewal risk (flagged Jul 9 Gong call) still has no response from Stillfront as of the last outreach.
+- Usage collapsed to ~252 queries/week from essentially one named user (nlobe@playa-games.com) — down from >1,300/week in early June.
+- Nils Lobe's Apr 6 DM request for a usage summary remains unanswered — now 3+ months overdue.
+- WHC (Warehouse) enterprise trial approval from Ofer Polivoda still pending after 2+ months.
+- No new raw customer Slack activity in either channel beyond automated weekly bot summaries; last real customer message was the Jul 9 Gong call reference.

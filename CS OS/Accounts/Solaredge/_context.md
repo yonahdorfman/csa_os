@@ -82,6 +82,12 @@ As of 2026-05-31, Solaredge has a steady but moderate usage profile. The FY27 Re
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up — quiet week, no new signals since Jul 20 weekly summary**
+- No new Solaredge-specific Slack activity beyond the standing weekly account-summary bot posts in #at-solaredge (only Slack source on file).
+- FY27 Renewal ($61,478, Stage 1: Pipeline) unchanged — still needs commercial motion.
+- Value Moments dropped to zero this week (from 139 prior week) despite query volume growing (9,706 total) — worth a quick check-in.
+- Outstanding action carried over: send CSV export of account manager/contact info per the Jul 8 Gong call (owner: Shavit).
+
 **2026-07-07 | Gmail catch-up (14-day sweep) — Gili Swary coverage gap surfaced**
 - Jun 29: Shavit sent a quarterly-catchup agenda to Shira Rotenberg, Nathanaelle Klein, and Gili Swary. Gili declined, saying an urgent meeting came up and adding "I'm not sure this is relevant to me as I've had a meeting with someone else from your team." This confirms the org-navigation problem already flagged (no clear strategic champion) — but now with a specific signal that Gili has been separately contacted by someone else on the Mixpanel side without visibility here. Worth checking internally who else has touched Gili so the account doesn't run two uncoordinated threads with the Installer Portal lead.
 - This is the same Jun 29 agenda that led into the brief (4 min) Jun 30 quarterly call already logged below.

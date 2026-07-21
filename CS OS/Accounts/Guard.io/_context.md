@@ -87,6 +87,11 @@ As of 2026-05-31, Guard.io is in an active pipeline stage for their FY 27 Renewa
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up (#at-guardio, #guardio-mixpanel)**
+- Confirms Guard.io renewed with an expanded data cap (Jul 15), resolving the overage/tier risk that had been open since Jun 21 (was at 97–101% of plan for weeks) — matches the existing Jul 15 DM note; still need to confirm the exact new cap amount with Shavit and update Notion/plan records.
+- Query volume steady (~13,947/week) across 22 named users; Session Replay watched has been at 0 for two straight weeks — worth a light check-in on why, given Guard.io was previously the top SR-engagement account in the book.
+- #guardio-mixpanel: no reply yet to Shavit's Jul 6 Hebrew AI/MCP outreach; channel otherwise quiet since May 26.
+
 **2026-07-15 | DM note [via Slack DM]**
 - Guard.io has renewed and has a bigger cap now. (Likely resolves the "approaching 100% data allocation limit" active risk below — confirm cap increase amount and update risk status.)
 

@@ -9,9 +9,9 @@ inputs:
   - ACCOUNTS_PATH: "Base path to accounts"
   - CSM_TIMEZONE: "IANA timezone"
   - LEDGER_PATH: "Base path to Ledger"
-schedule: "every 30m during work_hours"
+schedule: "every 60m during work_hours"
 invoke:
-  - Scheduled: every 30 minutes during work hours
+  - Scheduled: every 60 minutes during work hours
   - "/dm-monitor"
 ---
 
@@ -310,13 +310,13 @@ Write last processed message timestamp to `resources/dm-monitor-cursor.md`.
 
 In `cadence.md`:
 ```
-every hour during work_hours → slack-dm-monitor
+every 60m during work_hours → slack-dm-monitor
 ```
 
 In `overrides.md`:
 ```
 DM_MONITOR_ENABLED=true
-DM_MONITOR_INTERVAL=30m
+DM_MONITOR_INTERVAL=60m
 ```
 
 ## Graceful Degradation

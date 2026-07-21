@@ -112,6 +112,13 @@ As of 2026-05-31, PeerPlay has strong team-wide engagement (66K queries across 2
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up — Jul 6 QBR churn-risk signal still unconfirmed, Value Moments dropped to zero**
+- Jul 6 Quarterly Meeting (Guy Zamir, Shavit, Yonah) covered PeerPlay's economic pressures (FX, AI-driven workforce cuts, shift to revenue focus) and data strategy — flagged internally as a "decoupling/churn risk" signal that remains formally unconfirmed as of this catch-up.
+- FY27 Renewal ($90,999) sitting in Stage 4: Negotiation with no new movement.
+- Support ticket #5957 (Data Delay on Staging) status still unclear — needs a status check.
+- Value Moments usage dropped sharply this week (121 → 0) despite very strong overall query volume (~49.5K); worth a proactive check-in.
+- #at-peerplay, #ext-peerplay-mixpanel, and the Shavit/Gabriel/Yonah group DM were all scanned — no new technical escalations beyond the above.
+
 - 2026-06-15: Contract + risk call (33 min) with Guy Zamir (guy@peerplay.com) + Shavit Ben-Itzhak. Core issues: (1) DAU stagnated at ~65K for 2-3 months; (2) production incidents from Mixpanel data caused incorrect real-time segmentation → wrong game difficulty/task assignments → hurt user experience and monetization; (3) PeerPlay now building a direct BQ pipeline as parallel data source, reducing Mixpanel dependency; (4) Guy seeking contract credits for incident impact and wants to delay new contract start from Aug 1 to Sep 1 or Aug 15. Shavit to confirm feasibility within 2 days. Net 60 payment terms also on the table. Renewal deal is active but structurally at risk. Source: Clari call (https://copilot.clari.com/call/b52f1c4d-87ad-4ee3-bb57-c5ea2217ebf9)
 
 **2026-06-22 | DM note [via Slack DM]**

@@ -87,6 +87,13 @@ As of May 31, 2026, Pango Pay & Go has an active pipeline deal for their FY 28 R
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up — no critical new blockers, EU migration confirmed resolved**
+- EU data-residency migration: confirmed working as of Jul 14 (Shai Aviram DM) — Braze/other events no longer routing to US endpoint; MCP re-authentication issue also resolved (Jul 16, Keren Inbar DM).
+- Session Replay Demo scheduled Jul 27, 15:30–16:15 IDT, following Jul 19 quarterly meeting (Shavit missed it, Yonah covered solo) — customer interested in SR activation, deeper AI/Copilot use, and mobile A/B testing.
+- SR still not activated — Statisfy alert open since Mar 26, now 17+ weeks with no movement.
+- #mixpanel-pango and Tal Mariano DM remain quiet/inactive; #ext-pango-mixpanel funnel-identity thread (May 26) and EU-alert thread (May 17) both fully resolved.
+- No new commercial or escalation signals this cycle.
+
 **2026-07-02 | 1:1 DM sweep — unresolved legal/API-forwarding thread with Shai Aviram**
 - Mar 23: Shai asked Yonah about something needing legal sign-off; said he'd check with the legal department. Yonah followed up Mar 31 — no reply visible.
 - Jun 24: separate but related-sounding thread — Yonah asked about "api forwarding" progress; Shai confirmed the app shipped a prod version but "server side has not completed yet." No resolution visible since.

@@ -4,16 +4,16 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-honeybook (C0ANJ1YUVHC) | Active | 2026-07-16 |
-| Slack | channel | #ext-honeybook-mixpanel (C08GE17ET0Q) | Active | 2026-07-16 |
-| Slack | dm | Amy Vogel + Tal Huberman + Yonah Dorfman (C0AVB5LM9DG) | Active | 2026-07-16 |
-| Slack | dm | Nimrod Milo + Asaf Ziv + Ira Lisitsyna + Tal Huberman + Yonah Dorfman (C0BB756S014) | Active | 2026-07-16 |
-| Slack | user | Inbar Kipnis (U09DH1M7SG7) | Inactive | 2026-07-02 |
-| Slack | user | Bar Pakula (U08DF94T99B) | Inactive | 2026-07-02 |
-| Slack | user | Dana Erez (U0831PQDCN9) | Inactive | 2026-07-02 |
-| Slack | user | Moli Meshulam (U07NVET4UQZ) | Inactive | 2026-07-02 |
-| Slack | user | Yoni Levi (U07MGMUPJF5) | Active | 2026-07-02 |
-| Slack | user | Amy Vogel (U08L8U2EGGZ) | Inactive | 2026-07-02 |
+| Slack | channel | #at-honeybook (C0ANJ1YUVHC) | Active | 2026-07-21 |
+| Slack | channel | #ext-honeybook-mixpanel (C08GE17ET0Q) | Active | 2026-07-21 |
+| Slack | dm | Amy Vogel + Tal Huberman + Yonah Dorfman (C0AVB5LM9DG) | Inactive | 2026-07-21 |
+| Slack | dm | Nimrod Milo + Asaf Ziv + Ira Lisitsyna + Tal Huberman + Yonah Dorfman (C0BB756S014) | Active | 2026-07-21 |
+| Slack | user | Inbar Kipnis (U09DH1M7SG7) | Inactive | 2026-07-21 |
+| Slack | user | Bar Pakula (U08DF94T99B) | Inactive | 2026-07-21 |
+| Slack | user | Dana Erez (U0831PQDCN9) | Inactive | 2026-07-21 |
+| Slack | user | Moli Meshulam (U07NVET4UQZ) | Inactive | 2026-07-21 |
+| Slack | user | Yoni Levi (U07MGMUPJF5) | Inactive | 2026-07-21 |
+| Slack | user | Amy Vogel (U08L8U2EGGZ) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001i0000017ZsOTAA0](https://mixpanel.lightning.force.com/lightning/r/Account/001i0000017ZsOTAA0/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1UPDhGsipEUTD2TD0yAoaba-fBnSHoqiXwkaa3FGMoEM/edit?usp=drivesdk) | Active | — |

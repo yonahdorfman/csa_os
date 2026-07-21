@@ -4,12 +4,12 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-myheritage (C05GSGG8K6H) | Active | 2026-07-16 |
-| Slack | channel | #mixpanel-myheritage (C05EGFB8S3W) | Active | 2026-07-16 |
-| Slack | dm | Shavit Ben-Itzhak + Itay Sobol + Yonah Dorfman (C0B3BQYTR5Z) | Active | 2026-07-16 |
-| Slack | user | Itay Reznik (U0A262B3REY) | Active | 2026-07-02 |
-| Slack | user | Itay Sobol (U07TC01T1C0) | Active | 2026-07-02 |
-| Slack | user | Yael Naor (D0B30S1V3SM) | Active | 2026-07-02 |
+| Slack | channel | #at-myheritage (C05GSGG8K6H) | Active | 2026-07-21 |
+| Slack | channel | #mixpanel-myheritage (C05EGFB8S3W) | Active | 2026-07-21 |
+| Slack | dm | Shavit Ben-Itzhak + Itay Sobol + Yonah Dorfman (C0B3BQYTR5Z) | Active | 2026-07-21 |
+| Slack | user | Itay Reznik (U0A262B3REY) | Active | 2026-07-21 |
+| Slack | user | Itay Sobol (U07TC01T1C0) | Active | 2026-07-21 |
+| Slack | user | Yael Naor (D0B30S1V3SM) | Inactive | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [001i0000018aqPIAAY](https://mixpanel.lightning.force.com/lightning/r/Account/001i0000018aqPIAAY/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/18t4mYRonD5pAYGN5RIG24VJ8UqHSl8kvJfua9feYAOU/edit?usp=drivesdk) | Active | — |

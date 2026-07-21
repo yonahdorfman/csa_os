@@ -107,6 +107,13 @@ As of 2026-05-31, PayBox has an active pipeline deal for their FY28 Renewal at $
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up — fresh intro call with Sharon Ben Arie, downgrade still stalled (fresh pull, no duplicate of earlier note)**
+- New Jul 20 intro call (24 min, Tal Huberman + Sharon Ben Arie): covered Mixpanel platform usage and new AI capabilities, tied to FY28 Renewal ($128,299, Stage 1: Pipeline). Next steps owned by Tal.
+- $256K downgrade negotiation (Stage 4: Buying Process) remains unresolved, 5+ weeks with no movement.
+- 8 open Session Replay action items from the May 13 demo still untouched.
+- #mixpanel-paybox-qa channel disconnected (all PayBox members left, Mar 2026) — confirmed Inactive.
+- #mixpanel202 (external channel) and #at-paybox both active, no new technical escalations this cycle beyond the known EU-endpoint follow-up (already tracked separately).
+
 **2026-07-20 | EoD summary [via Slack DM]**
 - Focus tomorrow: PayBox renewal conversation ($256K downgrade + EU migration, due Jul 31). [via DM monitor]
 

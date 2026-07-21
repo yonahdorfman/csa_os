@@ -140,3 +140,35 @@ Entries are tagged VALUE, RISK, or GOAL for filtering at read time:
 
 ### Executive Summary (BQ)
 {2-3 sentence summary of pipeline, last interaction, key activities}
+
+---
+
+## Statisfy Snapshot
+> 🤖 Machine-generated — live CRM data as of {date}. Do not edit manually; overwritten each refresh.
+
+**Health Scorecard** (as of {health.date})
+
+| Pillar | Status |
+|--------|--------|
+| Overall | {overallHealth} |
+| Product Usage | {productUsage} |
+| Relationship | {relationship} |
+| Outcomes | {outcomes} |
+| Experience | {experience} |
+| Feature Requests | {featureRequests} |
+| Risks | {risks} |
+
+**Open Opportunities**
+
+| Name | Type | Stage | Amount | Close Date | Probability | Renewal at Risk? |
+|------|------|-------|--------|------------|--------------|-------------------|
+| {name} | {type} | {stage} | ${amount} | {close_date} | {probability}% | {Yes/No} |
+
+**Relationship of Record**
+- CSM: {name} | AM: {name} | Champion: {name or "none logged"} | Exec Sponsor: {name or "none logged"}
+
+**Open CRM Tasks**
+- [ ] {title} — due {due_date}
+
+**Conflicts with BigQuery** (only if any)
+- {e.g. BQ Contract End vs. Statisfy active Renewal opp close date mismatch — see harvest-statisfy.md}

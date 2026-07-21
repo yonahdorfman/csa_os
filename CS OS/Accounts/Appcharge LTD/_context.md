@@ -54,6 +54,13 @@ As of 2026-05-31, Appcharge LTD's FY27 Renewal ($155,900) was successfully Close
 **2026-07-21 | DM note [via Slack DM]**
 - Great meeting with CISO call. Tal was extremely prepared for the meeting and covered everything the customer wanted — successful engagement.
 
+**2026-07-21 | Slack full catch-up [#at-appcharge, #ext-appcharge-mixpanel]**
+- Mixpanel Security Review held Jul 20 (hosted by Lior Mazor) covering RBAC/permissions, data encryption, masking, API security, audit logs, and backups — this is the CISO call referenced above; strong signal of deepening platform trust.
+- Appcharge featured in Times Square as a 2026 "Game Changer" — good external momentum to acknowledge.
+- Customer asked (Jul 19, ext channel) for automated daily CSV/Excel export of a specific insight — thread has 7 replies but final resolution/owner unclear; worth confirming closed.
+- Usage remains very strong: ~51-52K queries/week, 53 active users, heavy Session Replay adoption (1,723 watched), MCP usage 1,873 (up from prior weeks).
+- Next Bi-Weekly meeting Jul 26, 15:00 IDT. "Appcharge - SR & AI" remains an open discussion carried on the internal Yonah/Tal weekly sync.
+
 ---
 
 ## Active Risks

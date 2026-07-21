@@ -1,7 +1,7 @@
 ---
 name: Notion Sync
-version: 5.0
-last_updated: 2026-04-29
+version: 5.1
+last_updated: 2026-07-21
 category: sub-skill
 requires_mcp: [Notion]
 inputs:
@@ -52,6 +52,13 @@ Local _context.md (working snapshot / cache)
 Read the Notion Context child page. Overwrite local `_context.md`.
 This is how every cycle starts.
 
+**Default scope is DELTA, not full-book.** Before pulling page bodies, query the
+Accounts DB for pages whose `Last edited time` is newer than the last successful
+pull, and pull only those. Everything else keeps its local snapshot. A full pull
+of all ~47 page bodies is reserved for: first run, `reconcile` finding drift, or
+an explicit `/notion-sync pull --full`. Pulling the whole book twice a day when
+0–5 pages changed is the system's largest avoidable token cost.
+
 ### Steps
 
 **1. Fetch Notion Context child page**
@@ -98,6 +105,13 @@ authoritative for those fields (since they're filterable in the DB).
 Write the full local `_context.md` markdown to the Notion Context child page body.
 Also extract metadata and update parent page properties.
 This is how compress and retros persist changes.
+
+**Scope: only the accounts that were patched this cycle** (by compress, a retro, or
+a DM note) — typically 1–10 accounts, never a "batch of all 47." An account whose
+local file didn't change has nothing to write. And the write happens in the SAME
+cycle as the patch — never log it as "scheduled for a later cycle" (see the
+orchestrator's pending-writes check, added 2026-07-21 after exactly that deferral
+dropped a day's writes).
 
 ### Page-State Detection
 

@@ -16,15 +16,20 @@ invoke:
 
 # Harvest Pylon
 
-**Pylon is the primary support ticket source going forward** — Mixpanel
-migrated off Zendesk to Pylon. Use this harvester first; use
-`harvest-zendesk.md` only as a fallback to check for **historical tickets
-filed before the migration**, which remain in Zendesk/BQ and were never
-backfilled into Pylon.
+**Pylon is the only support-ticket source called by harvest-all as of
+2026-07-16** — Mixpanel migrated off Zendesk to Pylon, and `harvest-zendesk.md`
+has been moved to standby (see that file and harvest-all.md's "Not called by
+default" section). If pre-migration ticket history is ever needed, reactivate
+Zendesk manually rather than relying on it in the regular cycle.
 
 Pull open and recent support tickets ("issues" in Pylon's model) for your
 accounts directly via the Pylon MCP — there is no BigQuery table for Pylon
-yet, so this harvester is MCP-only. Ticket patterns are early churn signals —
+yet (confirmed via a live `bq list-tables` check on 2026-07-16), so this
+harvester is MCP-only for now. **Per harvest-all.md's BQ-first policy, the
+moment a `pylon`-equivalent BQ table exists, switch this harvester to query
+it first and drop to the Pylon MCP only for same-day tickets not yet
+ingested** — same pattern as `harvest-gong.md`. Until then, MCP-only is
+correct, not a gap to keep flagging. Ticket patterns are early churn signals —
 volume spikes, repeated issues, high-severity tickets, and negative sentiment
 all indicate product friction.
 
@@ -116,13 +121,10 @@ Compress will:
 
 ## Historical Tickets (Pre-Migration)
 
-Tickets filed **before the Zendesk → Pylon cutover** live only in
-`sales_intelligence.zendesk_tickets_enriched` in BQ and are not in Pylon.
-Run `harvest-zendesk.md` alongside this harvester for now so historical
-context (open tickets that predate the migration, or root-cause patterns
-worth remembering) isn't lost. Once all pre-migration tickets are closed
-and no longer relevant to active risk, `harvest-zendesk.md` can be retired
-entirely.
+Tickets filed **before the Zendesk → Pylon cutover** live only in BQ (Zendesk
+tables) and are not in Pylon. `harvest-zendesk.md` is on standby, not run by
+default — if a specific account needs pre-migration ticket history, run it
+manually (`/harvest-zendesk`) rather than expecting it in the regular cycle.
 
 ## Notes
 

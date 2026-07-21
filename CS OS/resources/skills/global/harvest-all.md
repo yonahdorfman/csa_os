@@ -1,7 +1,7 @@
 ---
 name: Harvest All
-version: 1.1
-last_updated: 2026-07-16
+version: 1.2
+last_updated: 2026-07-21
 category: sub-skill
 description: >
   Wrapper skill that runs all available harvesters and combines their
@@ -48,10 +48,11 @@ and skips gracefully if unavailable:
 4. `sub/harvest-notion.md` (requires: Notion MCP)
 5. `sub/harvest-drive.md` (requires: Google Drive MCP)
 6. `sub/harvest-bq.md` (requires: BigQuery MCP)
-7. `sub/harvest-mixpanel.md` (requires: BigQuery or Mixpanel MCP)
-8. `sub/harvest-gong.md` (requires: BigQuery; optional: Gong MCP) ← **the only call-intelligence source in the harvest — BQ first, MCP only for today's not-yet-ingested calls**
-9. `sub/harvest-pylon.md` (requires: Pylon MCP) ← **the only support-ticket source in the harvest**
-10. `sub/harvest-asana.md` (requires: Asana MCP)
+7. `sub/harvest-statisfy.md` (requires: Statisfy MCP) ← **second-source CRM enrichment, cross-checked against BQ; optional, never blocks the cycle**
+8. `sub/harvest-mixpanel.md` (requires: BigQuery or Mixpanel MCP)
+9. `sub/harvest-gong.md` (requires: BigQuery; optional: Gong MCP) ← **the only call-intelligence source in the harvest — BQ first, MCP only for today's not-yet-ingested calls**
+10. `sub/harvest-pylon.md` (requires: Pylon MCP) ← **the only support-ticket source in the harvest**
+11. `sub/harvest-asana.md` (requires: Asana MCP)
 
 **Not called by default (standby):**
 
@@ -107,6 +108,10 @@ Combine all harvester outputs under a single header:
 
 ---
 
+{statisfy harvest output}
+
+---
+
 {asana harvest output}
 ```
 
@@ -120,7 +125,7 @@ One changelog entry for the batch:
 
 - **Type:** harvest:completed
 - **Detail:** {N} sources scanned, {N} skipped. {N} total signals.
-  Gmail: {N} | Slack: {N} | Calendar: {N} | Notion: {N} | Drive: {N} | BQ: {N} | Gong: {N} | Pylon: {N} | Asana: {N}
+  Gmail: {N} | Slack: {N} | Calendar: {N} | Notion: {N} | Drive: {N} | BQ: {N} | Statisfy: {N} | Gong: {N} | Pylon: {N} | Asana: {N}
 ```
 
 ## Notes

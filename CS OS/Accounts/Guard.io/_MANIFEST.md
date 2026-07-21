@@ -4,8 +4,8 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-guardio (C065MAM148J) | Active | 2026-07-16 |
-| Slack | channel | #guardio-mixpanel (C01T4342ATS) | Active | 2026-07-16 |
+| Slack | channel | #at-guardio (C065MAM148J) | Active | 2026-07-21 |
+| Slack | channel | #guardio-mixpanel (C01T4342ATS) | Active | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002HKd8OAAT](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002HKd8OAAT/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1ndGdLVpRKId9MWos3gH9hHsMzFxrzvIoYiHn1ibeqs4/edit?usp=drivesdk) | Active | — |

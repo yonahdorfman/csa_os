@@ -21,9 +21,10 @@ Pull call transcripts, summaries, key takeaways, and action items from BQ.
 This is one of the richest signal sources — a single call produces structured
 action items with owners, detailed takeaways, and participant lists.
 
-**Gong is the primary call intelligence platform.** Use this harvester first;
-use harvest-clari.md only as a fallback for calls that may exist in the old
-Clari dataset but not yet in Gong.
+**Gong is the only call intelligence source called by harvest-all** — use
+this harvester. `harvest-clari.md` is on standby (not called by default); it's
+kept on disk only in case the old Clari dataset ever needs cross-checking
+against Gong, and shouldn't be run without asking first.
 
 ## Data Model (Verified)
 

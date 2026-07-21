@@ -68,3 +68,13 @@ _No action items._
 | Latest Opp | — |
 | Stage | — |
 | Opp ARR | — |
+
+---
+
+## Recent History
+
+**2026-07-21 | Slack full catch-up — renewal consent and invoice still blocking, AI-skill adoption ongoing**
+- Written renewal consent from Hagit (hagitbe@papayaglobal.com) still outstanding — carried multiple weeks, blocking SR+WHC upsell ($15K, Stage 2) progression.
+- Overdue invoice #72667 ($11,700) remains unresolved.
+- Yuval Brill (DM thread) confirmed the AI-skill-driven event implementation is "working fine" but still seeing some "(not set)" values he can't source — asked Claude to investigate without success; offered to share the conversation with Yonah (last reply Jul 15, no resolution yet).
+- #ext-papaya-global-mixpanel and #at-papayaglobal both active; no new escalations or churn signals this cycle beyond the persistent commercial blockers above.

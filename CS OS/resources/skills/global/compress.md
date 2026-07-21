@@ -1,7 +1,7 @@
 ---
 name: Compress
-version: 1.0
-last_updated: 2026-04-21
+version: 1.2
+last_updated: 2026-07-21
 category: sub-skill
 description: >
   The intelligence step. Takes raw harvest output from all sources, classifies
@@ -14,6 +14,7 @@ inputs:
   - HARVEST_OUTPUT: "Combined output from all harvest-* skills"
   - CSM_NAME: "Your name"
   - CSM_TIMEZONE: "IANA timezone"
+  - MAX_ACCOUNTS_PER_CYCLE: "default: UNLIMITED (process all accounts with signals)"
 output: Summary of context patches applied
 invoke:
   - Called by assistant after harvest phase
@@ -58,7 +59,7 @@ Do not treat them as independent sources. Neither overrides a locally-authored e
 The assistant passes combined output from all harvest-* skills that ran.
 Parse this into a flat list of signals, each with:
 - account (matched or "unmatched")
-- source (gmail, slack, calendar, drive, bq, notion)
+- source (gmail, slack, calendar, drive, bq, notion, statisfy)
 - urgency (critical, high, normal, noise)
 - signal_type (risk, decision, approval, escalation, blocker, milestone, sentiment, renewal, general)
 - summary (one line)
@@ -67,6 +68,29 @@ Parse this into a flat list of signals, each with:
 ### 2. Filter Noise
 
 Remove signals classified as `noise`. Count them for the summary.
+
+### 2.5. Account Processing Scope
+
+**IMPORTANT:** Process ALL accounts with signals, not just a subset.
+
+The default behavior is to process every account that has signals from the harvest.
+DO NOT self-impose artificial limits like "top 10 by urgency" or "tool-budget reasons"
+unless explicitly configured via MAX_ACCOUNTS_PER_CYCLE.
+
+If MAX_ACCOUNTS_PER_CYCLE is set to a number (e.g., 10):
+- Sort accounts by urgency: critical > high > normal
+- Within same urgency, sort by: renewal date (soonest first), then ARR (highest first)
+- Process only the top N accounts
+- Log which accounts were skipped and why
+
+If MAX_ACCOUNTS_PER_CYCLE is UNLIMITED (default):
+- Process ALL accounts with signals
+- This is the correct default behavior for a CSA OS managing a full book
+
+**Rationale:** A CSA managing 47 accounts needs context freshness on all 47, not
+just the top 10. Artificially limiting to 10 accounts means 66% of the book goes
+stale (>14 days without refresh), which defeats the purpose of automated context
+maintenance.
 
 ### 3. Group by Account
 
@@ -256,4 +280,4 @@ For each account that was updated, append to the changelog:
 
 - **Empty harvest:** If all harvesters returned nothing or were unavailable, say "No signals to compress" and log it.
 - **New account detected:** If a signal references an account that doesn't have a folder yet, file to Inbox with a note: "Possible new account: {name}. Create folder with /add-account."
-- **Conflicting signals:** If two sources say different things about the same topic (e.g., Slack says "deal closed" but Gmail says "still negotiating"), include both with source attribution. Don't resolve conflicts — flag them for human review.
+- **Conflicting signals:** If two sources say different things about the same topic (e.g., Slack says "deal closed" but Gmail says "still negotiating"), include both with source attribution. Don't resolve conflicts — flag them for human review. BQ vs. Statisfy is the recurring case (contract dates, ARR, CSM/AM assignment, renewal stage) — harvest-statisfy.md surfaces these explicitly; carry them into Active Risk or Recent History with both values and sources rather than picking one.

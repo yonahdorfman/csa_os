@@ -119,3 +119,9 @@ As of May 31, 2026, Whalo has an active pipeline deal 'Whalo - FY 28 Renewal' fo
 - ⚠️ Open item overdue: Post-workshop follow-up with Mor Lederhendler — due Jun 7, 16 days overdue.
 - ⚠️ Open item overdue: Pitch SR to top users — due Jun 15, 8 days overdue.
 - Renewal Aug 31 (69 days) — formal renewal conversation not yet started.
+
+**2026-07-21 | Slack full catch-up (#at-whalo, #ext-whalo-mixpanel, DM Alon Lev, DM Yaniv Lior)**
+- Customer confirmed a further rate-limit increase request (Fish of Fortune project, Jun 23): asked to bump from 60/hr to ~300/hr — Yonah replied same window increasing syncs 60→120, more may be needed.
+- FY28 Renewal ($130,000, Stage 1: Pipeline) has its Aug 31 deadline ~6 weeks out with still no renewal motion started — flagged as the top open risk despite otherwise strong usage (43 active users, 285 MCP queries this week).
+- Tracked feature usage (Value Moments, Replay, Copilot) dropped to zero this week vs. 821 Value Moments last week — worth a quick check whether this is a tracking gap or real change.
+- DM channels with Alon Lev and Yaniv Lior (D0BAE63RHAL, D0B9MNGJA9F) returned no messages — likely wrong/stale IDs or no direct history; no signal to report there.

@@ -88,6 +88,12 @@ As of 2026-05-31, DuxGroup is in active negotiation for a FY 27 Renewal + Upsell
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up (#at-duxgroup, #ext-mixpanel-duxgroup, DM Vahshan Zeinalov, DM Ksenia Korolyova)**
+- Weekly Slack account-summary bot (Jul 20) shows Session Replay activation still stalled — only 3 replays/week, unchanged for weeks, despite SR being sold as part of the June renewal ($78,810 closed won Jun 20).
+- Query volume steady (~7,698/week); no new customer-initiated messages in #ext-mixpanel-duxgroup since the Jun 25–Jul 2 thread (Ksenia re-added to channel, Snowflake connector question resolved).
+- Ksenia Korolyova DM and Vahshan Zeinalov DM show no new activity since Mar 30 — both quiet.
+- No new signals beyond the recurring SR-activation gap already tracked.
+
 **2026-06-10 | DM note [via Slack DM]**
 - Waiting on their details; will be a $17K upsell — ball is in their hands now
 

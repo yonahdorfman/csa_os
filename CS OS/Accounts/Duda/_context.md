@@ -81,6 +81,13 @@ Current state as of 2026-05-31: Duda has an active pipeline deal (Duda - FY 27 R
 
 ## Recent History
 
+**2026-07-21 | Slack full catch-up [#at-duda, #ext-duda-mixpanel]**
+- Statisfy flagged Duda's AI Health Score as Negative (last interaction Jul 5) with no specific open technical case identified — worth investigating the sentiment drop directly.
+- MCP usage held strong (~548 queries/week, led by kira.koroleva@duda.co); Mixpanel Agent Prompt usage also active.
+- The $56K Session Replay upsell opportunity remains unformalized in SFDC despite champion tal.levi's continued heavy usage (1,184 queries this week).
+- Avigayil Lewin follow-up (from the Jun 1 meeting-invite ask) remains unanswered, now 8+ weeks overdue; EU data-residency migration still unconfirmed (missed the Jul 1 org-wide deadline flagged Jun 21 & 24).
+- Next confirmed touchpoint: Duda/Mixpanel Quarterly Meeting, Aug 17, 12:30 IDT.
+
 **2026-07-02 | External channel scan — EU data residency deadline missed**
 - Jun 21: Yonah flagged EU data residency migration needed before Jul 1. Jun 24: customer had not acted; Yonah apologized for missing the follow-up and resent setup instructions. No confirmation of completion visible — deadline (Jul 1) has now passed.
 - *Source: Slack (#ext-duda-mixpanel), harvest-catchup 2026-07-02.*

@@ -4,7 +4,7 @@
 
 | Source | Type | Identifier | Status | Last Fetched |
 |--------|------|-----------|--------|-------------|
-| Slack | channel | #at-riverside (C0B38V48DKQ) | Active | 2026-07-16 |
+| Slack | channel | #at-riverside (C0B38V48DKQ) | Active | 2026-07-21 |
 | BigQuery | sales_intelligence | account_plans_current | Active | 2026-06-03 |
 | SFDC | account | [0013q00002JIzsvAAD](https://mixpanel.lightning.force.com/lightning/r/Account/0013q00002JIzsvAAD/view) | Linked | — |
 | GDoc | account_plan | [Link](https://docs.google.com/document/d/1xn-eenCVH5SXCf1_3ItFZ-vkbkK8s4ln5Ouv5i6SOt0/edit?usp=drivesdk) | Active | — |

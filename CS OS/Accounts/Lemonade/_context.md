@@ -103,6 +103,14 @@ As of 2026-05-31, Lemonade's FY 28 Renewal deal ($80,284 ARR) recently Closed Wo
 
 ## Recent History
 
+### 2026-07-21 — Slack Full Catch-up
+- Scanned #at-lemonade, #mixpanel-lemonade-shared, and 3 Slack group DMs plus 13 individual 1:1 DMs (18 sources total); all reachable, none skipped.
+- Leora Gildenblat consolidated the "Leora + Tal + Yonah + Omer" group DM into a new group DM that also adds Ofir Ventura (C0BFCDSP9QS) — this is now the active thread for Lemonade technical conversations.
+- New meeting scheduled for Tue Jul 28 (~11:00) with Omer Gerson + Ofir Ventura: topic is **moving Lemonade to a new Mixpanel project** — a significant data-migration/re-implementation initiative tied to the ongoing identity-merge cleanup.
+- Yonah shared a Notion "Lemonade Data Optimization Report" (full Mixpanel data/Lexicon audit) in the group DM on 2026-07-21 as prep material ahead of that migration discussion.
+- Weekly Account Summary (Jul 20, posted in #at-lemonade) confirms: Technical Session held Thu Jul 16 on user identification/merge status; Gong still shows the $80K FY28 renewal opp at Stage 1 Pipeline with a Jun 2027 close date (no commercial movement); usage remains healthy (69 active users, 202 MCP queries last 7 days); an Asana-flagged meeting still needs rescheduling due to an attendee's absence.
+- No new escalations, no fresh NPS/sentiment signals, and no unreplied @Yonah mentions found since the 2026-07-16 last-fetch date.
+
 **2026-07-12 | Gmail harvest (morning-cycle, weekly) — ticket #9345 stalled on customer side**
 - Support (Lin Yee) diagnosed the "View Users Not Working" issue Jul 8: the funnel Yonah shared didn't include the `preventative_items_select_question_answered` event, which is likely the root cause. Yonah replied same day (Jul 8, 07:29 IDT) with the funnel link and analysis.
 - No reply from Leora Gildenblat or anyone at Lemonade since. Mixpanel Support auto-sent a "haven't heard from you" follow-up on Jul 11 (09:05 IDT).
